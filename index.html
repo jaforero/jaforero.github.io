@@ -1,0 +1,2087 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Javier Forero · Senior Data Scientist · AI Strategy Consultant · Transformación Digital</title>
+
+<!-- ============ SEO ============ -->
+<meta name="description" content="Javier Forero — Científico de Datos Senior, Estadístico y Consultor en Analítica, Inteligencia Artificial y Transformación Digital. 25+ años conectando datos, IA y decisiones de negocio.">
+<meta name="author" content="Javier Forero">
+<meta name="keywords" content="Data Scientist, AI Strategy, Generative AI, Advanced Analytics, Digital Transformation, Consultoría IA, Machine Learning, Power BI, Estadística, Bogotá, Colombia">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://javierforero.co/">
+
+<!-- ============ Open Graph / Social ============ -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Javier Forero · Senior Data Scientist · AI Strategy Consultant">
+<meta property="og:description" content="25+ años conectando datos, inteligencia artificial y decisiones de negocio. Estrategia, productos analíticos, automatización inteligente y adopción de IA.">
+<meta property="og:url" content="https://javierforero.co/">
+<meta property="og:locale" content="es_CO">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Javier Forero · Senior Data Scientist · AI Strategy Consultant">
+<meta name="twitter:description" content="25+ años conectando datos, IA y decisiones de negocio.">
+
+<!-- ============ JSON-LD: Perfil profesional ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Javier Forero",
+  "jobTitle": "Senior Data Scientist · AI Strategy Consultant · Digital Transformation Advisor",
+  "description": "Científico de Datos Senior, Estadístico y Consultor en Analítica, Inteligencia Artificial y Transformación Digital, con más de 25 años de experiencia.",
+  "url": "https://javierforero.co/",
+  "email": "mail@javierforero.com",
+  "telephone": "+57 320 838 3457",
+  "address": { "@type": "PostalAddress", "addressLocality": "Bogotá", "addressCountry": "CO" },
+  "sameAs": [
+    "https://www.linkedin.com/in/jforero/",
+    "https://www.youtube.com/@JavierForeroRuiz",
+    "https://javierforero.co/"
+  ],
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universidad Nacional de Colombia" },
+  "knowsAbout": ["Data Science","Generative AI","Advanced Analytics","Machine Learning","Digital Transformation","AI Strategy","Business Intelligence","Cloud Architecture","AI Governance"],
+  "worksFor": { "@type": "Organization", "name": "Consultoría Independiente" }
+}
+</script>
+
+<style>
+/* =========================================================
+   SISTEMA DE DISEÑO — Branding oficial Javier Forero
+   ========================================================= */
+:root{
+  --purple:#4e00ff;
+  --purple-light:#7c4dff;
+  --deep-blue:#041c59;
+  --vibrant-blue:#0048ff;
+  --bg:#f5f7fb;
+  --white:#ffffff;
+  --border:#e3e8f5;
+  --soft-lilac:#f6f3ff;
+  --text:#1f2937;
+  --muted:#5f6b7a;
+  --grad:linear-gradient(135deg,#041c59 0%,#4e00ff 68%,#7c4dff 100%);
+  --grad-cta:linear-gradient(135deg,#4e00ff 0%,#7c4dff 100%);
+  --shadow:0 12px 32px rgba(4,28,89,.08);
+  --shadow-sm:0 8px 24px rgba(4,28,89,.05);
+  --radius:18px;
+  --radius-lg:26px;
+  --maxw:1120px;
+  --tip-bg:#041c59;
+  --nav-bg:rgba(245,247,251,.95);
+  --footer-bg:#041c59;
+}
+/* ---- DARK THEME ---- */
+[data-theme="dark"]{
+  --deep-blue:#cfd9f7;        /* títulos legibles sobre fondo oscuro */
+  --bg:#0a1020;
+  --white:#121b33;            /* superficie de tarjetas */
+  --border:#26324d;
+  --soft-lilac:#1b2138;
+  --text:#e8edf9;
+  --muted:#9fabc4;
+  --vibrant-blue:#7aa2ff;
+  --shadow:0 14px 34px rgba(0,0,0,.45);
+  --shadow-sm:0 8px 22px rgba(0,0,0,.32);
+  --tip-bg:#1b2440;
+  --nav-bg:rgba(10,16,32,.95);
+  --footer-bg:#070d1c;
+}
+[data-theme="dark"] .ev-doc{background:#1c2748;color:#bcd0ff}
+[data-theme="dark"] .ev-pub{background:#241a40;color:#c8adff}
+[data-theme="dark"] .ev-rep{background:#152544;color:#9cc0ff}
+[data-theme="dark"] .ev-kpi{background:#21193f;color:#c6a8ff}
+[data-theme="dark"] .ev-exp{background:#1b2138;color:#cdd9ff}
+[data-theme="dark"] .ev-pen{background:#1a2236;color:#9fabc4}
+[data-theme="dark"] .tab.active{background:var(--purple);border-color:var(--purple)}
+[data-theme="dark"] .jd-role.active{color:#0a1020}
+[data-theme="dark"] .btn.secondary{color:var(--vibrant-blue)}
+[data-theme="dark"] .hero,[data-theme="dark"] .jd,[data-theme="dark"] .contact-card,[data-theme="dark"] .modal-hero{filter:saturate(1.05)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{
+  margin:0;background:var(--bg);
+  font-family:'IgraSans',Arial,Helvetica,Aptos,Calibri,sans-serif;
+  color:var(--text);line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--vibrant-blue);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%}
+h1,h2,h3,h4{line-height:1.18;margin:0}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--purple)}
+.section{padding:64px 0;scroll-margin-top:84px}
+.section-head{margin-bottom:28px}
+.section-title{
+  color:var(--deep-blue);font-size:13px;letter-spacing:.12em;text-transform:uppercase;
+  font-weight:800;padding-left:12px;border-left:4px solid var(--purple);margin-bottom:10px;
+}
+.section-h{font-size:30px;font-weight:800;color:var(--deep-blue);letter-spacing:-.01em}
+.section-sub{color:var(--muted);font-size:16px;max-width:720px;margin-top:8px}
+
+/* Cards */
+.card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);
+  padding:20px 22px;box-shadow:var(--shadow-sm)}
+.badge{display:inline-block;background:var(--soft-lilac);color:var(--deep-blue);
+  border:1px solid var(--border);border-radius:999px;padding:5px 11px;font-size:12px;font-weight:700;margin:3px 4px 3px 0}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;cursor:pointer;border:0;
+  background:var(--purple);color:#fff;text-decoration:none;padding:13px 22px;border-radius:999px;
+  font-family:inherit;font-size:15px;font-weight:800;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(78,0,255,.28);text-decoration:none}
+.btn.secondary{background:var(--white);color:var(--vibrant-blue);border:1px solid var(--border)}
+.btn.ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35)}
+.btn.sm{padding:9px 15px;font-size:13px}
+
+/* =========================================================
+   NAV STICKY
+   ========================================================= */
+.nav{position:sticky;top:0;z-index:120;background:var(--nav-bg);
+  backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid var(--border);
+  box-shadow:0 2px 12px rgba(4,28,89,.05)}
+.nav-in{display:flex;align-items:center;gap:12px;height:64px;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.brand{font-weight:800;color:var(--deep-blue);font-size:16px;letter-spacing:-.01em;white-space:nowrap;flex:0 0 auto}
+.brand span{color:var(--purple)}
+.nav-links{display:flex;gap:1px;margin-left:6px;flex:1 1 auto;min-width:0;flex-wrap:nowrap;align-items:center;
+  overflow-x:auto;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{color:var(--text);font-size:12.5px;font-weight:600;padding:7px 8px;border-radius:999px;
+  white-space:nowrap;transition:color .15s,background .15s}
+.nav-links a:hover{color:var(--deep-blue);background:var(--soft-lilac);text-decoration:none}
+.nav-tools{margin-left:auto;display:flex;align-items:center;gap:10px}
+.search-box{display:flex;align-items:center;gap:7px;background:var(--white);border:1px solid var(--border);
+  border-radius:999px;padding:7px 13px;min-width:170px}
+.search-box input{border:0;outline:0;font-family:inherit;font-size:13px;width:100%;background:transparent;color:var(--text)}
+.proj-search{max-width:340px;margin:0 0 16px}
+.nav-toggle{display:none;background:var(--white);border:1px solid var(--border);border-radius:10px;width:40px;height:40px;cursor:pointer;font-size:18px;color:var(--deep-blue)}
+/* Segmented language switch + theme button */
+.seg{display:inline-flex;background:var(--white);border:1px solid var(--border);border-radius:999px;padding:3px;gap:2px}
+.seg-btn{border:0;background:transparent;cursor:pointer;font-family:inherit;font-size:12px;font-weight:800;
+  color:var(--muted);padding:6px 11px;border-radius:999px;transition:.15s}
+.seg-btn.active{background:var(--purple);color:#fff}
+.icon-btn{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;
+  background:var(--white);border:1px solid var(--border);cursor:pointer;font-size:17px;color:var(--deep-blue);transition:.15s}
+.icon-btn:hover{border-color:var(--purple)}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero{background:var(--grad);color:#fff;border-radius:0 0 var(--radius-lg) var(--radius-lg);
+  position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;
+  background:radial-gradient(circle,rgba(124,77,255,.45),transparent 70%);pointer-events:none}
+.hero-in{position:relative;z-index:2;padding:72px 0 64px}
+.hero .eyebrow{color:rgba(255,255,255,.85)}
+.hero h1{font-size:54px;font-weight:800;letter-spacing:-.02em;margin:14px 0 0}
+.hero-role{font-size:20px;font-weight:600;margin-top:14px;color:rgba(255,255,255,.95)}
+.hero-lead{font-size:17px;line-height:1.6;margin-top:20px;max-width:680px;color:rgba(255,255,255,.92)}
+.hero-meta{margin-top:18px;font-size:14px;color:rgba(255,255,255,.85);display:flex;flex-wrap:wrap;gap:8px 18px}
+.hero-meta span{display:inline-flex;align-items:center;gap:6px}
+.hero-cta{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
+.hero-chips{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px}
+.hero-chips .badge{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.28)}
+
+/* =========================================================
+   IMPACT SNAPSHOT
+   ========================================================= */
+.snapshot{margin-top:-40px;position:relative;z-index:5}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.metric{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow-sm);position:relative}
+.metric .num{font-size:32px;font-weight:800;color:var(--purple);line-height:1}
+.metric .lab{margin-top:8px;font-size:12.5px;color:var(--muted);line-height:1.4}
+.ev{display:inline-block;margin-top:11px;font-size:10px;font-weight:800;letter-spacing:.04em;
+  text-transform:uppercase;padding:3px 8px;border-radius:999px;cursor:help;position:relative}
+.ev-doc{background:#eaf0ff;color:var(--deep-blue)}
+.ev-pub{background:#f0e9ff;color:var(--purple)}
+.ev-rep{background:#e6efff;color:var(--vibrant-blue)}
+.ev-kpi{background:#efe7ff;color:var(--purple-light)}
+.ev-exp{background:var(--soft-lilac);color:var(--deep-blue)}
+.ev-pen{background:#eef1f5;color:var(--muted)}
+/* Tooltip */
+[data-tip]{position:relative}
+[data-tip]:hover:before,[data-tip]:focus:before{
+  content:attr(data-tip);position:absolute;bottom:130%;left:0;
+  background:var(--tip-bg);color:#fff;font-size:11.5px;font-weight:500;line-height:1.4;
+  text-transform:none;letter-spacing:0;padding:8px 11px;border-radius:10px;width:230px;z-index:50;
+  box-shadow:var(--shadow)}
+
+/* =========================================================
+   VALUE PROPOSITION
+   ========================================================= */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pillar h4{color:var(--deep-blue);font-size:16px;margin-bottom:7px}
+.pillar p{color:var(--muted);font-size:14px;margin:0}
+.vp-lead{background:var(--soft-lilac);border:1px solid var(--border);border-left:5px solid var(--purple);
+  border-radius:var(--radius);padding:22px 24px;margin-bottom:24px;font-size:17px;color:var(--deep-blue);font-weight:600}
+
+/* =========================================================
+   FILTER BAR + PROJECTS
+   ========================================================= */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chip{cursor:pointer;background:var(--white);border:1px solid var(--border);border-radius:999px;
+  padding:8px 15px;font-size:13px;font-weight:700;color:var(--muted);font-family:inherit;transition:.15s}
+.chip:hover{color:var(--deep-blue)}
+.chip.active{background:var(--purple);color:#fff;border-color:var(--purple)}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.proj{display:flex;flex-direction:column;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.proj:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.proj .ptype{font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--purple)}
+.proj h4{color:var(--deep-blue);font-size:17px;margin:7px 0}
+.proj p{color:var(--muted);font-size:13.5px;flex:1;margin:0 0 12px}
+.proj .tags{margin-bottom:10px}
+.proj .more{font-size:13px;font-weight:800;color:var(--vibrant-blue)}
+.empty{color:var(--muted);font-size:14px;padding:30px 0;text-align:center;display:none}
+
+/* =========================================================
+   MODAL / DRAWER
+   ========================================================= */
+.modal-bg{position:fixed;inset:0;background:rgba(4,28,89,.45);z-index:200;display:none;
+  align-items:flex-start;justify-content:center;padding:40px 18px;overflow-y:auto}
+.modal-bg.open{display:flex}
+.modal{background:var(--white);border-radius:var(--radius-lg);max-width:760px;width:100%;box-shadow:0 30px 70px rgba(4,28,89,.35);
+  animation:rise .25s ease}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.modal-hero{background:var(--grad);color:#fff;padding:28px 30px;border-radius:var(--radius-lg) var(--radius-lg) 0 0;position:relative}
+.modal-hero .ptype{color:rgba(255,255,255,.85)}
+.modal-hero h3{font-size:24px;margin:8px 0 4px}
+.modal-hero .pmeta{font-size:13px;color:rgba(255,255,255,.85)}
+.modal-x{position:absolute;top:18px;right:18px;background:rgba(255,255,255,.18);border:0;color:#fff;
+  width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:18px}
+.modal-body{padding:26px 30px 30px}
+.modal-body h5{color:var(--deep-blue);font-size:13px;text-transform:uppercase;letter-spacing:.08em;
+  margin:20px 0 8px;padding-left:10px;border-left:3px solid var(--purple)}
+.modal-body h5:first-child{margin-top:0}
+.modal-body p,.modal-body li{font-size:14.5px;color:var(--text)}
+.modal-body ul{margin:6px 0;padding-left:20px}
+
+/* =========================================================
+   EXPERIENCE TIMELINE
+   ========================================================= */
+.tl-wrap{position:relative;margin-top:6px}
+.tl{position:relative;display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:6px 2px 14px;scrollbar-width:none}
+.tl::-webkit-scrollbar{display:none}
+.tl-item{position:relative;flex:0 0 84%;max-width:340px;scroll-snap-align:center;padding-top:46px;display:flex;flex-direction:column}
+.tl-item::before{content:"";position:absolute;top:21px;left:-8px;right:-8px;height:3px;background:var(--border);z-index:0}
+.tl-item:first-child::before{left:50%}
+.tl-item:last-child::before{right:50%}
+.tl-dot{position:absolute;top:14px;left:50%;transform:translateX(-50%);width:16px;height:16px;border-radius:50%;background:var(--purple);border:3px solid var(--white);box-shadow:0 0 0 3px var(--border);z-index:1;transition:transform .2s,background .2s}
+.tl-item:hover .tl-dot,.tl-item:focus-within .tl-dot{transform:translateX(-50%) scale(1.28);background:var(--purple-light)}
+.tl-item .per{text-align:center;font-size:12.5px;font-weight:800;color:var(--purple);letter-spacing:.02em;margin-bottom:12px}
+.tl-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-sm);padding:18px 18px 20px;flex:1;transition:transform .2s,box-shadow .2s}
+.tl-item:hover .tl-card,.tl-item:focus-within .tl-card{transform:translateY(-3px);box-shadow:var(--shadow)}
+.tl-card h4{color:var(--deep-blue);font-size:16.5px;margin:0 0 4px;line-height:1.25}
+.tl-card .org{font-size:13px;color:var(--muted);font-weight:600;margin-bottom:9px}
+.tl-card p{font-size:13.5px;color:var(--text);margin:0;line-height:1.5}
+.tl-arrow{display:none}
+.tl-dots{display:flex;justify-content:center;flex-wrap:wrap;gap:7px;margin-top:8px}
+.tl-dotnav{width:8px;height:8px;border-radius:50%;border:0;background:var(--border);cursor:pointer;padding:0;transition:.25s}
+.tl-dotnav.active{background:var(--purple);width:22px;border-radius:5px}
+.tl-hint{text-align:center;font-size:12px;color:var(--muted);margin:10px 0 0}
+@media(min-width:720px){
+  .tl-item{flex-basis:46%}
+  .tl-arrow{display:flex;align-items:center;justify-content:center;position:absolute;top:74px;z-index:6;width:42px;height:42px;border-radius:50%;background:var(--white);border:1px solid var(--border);color:var(--deep-blue);font-size:22px;cursor:pointer;box-shadow:var(--shadow-sm);transition:.15s}
+  .tl-prev{left:-6px}.tl-next{right:-6px}
+  .tl-arrow:hover{border-color:var(--purple);color:var(--purple)}
+  .tl-hint{display:none}
+}
+@media(min-width:1000px){.tl-item{flex-basis:31.5%}}
+
+/* =========================================================
+   ACCORDION (skills, education, certs)
+   ========================================================= */
+.acc{border:1px solid var(--border);border-radius:var(--radius);background:var(--white);margin-bottom:12px;overflow:hidden}
+.acc-h{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;
+  background:var(--white);border:0;cursor:pointer;padding:18px 20px;font-family:inherit;text-align:left}
+.acc-h h4{color:var(--deep-blue);font-size:16px}
+.acc-h .sub{font-size:12.5px;color:var(--muted);font-weight:600;margin-top:3px}
+.acc-h .ico{font-size:20px;color:var(--purple);transition:transform .2s;flex-shrink:0}
+.acc.open .ico{transform:rotate(45deg)}
+.acc-c{display:none;padding:0 20px 20px}
+.acc.open .acc-c{display:block}
+.acc-c p,.acc-c li{font-size:14px;color:var(--text)}
+
+/* Tabs (skills) */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.tab{cursor:pointer;background:var(--white);border:1px solid var(--border);border-radius:999px;padding:9px 16px;
+  font-size:13px;font-weight:700;color:var(--muted);font-family:inherit}
+.tab.active{background:var(--deep-blue);color:#fff;border-color:var(--deep-blue)}
+.tabpanel{display:none}
+.tabpanel.active{display:block}
+
+/* Industries */
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ind{text-align:left}
+.ind h4{color:var(--deep-blue);font-size:15px;margin-bottom:5px}
+.ind p{font-size:12.5px;color:var(--muted);margin:0}
+
+/* Certifications explorer */
+.cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.cert{display:flex;justify-content:space-between;gap:12px;background:var(--white);border:1px solid var(--border);
+  border-radius:14px;padding:12px 15px}
+.cert .ct{font-size:13.5px;font-weight:600;color:var(--text)}
+.cert .ci{font-size:12px;color:var(--muted);margin-top:2px}
+.cert .cy{font-size:11px;font-weight:800;color:var(--purple);white-space:nowrap}
+.cert-count{font-size:13px;color:var(--muted);margin-bottom:14px}
+
+/* Content / ecosystem */
+.eco{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.eco a.card{display:block;color:inherit;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.eco a.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);text-decoration:none}
+.eco h4{color:var(--deep-blue);font-size:16px;margin-bottom:6px}
+.eco p{font-size:13px;color:var(--muted);margin:0 0 10px}
+.eco .lnk{font-size:13px;font-weight:800;color:var(--vibrant-blue)}
+
+/* Testimonials */
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.quote{font-size:15px;color:var(--text);font-style:italic;line-height:1.6}
+.quote-who{margin-top:14px;font-size:13px;font-weight:800;color:var(--deep-blue)}
+.quote-role{font-size:12px;color:var(--muted);font-weight:600}
+
+/* JD ADAPTER */
+.jd{background:var(--grad);border-radius:var(--radius-lg);color:#fff;padding:34px 32px}
+.jd .section-title{color:#fff;border-color:#fff}
+.jd h2{color:#fff}
+.jd .section-sub{color:rgba(255,255,255,.9)}
+.jd-roles{display:flex;flex-wrap:wrap;gap:9px;margin:22px 0}
+.jd-role{cursor:pointer;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.32);
+  color:#fff;border-radius:999px;padding:9px 17px;font-size:13.5px;font-weight:700;font-family:inherit;transition:.15s}
+.jd-role:hover{background:rgba(255,255,255,.22)}
+.jd-role.active{background:#fff;color:var(--deep-blue);border-color:#fff}
+.jd-out{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:var(--radius);padding:22px 24px;margin-top:6px}
+.jd-out h4{font-size:18px;margin-bottom:6px}
+.jd-narr{font-size:15px;line-height:1.6;color:rgba(255,255,255,.96);margin:0 0 16px}
+.jd-cols{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.jd-cols h6{font-size:12px;text-transform:uppercase;letter-spacing:.07em;margin:0 0 8px;color:rgba(255,255,255,.8)}
+.jd-cols .badge{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.3)}
+.jd-skills{margin-top:14px}
+.jd-skills h6{font-size:12px;text-transform:uppercase;letter-spacing:.07em;margin:0 0 8px;color:rgba(255,255,255,.8)}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:22px;align-items:start}
+.contact-card{background:var(--grad);color:#fff;border-radius:var(--radius-lg);padding:30px 32px}
+.contact-card h3{font-size:24px;margin-bottom:10px}
+.contact-card p{color:rgba(255,255,255,.92);font-size:15px}
+.contact-list{list-style:none;padding:0;margin:18px 0 0}
+.contact-list li{margin:11px 0;font-size:14.5px;display:flex;gap:10px;align-items:center}
+.contact-list a{color:#fff;font-weight:600}
+.cta-side .card{margin-bottom:14px}
+.cta-side h4{color:var(--deep-blue);font-size:16px;margin-bottom:5px}
+.cta-side p{font-size:13.5px;color:var(--muted);margin:0 0 12px}
+
+/* Footer */
+.footer{background:var(--footer-bg);color:rgba(255,255,255,.85);padding:40px 0 30px;margin-top:30px}
+.footer-in{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-start}
+.footer h4{color:#fff;font-size:18px;margin-bottom:6px}
+.footer p{font-size:13px;margin:3px 0;color:rgba(255,255,255,.8)}
+.footer a{color:#fff}
+.footer-links{display:flex;flex-wrap:wrap;gap:14px;font-size:13px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.15);margin-top:26px;padding-top:18px;font-size:12px;color:rgba(255,255,255,.65)}
+
+/* Back to top */
+.totop{position:fixed;right:22px;bottom:22px;z-index:90;width:46px;height:46px;border-radius:50%;
+  background:var(--purple);color:#fff;border:0;cursor:pointer;font-size:20px;box-shadow:var(--shadow);
+  display:none;align-items:center;justify-content:center}
+.totop.show{display:flex}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media(max-width:980px){
+  .metrics{grid-template-columns:repeat(2,1fr)}
+  .grid-3,.pillars,.eco{grid-template-columns:1fr 1fr}
+  .grid-4{grid-template-columns:1fr 1fr}
+  .cert-grid,.grid-2,.contact-grid,.jd-cols{grid-template-columns:1fr}
+  .hero h1{font-size:40px}
+}
+@media(max-width:620px){
+  .wrap,.nav-in{padding:0 18px}
+  .metrics,.grid-3,.pillars,.eco,.grid-4{grid-template-columns:1fr}
+  .hero h1{font-size:32px}
+  .hero-in{padding:48px 0 40px}
+  .section{padding:46px 0}
+  .section-h{font-size:24px}
+  .proj-search{max-width:none}
+}
+
+/* Nav: drawer en pantallas medianas/móviles (evita 2ª y 3ª fila de menús) */
+@media(max-width:1120px){
+  .nav-links{display:none}
+  .nav-toggle{display:inline-flex;align-items:center;justify-content:center}
+  .nav-links.open{display:flex;position:fixed;top:64px;left:0;right:0;flex-direction:column;
+    background:var(--white);border-bottom:1px solid var(--border);
+    box-shadow:0 18px 34px rgba(4,28,89,.12);padding:10px 18px 16px;gap:2px;
+    max-height:calc(100vh - 64px);overflow-y:auto;animation:navDrop .2s ease}
+  .nav-links a{font-size:15px;padding:13px 12px;border-radius:12px;color:var(--text);
+    border-bottom:1px solid var(--border)}
+  .nav-links a:last-child{border-bottom:0}
+  .nav-links a.active{background:var(--soft-lilac);color:var(--deep-blue)}
+}
+@keyframes navDrop{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+
+/* =========================================================
+   PRINT — CV exportable
+   ========================================================= */
+@media print{
+  .nav,.totop,.hero-cta,.filters,.tabs,.jd,#jd,.search-box,.nav-tools,.modal-bg,
+  #content,.eco,.totop,.print-hide{display:none!important}
+  body{background:#fff;font-size:11pt;color:#000}
+  .hero{background:#041c59!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;border-radius:0}
+  .section{padding:14px 0;page-break-inside:avoid}
+  .card,.metric,.proj{box-shadow:none;break-inside:avoid}
+  .grid-3,.metrics{grid-template-columns:repeat(2,1fr)}
+  a{color:#000;text-decoration:none}
+  .tabpanel{display:block!important}
+}
+
+/* ---- Mobile-first refinements ---- */
+@media(max-width:620px){
+  .filters,.tabs,.jd-roles{flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-left:-18px;margin-right:-18px;padding-left:18px;padding-right:18px}
+  .filters::-webkit-scrollbar,.tabs::-webkit-scrollbar,.jd-roles::-webkit-scrollbar{display:none}
+  .chip,.tab,.jd-role{flex:0 0 auto;scroll-snap-align:start}
+  .nav-tools>.btn{display:none}
+  .seg-btn{padding:7px 12px}
+  .nav-in{gap:10px}
+  .tl-item{flex-basis:88%}
+}
+@media print{
+  .tl-wrap{overflow:visible}
+  .tl{display:block;overflow:visible;padding:0}
+  .tl-item{flex:none;max-width:none;width:100%;padding-top:0;margin-bottom:8px;break-inside:avoid}
+  .tl-item::before,.tl-dot,.tl-arrow,.tl-dots,.tl-hint{display:none!important}
+  .tl-card{box-shadow:none}
+  .tl-item .per{text-align:left;margin-bottom:4px}
+}
+
+/* =========================================================
+   CAPA BI / SCROLLYTELLING — refinamiento quirúrgico aditivo
+   (todo lo anterior se mantiene igual; estas reglas solo añaden/sobre-escriben)
+   ========================================================= */
+
+/* Barra de progreso de lectura — narrativa de "reporte analítico" */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:200;
+  background:linear-gradient(90deg,var(--vibrant-blue),var(--purple) 55%,var(--purple-light));
+  box-shadow:0 0 10px rgba(78,0,255,.45)}
+
+/* Reveal on scroll — "descubrir insights" al bajar (gated por reduced-motion) */
+@media (prefers-reduced-motion: no-preference){
+  .reveal{opacity:0;transform:translateY(20px);
+    transition:opacity .6s ease,transform .65s cubic-bezier(.22,1,.36,1)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal-stagger>*{opacity:0;transform:translateY(16px);
+    transition:opacity .5s ease,transform .55s cubic-bezier(.22,1,.36,1)}
+  .reveal-stagger.in>*{opacity:1;transform:none}
+  .reveal-stagger.in>*:nth-child(1){transition-delay:.04s}
+  .reveal-stagger.in>*:nth-child(2){transition-delay:.10s}
+  .reveal-stagger.in>*:nth-child(3){transition-delay:.16s}
+  .reveal-stagger.in>*:nth-child(4){transition-delay:.22s}
+  .reveal-stagger.in>*:nth-child(5){transition-delay:.28s}
+  .reveal-stagger.in>*:nth-child(6){transition-delay:.34s}
+  .reveal-stagger.in>*:nth-child(7){transition-delay:.40s}
+  .reveal-stagger.in>*:nth-child(8){transition-delay:.46s}
+  /* Carga escalonada tipo "widget de dashboard" para proyectos y certificaciones */
+  .proj,.cert{animation:cardIn .5s both}
+  @keyframes cardIn{from{opacity:0;transform:translateY(16px) scale(.985)}to{opacity:1;transform:none}}
+  .grid-3 .proj:nth-child(1){animation-delay:.03s}
+  .grid-3 .proj:nth-child(2){animation-delay:.08s}
+  .grid-3 .proj:nth-child(3){animation-delay:.13s}
+  .grid-3 .proj:nth-child(4){animation-delay:.18s}
+  .grid-3 .proj:nth-child(5){animation-delay:.23s}
+  .grid-3 .proj:nth-child(6){animation-delay:.28s}
+  .grid-3 .proj:nth-child(7){animation-delay:.33s}
+  .grid-3 .proj:nth-child(8){animation-delay:.38s}
+  .grid-3 .proj:nth-child(9){animation-delay:.43s}
+  /* El número KPI "resuelve" de desenfocado a nítido al entrar en viewport */
+  .metrics.in .metric .num{animation:numIn .7s both}
+  @keyframes numIn{from{filter:blur(7px);opacity:0;transform:translateY(6px)}to{filter:blur(0);opacity:1;transform:none}}
+}
+
+/* ===== Tarjetas de KPI (metáfora visual de dashboard BI) ===== */
+.metric.kpi::before{content:"";position:absolute;left:0;top:0;height:4px;width:100%;
+  border-radius:var(--radius) var(--radius) 0 0;
+  background:linear-gradient(90deg,var(--purple),var(--purple-light))}
+.metric .num{font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.kpi-gauge{margin-top:13px;height:6px;border-radius:999px;background:var(--soft-lilac);overflow:hidden}
+.kpi-gauge i{display:block;height:100%;width:0;border-radius:999px;
+  background:linear-gradient(90deg,var(--vibrant-blue),var(--purple))}
+@media (prefers-reduced-motion: no-preference){
+  .kpi-gauge i{transition:width 1.1s cubic-bezier(.22,1,.36,1) .15s}
+}
+.metrics.in .kpi-gauge i{width:var(--w,80%)}
+
+/* Scrollspy — la nav marca la "sección del reporte" en curso */
+.nav-links a.active{color:var(--deep-blue);background:var(--soft-lilac)}
+
+/* ===== Timeline analítico: altura uniforme + "Ver más" ===== */
+.tl{align-items:flex-start}
+.tl-card{min-height:252px}
+.tl-card p{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.tl-card.open p{-webkit-line-clamp:unset;overflow:visible}
+.tl-more{margin-top:11px;align-self:flex-start;background:none;border:0;cursor:pointer;
+  color:var(--vibrant-blue);font-family:inherit;font-weight:800;font-size:12.5px;
+  display:inline-flex;align-items:center;gap:5px;padding:4px 0}
+.tl-more::after{content:"\25BE";font-size:11px;transition:transform .2s}
+.tl-card.open .tl-more::after{transform:rotate(180deg)}
+
+/* Print: revelar todo el contenido, sin adornos de pantalla */
+@media print{
+  #progress{display:none!important}
+  .reveal,.reveal-stagger>*{opacity:1!important;transform:none!important}
+  .tl-card p{-webkit-line-clamp:unset!important;overflow:visible!important}
+  .tl-more,.kpi-gauge{display:none!important}
+}
+
+/* =========================================================
+   CERTIFICACIONES — panel compacto tipo tabla de datos BI
+   (scroll interno + fade + micro-métricas; no afecta el scroll del body)
+   ========================================================= */
+.cert-scroll{position:relative}
+#certGrid{max-height:450px;overflow-y:auto;overflow-x:hidden;padding:2px 10px 2px 0;
+  scrollbar-width:thin;scrollbar-color:var(--purple) var(--soft-lilac)}
+#certGrid::-webkit-scrollbar{width:8px}
+#certGrid::-webkit-scrollbar-track{background:var(--soft-lilac);border-radius:999px}
+#certGrid::-webkit-scrollbar-thumb{background:linear-gradient(var(--purple),var(--purple-light));
+  border-radius:999px;border:2px solid var(--soft-lilac)}
+#certGrid::-webkit-scrollbar-thumb:hover{background:var(--purple)}
+/* Fade-out inferior: solo visible cuando aún hay datos por debajo (clase .more vía JS) */
+.cert-scroll::after{content:"";position:absolute;left:0;right:10px;bottom:0;height:54px;pointer-events:none;
+  background:linear-gradient(to bottom,transparent,var(--bg));opacity:0;transition:opacity .25s}
+.cert-scroll.more::after{opacity:1}
+/* Micro-métricas: contador real por categoría en cada filtro (atributo + ::after) */
+#certFilters .chip[data-count]::after{content:attr(data-count);margin-left:8px;background:var(--soft-lilac);
+  color:var(--purple);font-size:10.5px;font-weight:800;padding:1px 7px;border-radius:999px;vertical-align:middle}
+#certFilters .chip.active[data-count]::after{background:rgba(255,255,255,.28);color:#fff}
+@media print{ #certGrid{max-height:none;overflow:visible} .cert-scroll::after{display:none} }
+
+/* =========================================================
+   JD STUDIO — módulo privado del propietario (overlay oculto)
+   ========================================================= */
+.jd-studio-bg{position:fixed;inset:0;z-index:300;background:rgba(4,28,89,.5);
+  display:flex;align-items:flex-start;justify-content:center;padding:30px 16px;overflow-y:auto}
+.jd-studio-bg[hidden]{display:none}
+.jd-studio{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);
+  max-width:860px;width:100%;box-shadow:0 30px 70px rgba(4,28,89,.4)}
+.jd-studio-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;
+  padding:22px 26px 16px;border-bottom:1px solid var(--border);position:relative}
+.jd-studio-head .eyebrow{color:var(--purple)}
+.jd-studio-head h3{color:var(--deep-blue);font-size:21px;margin:6px 0 4px}
+.jd-studio-sub{font-size:13px;color:var(--muted);margin:0;max-width:580px;line-height:1.5}
+.jd-studio-head .modal-x{position:static;flex:0 0 auto}
+.jd-studio-body{padding:18px 26px 24px}
+.jd-field{display:block;margin-bottom:14px}
+.jd-field>span{display:block;font-size:12px;font-weight:800;text-transform:uppercase;
+  letter-spacing:.06em;color:var(--deep-blue);margin-bottom:7px}
+#jdInput{width:100%;border:1px solid var(--border);border-radius:14px;background:var(--bg);
+  color:var(--text);font-family:inherit;font-size:14px;line-height:1.5;padding:12px 14px;resize:vertical;min-height:92px}
+#jdInput:focus{outline:2px solid var(--purple);outline-offset:1px}
+.jd-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:4px}
+.jd-file-lbl{font-size:12.5px;color:var(--vibrant-blue);font-weight:700;cursor:pointer}
+.jd-suggest{font-size:13px;color:var(--purple);font-weight:800}
+#jdStudio .jd-roles{margin:16px 0 6px}
+#jdStudio .jd-role{background:var(--soft-lilac);color:var(--deep-blue);border:1px solid var(--border)}
+#jdStudio .jd-role.active{background:var(--purple);color:#fff;border-color:var(--purple)}
+#jdStudio .jd-out{background:transparent;border:0;padding:0;margin-top:8px}
+#jdStudio .jd-out h4{color:var(--deep-blue)}
+#jdStudio .jd-narr{color:var(--text)}
+#jdStudio .jd-cols h6,#jdStudio .jd-skills h6{color:var(--muted)}
+#jdStudio .jd-cols .badge,#jdStudio .jd-skills .badge{background:var(--soft-lilac);color:var(--deep-blue);border-color:var(--border)}
+.jd-sec-label{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;
+  color:var(--deep-blue);margin:18px 0 8px}
+.jd-match{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 6px}
+.jd-compat{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.jd-hit{outline:2px solid var(--purple);outline-offset:1px;background:var(--soft-lilac)!important}
+.jd-studio-foot{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;padding-top:16px;border-top:1px solid var(--border)}
+.modal-bg{z-index:400}
+@media(max-width:620px){.jd-compat{grid-template-columns:1fr}.jd-studio-head h3{font-size:18px}.jd-studio-body{padding:16px 18px 20px}}
+/* Imprimir SOLO la variante adaptada cuando el propietario lo pide */
+@media print{
+  body.jd-print > *{display:none!important}
+  body.jd-print #jdStudio,body.jd-print #jdStudio[hidden]{display:block!important;position:static!important;padding:0;background:#fff;overflow:visible}
+  body.jd-print .jd-studio{box-shadow:none;border:0;max-width:none}
+  body.jd-print .jd-studio-head,body.jd-print .jd-field,body.jd-print .jd-actions,
+  body.jd-print #jdRoles,body.jd-print .jd-studio-foot{display:none!important}
+  body.jd-print #jdStudio .jd-out h4,body.jd-print #jdStudio .jd-narr,
+  body.jd-print #jdStudio .badge,body.jd-print #jdStudio .jd-sec-label,body.jd-print #jdStudio .proj *{color:#000!important}
+}
+
+/* =========================================================
+   PROYECTOS — grid más denso + cards compactas
+   (progressive disclosure: el detalle completo vive en el modal)
+   ========================================================= */
+#projGrid{grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:14px}
+.proj.card{padding:15px 16px}
+.proj .ptype{font-size:10px;letter-spacing:.04em}
+.proj h4{font-size:15px;line-height:1.25;margin:6px 0 5px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.proj p{font-size:12.5px;line-height:1.45;margin:0 0 10px;flex:0 1 auto;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.proj .tags{margin-bottom:8px;max-height:25px;overflow:hidden}
+.proj .badge{font-size:10.5px;padding:3px 8px;margin:2px 3px 2px 0;font-weight:700}
+.proj-foot{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:auto}
+.proj-foot .ev{margin-top:0}
+.proj .more{font-size:12px;font-weight:800;color:var(--vibrant-blue);white-space:nowrap}
+@media(max-width:620px){
+  #projGrid{grid-template-columns:repeat(2,1fr);gap:9px}
+  .proj.card{padding:12px 12px}
+  .proj h4{font-size:13.5px;margin:5px 0 4px}
+  .proj p{font-size:11.5px;-webkit-line-clamp:3;margin-bottom:8px}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" aria-label="Navegación principal">
+  <div class="nav-in">
+    <div class="brand">Javier<span>Forero</span></div>
+    <div class="nav-links" id="navLinks">
+      <a href="#valor" data-en="Value">Valor</a>
+      <a href="#proyectos" data-en="Projects">Proyectos</a>
+      <a href="#experiencia" data-en="Experience">Experiencia</a>
+      <a href="#skills" data-en="Capabilities">Capacidades</a>
+      <a href="#industrias" data-en="Industries">Industrias</a>
+      <a href="#educacion" data-en="Education">Educación</a>
+      <a href="#certificaciones" data-en="Certifications">Certificaciones</a>
+      <a href="#content" data-en="Content">Contenidos</a>
+      <a href="#contacto" data-en="Contact">Contacto</a>
+    </div>
+    <div class="nav-tools">
+      <div class="seg" id="langSeg" role="group" aria-label="Idioma / Language">
+        <button class="seg-btn active" data-lang="es">ES</button>
+        <button class="seg-btn" data-lang="en">EN</button>
+      </div>
+      <button class="icon-btn" id="themeBtn" aria-label="Cambiar tema claro/oscuro" title="Tema claro/oscuro">🌙</button>
+      <button class="icon-btn" id="cvBtn" onclick="downloadCV()" aria-label="Descargar CV" data-en-attr="aria-label" data-en="Download CV" title="Descargar CV (PDF)">⬇</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="inicio">
+  <div class="wrap hero-in">
+    <p class="eyebrow" data-en="Executive Intelligence Platform">Plataforma de Inteligencia Ejecutiva</p>
+    <h1>Javier Forero</h1>
+    <p class="hero-role" data-en="Senior Data Scientist · AI Strategy Consultant · Digital Transformation Advisor">Científico de Datos Senior · Consultor en Estrategia de IA · Asesor en Transformación Digital</p>
+    <p class="hero-lead" data-en-html="<strong>25+ years</strong> connecting data, artificial intelligence and business decisions. I design strategies, analytical products, intelligent automation and adoption programs that help organizations turn technical complexity into real transformation capabilities."><strong>25+ años</strong> conectando datos, inteligencia artificial y decisiones de negocio. Diseño estrategias, productos analíticos, automatizaciones inteligentes y programas de adopción que ayudan a las organizaciones a convertir la complejidad técnica en capacidades reales de transformación.</p>
+    <div class="hero-meta">
+      <span>📍 Bogotá, Colombia</span>
+      <span>✉️ <a href="mailto:mail@javierforero.com" style="color:#fff">mail@javierforero.com</a></span>
+      <span>📞 +57 320 838 3457</span>
+      <span>🔗 <a href="https://www.linkedin.com/in/jforero/" style="color:#fff" target="_blank" rel="noopener">linkedin.com/in/jforero</a></span>
+    </div>
+    <div class="hero-cta">
+      <button class="btn secondary" onclick="downloadCV()" data-en="⬇ Download CV">⬇ Descargar CV</button>
+      <a class="btn ghost" href="#proyectos" data-en="View projects">Ver proyectos</a>
+      <a class="btn ghost" href="#contacto" data-en="Get in touch">Contactar</a>
+    </div>
+    <div class="hero-chips" aria-label="Especialidades">
+      <span class="badge" data-en="Generative AI &amp; LLMs">IA Generativa y LLMs</span>
+      <span class="badge" data-en="Advanced Analytics">Analítica Avanzada</span>
+      <span class="badge" data-en="AI Strategy &amp; Governance">Estrategia y Gobierno de IA</span>
+      <span class="badge" data-en="Intelligent automation">Automatización inteligente</span>
+      <span class="badge" data-en="Cloud (AWS · Azure · GCP)">Nube (AWS · Azure · GCP)</span>
+      <span class="badge" data-en="Data storytelling">Storytelling con datos</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ IMPACT SNAPSHOT ============ -->
+<section class="section" id="snapshot" aria-label="Métricas de impacto" style="padding-top:0">
+  <div class="wrap snapshot">
+    <div class="metrics">
+      <div class="metric">
+        <div class="num">25+</div>
+        <div class="lab" data-en="Years in data, analytics, AI and digital transformation">Años en datos, analítica, IA y transformación digital</div>
+        <span class="ev ev-doc" data-en="Documented" data-tip="Resultado documentado: trayectoria verificable de más de 25 años." data-en-tip="Documented result: verifiable track record of more than 25 years.">Documentado</span>
+      </div>
+      <div class="metric">
+        <div class="num" data-en="22+ yrs">+22 años</div>
+        <div class="lab" data-en="Longitudinal brand intelligence (RAC): 19 sectors · 120+ categories">Inteligencia longitudinal de branding (RAC): 19 sectores · 120+ categorías</div>
+        <span class="ev ev-doc" data-en="Documented" data-tip="Resultado documentado: análisis histórico del estudio RAC 2003–2025." data-en-tip="Documented result: historical analysis of the RAC study 2003–2025.">Documentado</span>
+      </div>
+      <div class="metric">
+        <div class="num">NPS &gt;85</div>
+        <div class="lab" data-en="Public institutional average in AI training (Asuntos Digitales)">Promedio público institucional en formación de IA (Asuntos Digitales)</div>
+        <span class="ev ev-pub" data-en="Public average" data-tip="Promedio público institucional de la escuela. No corresponde a un diplomado específico." data-en-tip="Public institutional average of the school. Not tied to a specific program.">Promedio público</span>
+      </div>
+      <div class="metric">
+        <div class="num">70+</div>
+        <div class="lab" data-en="Credentials in AI, data, cloud, analytics, product and leadership">Credenciales en IA, datos, cloud, analítica, producto y liderazgo</div>
+        <span class="ev ev-doc" data-en="Documented" data-tip="Resultado documentado: 70 certificaciones visibles en LinkedIn + programas extendidos." data-en-tip="Documented result: 70 certifications visible on LinkedIn + extended programs.">Documentado</span>
+      </div>
+      <div class="metric">
+        <div class="num">NPS 70 / 60</div>
+        <div class="lab" data-en="AI Productivity Tools — Collective Academy (two cohorts)">AI Productivity Tools — Collective Academy (dos cohortes)</div>
+        <span class="ev ev-doc" data-en="Documented" data-tip="Resultado documentado por cohorte en Collective Academy." data-en-tip="Result documented per cohort at Collective Academy.">Documentado</span>
+      </div>
+      <div class="metric">
+        <div class="num">+300 K</div>
+        <div class="lab" data-en="Views of educational content on YouTube">Visualizaciones de contenidos educativos en YouTube</div>
+        <span class="ev ev-rep" data-en="Reported" data-tip="Dato reportado por Javier. Métrica dinámica, se revisa periódicamente." data-en-tip="Reported by Javier. Dynamic metric, reviewed periodically.">Dato reportado</span>
+      </div>
+      <div class="metric">
+        <div class="num">3 clouds</div>
+        <div class="lab" data-en="Experience across AWS, Microsoft Azure and Google Cloud">Experiencia en AWS, Microsoft Azure y Google Cloud</div>
+        <span class="ev ev-doc" data-en="Documented" data-tip="Resultado documentado: experiencia en los tres ecosistemas cloud." data-en-tip="Documented result: experience across the three cloud ecosystems.">Documentado</span>
+      </div>
+      <div class="metric">
+        <div class="num">14 + 1</div>
+        <div class="lab" data-en="Inspire Awards and 1 Encore Award at Johnson &amp; Johnson">Inspire Awards y 1 Encore Award en Johnson &amp; Johnson</div>
+        <span class="ev ev-doc" data-en="Documented" data-tip="Resultado documentado: reconocimientos listados en el perfil profesional." data-en-tip="Documented result: awards listed in the professional profile.">Documentado</span>
+      </div>
+    </div>
+    <p style="font-size:11.5px;color:var(--muted);margin-top:14px" data-en="Each metric is classified by evidence type. Hover over each label to see its scope. Metrics that are targets, expected KPIs or pending data are not presented as achievements.">Cada métrica está clasificada por tipo de evidencia. Pase el cursor sobre cada etiqueta para ver su alcance. No se presentan como logros métricas que son objetivos, KPIs esperados o datos pendientes de confirmar.</p>
+  </div>
+</section>
+
+<!-- ============ PROPUESTA DE VALOR ============ -->
+<section class="section" id="valor">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-title" data-en="Value proposition">Propuesta de valor</div>
+      <h2 class="section-h" data-en="From AI curiosity to measurable execution">De la curiosidad por la IA a la ejecución medible</h2>
+    </div>
+    <div class="vp-lead" data-en="I turn data, artificial intelligence and automation into decisions, analytical products, organizational capabilities and sustainable business results — connecting strategy, data, AI, cloud, governance, adoption and executive storytelling.">Convierto datos, inteligencia artificial y automatización en decisiones, productos analíticos, capacidades organizacionales y resultados de negocio sostenibles — conectando estrategia, datos, IA, cloud, gobierno, adopción y storytelling ejecutivo.</div>
+    <div class="pillars">
+      <div class="card pillar"><h4 data-en="Business–technology translator">Traductor negocio–tecnología</h4><p data-en="I turn complex problems into solutions that executive and technical stakeholders can understand.">Convierto problemas complejos en soluciones comprensibles para stakeholders ejecutivos y técnicos.</p></div>
+      <div class="card pillar"><h4 data-en="AI capability architect">Arquitecto de capacidades de IA</h4><p data-en="I design roadmaps, MVPs, success criteria, governance and organizational adoption.">Diseño roadmaps, MVPs, criterios de éxito, gobierno y adopción organizacional.</p></div>
+      <div class="card pillar"><h4 data-en="Data scientist with statistical rigor">Científico de datos con criterio estadístico</h4><p data-en="I bring methodological, analytical and measurement rigor to every initiative.">Aporto rigor metodológico, analítico y de medición a cada iniciativa.</p></div>
+      <div class="card pillar"><h4 data-en="Implementation-focused consultant">Consultor orientado a implementación</h4><p data-en="I design solutions connected to real processes, not just conceptualizations.">Diseño soluciones conectadas con procesos reales, no solo conceptualizaciones.</p></div>
+      <div class="card pillar"><h4 data-en="Educator and facilitator">Educador y facilitador</h4><p data-en="I train technical and non-technical audiences in AI, analytics and productivity.">Formo audiencias técnicas y no técnicas en IA, analítica y productividad.</p></div>
+      <div class="card pillar"><h4 data-en="Data storyteller">Storyteller de datos</h4><p data-en="I communicate insights with clarity, structure and executive impact.">Comunico insights con claridad, estructura e impacto ejecutivo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROYECTOS ============ -->
+<section class="section" id="proyectos" style="background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-title" data-en="Projects &amp; featured cases">Proyectos y casos destacados</div>
+      <h2 class="section-h" data-en="Evidence of how I turn data and AI into capabilities">Evidencia de cómo convierto datos e IA en capacidades</h2>
+      <p class="section-sub" data-en="Filter by initiative type, or search by technology, client or keyword. Click any card to see the full case: context, challenge, role, solution, stack and evidence classification.">Filtre por tipo de iniciativa, o busque por tecnología, cliente o palabra clave. Haga clic en cualquier tarjeta para ver el caso completo: contexto, reto, rol, solución, stack y clasificación de evidencia.</p>
+    </div>
+    <label class="search-box proj-search" aria-label="Buscar proyectos">
+      <span aria-hidden="true">🔎</span>
+      <input type="search" id="search" placeholder="Buscar: RAG, Power BI, J&amp;J…" data-en-attr="placeholder" data-en="Search: RAG, Power BI, J&amp;J…" autocomplete="off">
+    </label>
+    <div class="filters" id="projFilters" role="tablist" aria-label="Filtrar proyectos">
+      <button class="chip active" data-f="all" data-en="All">Todos</button>
+      <button class="chip" data-f="ai" data-en="AI Strategy &amp; Adoption">Estrategia y Adopción de IA</button>
+      <button class="chip" data-f="genai" data-en="GenAI &amp; Automation">GenAI y Automatización</button>
+      <button class="chip" data-f="analytics" data-en="Analytics Products">Productos Analíticos</button>
+      <button class="chip" data-f="public" data-en="Public Sector / Volunteering">Sector público / Voluntariado</button>
+      <button class="chip" data-f="teaching" data-en="Teaching &amp; Adoption">Docencia y Adopción</button>
+      <button class="chip" data-f="corporate" data-en="Corporate Data &amp; BI">Datos Corporativos y BI</button>
+      <button class="chip" data-f="creative" data-en="Own products">Productos propios</button>
+    </div>
+    <div class="grid-3" id="projGrid"></div>
+    <p class="empty" id="projEmpty" data-en="No projects found for that filter or search.">No se encontraron proyectos para ese filtro o búsqueda.</p>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCIA ============ -->
+<section class="section" id="experiencia">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-title" data-en="Professional experience · Timeline">Experiencia profesional · Timeline</div>
+      <h2 class="section-h" data-en="Over two decades connecting data and decisions">Más de dos décadas conectando datos y decisiones</h2>
+    </div>
+    <div class="tl-wrap">
+      <button class="tl-arrow tl-prev" aria-label="Anterior" data-en-attr="aria-label" data-en="Previous">‹</button>
+      <button class="tl-arrow tl-next" aria-label="Siguiente" data-en-attr="aria-label" data-en="Next">›</button>
+      <div class="tl" id="tl">
+      <article class="tl-item" tabindex="0">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <div class="per" data-en="2024 — Present">2024 — Actualidad</div>
+        <div class="tl-card">
+        <h4 data-en="Analytics, AI &amp; Digital Transformation Consultant">Consultor en Analítica, IA y Transformación Digital</h4>
+        <div class="org" data-en="Independent consulting · Colombia / Global">Consultoría independiente · Colombia / Global</div>
+        <p data-en="I lead strategic advanced analytics, machine learning and applied AI projects for organizations across industries, acting as a strategic partner to executive areas. I design and implement end-to-end solutions —from problem definition to production deployment—, orchestrate data- and AI-driven automation, and advise on data strategy, AI governance and organizational adoption.">Lidero proyectos estratégicos de analítica avanzada, machine learning e IA aplicada para organizaciones de distintas industrias, actuando como socio estratégico de áreas ejecutivas. Diseño e implemento soluciones end-to-end —desde la definición del problema hasta el despliegue productivo—, orquesto automatización basada en datos e IA, y asesoro en estrategia de datos, gobierno de IA y adopción organizacional.</p>
+        </div>
+      </article>
+      <article class="tl-item" tabindex="0">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <div class="per" data-en="2025 — Present">2025 — Actualidad</div>
+        <div class="tl-card">
+        <h4 data-en="Lecturer and facilitator in applied AI">Docente y facilitador en IA aplicada</h4>
+        <div class="org">Asuntos Digitales · Universidad Militar Nueva Granada · Collective Academy</div>
+        <p data-en="Applied AI training for LATAM audiences and academic programs: diplomas in productivity, marketing, operations, sales and business; generative AI, Legal Tech, ethics and research. Public institutional NPS &gt;85 (Asuntos Digitales); NPS 70/60 and 40/50 documented at Collective Academy.">Formación en IA aplicada para audiencias LATAM y programas académicos: diplomados de productividad, marketing, operaciones, ventas y negocios; IA generativa, Legal Tech, ética e investigación. NPS público institucional &gt;85 (Asuntos Digitales); NPS 70/60 y 40/50 documentados en Collective Academy.</p>
+        </div>
+      </article>
+      <article class="tl-item" tabindex="0">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <div class="per">2021 — 2024</div>
+        <div class="tl-card">
+        <h4 data-en="Data Scientist / Analytics Lead — Corporate Business Technology">Data Scientist / Líder de Analítica — Corporate Business Technology</h4>
+        <div class="org">Johnson &amp; Johnson · Global</div>
+        <p data-en="Contributed to the design and implementation of AI, GenAI and advanced analytics solutions for global corporate functions (HR, Finance, Procurement and Legal), focused on automation, insight generation, data governance and responsible adoption. 14 Inspire Awards and 1 Encore Award.">Contribuí al diseño e implementación de soluciones de IA, GenAI y analítica avanzada para funciones corporativas globales (HR, Finance, Procurement y Legal), con foco en automatización, generación de insights, gobierno de datos y adopción responsable. 14 Inspire Awards y 1 Encore Award.</p>
+        </div>
+      </article>
+      <article class="tl-item" tabindex="0">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <div class="per">2018 — 2021</div>
+        <div class="tl-card">
+        <h4 data-en="BI &amp; Advanced Analytics — Procurement Shared Services Americas">BI &amp; Advanced Analytics — Procurement Shared Services Americas</h4>
+        <div class="org">Johnson &amp; Johnson · Regional</div>
+        <p data-en="Led Business Intelligence, predictive and prescriptive analytics capabilities for Procurement Americas, automating analysis, integrating data flows and enabling decisions with real-time signals. Contributed to a center of excellence in user experience and NLP.">Lideré capacidades de Business Intelligence, analítica predictiva y prescriptiva para Procurement Americas, automatizando análisis, integrando flujos de datos y habilitando decisiones con señales en tiempo real. Contribución a un centro de excelencia en experiencia de usuario y NLP.</p>
+        </div>
+      </article>
+      <article class="tl-item" tabindex="0">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <div class="per" data-en="Apr 2013 — Dec 2017">abr. 2013 — dic. 2017</div>
+        <div class="tl-card">
+        <h4 data-en="Digital &amp; Data Director">Director de Digital y Datos</h4>
+        <div class="org" data-en="MEC / GroupM · Colombia">MEC / GroupM · Colombia</div>
+        <p data-en="Led a consultancy team delivering intelligent business-analysis outputs for clients through the latest data-visualization tools and sophisticated BI platforms. Special emphasis on digital analytics for performance clients, defining trafficking guidelines and delivering analytics for campaign and content optimization.">Lideré un equipo de consultoría entregando análisis de negocio inteligente para clientes mediante las últimas herramientas de visualización de datos y plataformas avanzadas de BI. Énfasis especial en analítica digital para clientes de performance, definiendo lineamientos de trafficking y entregando analítica para la optimización de campañas y contenidos.</p>
+        </div>
+      </article>
+      <article class="tl-item" tabindex="0">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <div class="per" data-en="Oct 2010 — Mar 2013">oct. 2010 — mar. 2013</div>
+        <div class="tl-card">
+        <h4 data-en="Analytics &amp; Insight LatAm Managing Partner">Managing Partner de Analytics &amp; Insight — LatAm</h4>
+        <div class="org" data-en="MEC Global / GroupM · Miami, USA">MEC Global / GroupM · Miami, EE. UU.</div>
+        <p data-en="Led the Analytics &amp; Insight division of this global communications agency for Latin America from the LatAm HUB in Miami, serving global and regional accounts across sectors such as consumer electronics, luxury and beauty, telecommunications, leisure and tourism, entertainment and FMCG. Partnered with regional A&amp;I heads to deliver the global product offer adapted to local client needs. Member of the Global Analytics &amp; Insight Board, representing LATAM's interests.">Dirigí la división de Analytics &amp; Insight de esta agencia global de comunicación para América Latina, desde el HUB LatAm en Miami, atendiendo cuentas globales y regionales en sectores como electrónica de consumo, lujo y belleza, telecomunicaciones, ocio y turismo, entretenimiento y consumo masivo. Trabajé con los líderes regionales de A&amp;I en la entrega de la oferta global de productos, adaptándola a las necesidades locales. Miembro del Global Analytics &amp; Insight Board, representando los intereses de LATAM.</p>
+        </div>
+      </article>
+      <article class="tl-item" tabindex="0">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <div class="per" data-en="Aug 2008 — Sep 2010">ago. 2008 — sept. 2010</div>
+        <div class="tl-card">
+        <h4 data-en="Analytics &amp; Insight Director">Director de Analytics &amp; Insight</h4>
+        <div class="org" data-en="MEC Global Solutions · London, UK">MEC Global Solutions · Londres, Reino Unido</div>
+        <p data-en="Led projects with international clients from the London global hub, consolidating consultancy and data-management expertise. Created innovative reporting tools for clients and global R&amp;D, earning special recognition from clients and partner companies. Active participation in the digital immersion program and support for new-business pitches globally, across FMCG, telecommunications, pharmaceutical, finance, digital, luxury and entertainment clients.">Lideré proyectos con clientes internacionales desde el hub global de Londres, consolidando experiencia consultiva y de gestión de datos. Creé herramientas de reporting innovadoras para clientes y para I+D global, con reconocimiento especial de clientes y compañías aliadas. Participación activa en el programa de inmersión digital y soporte a pitches de nuevo negocio a nivel global, con clientes de consumo masivo, telecomunicaciones, farmacéutico, finanzas, digital, lujo y entretenimiento.</p>
+        </div>
+      </article>
+      <article class="tl-item" tabindex="0">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <div class="per" data-en="Apr 2000 — Jul 2008">abr. 2000 — jul. 2008</div>
+        <div class="tl-card">
+        <h4 data-en="Research Director">Director de Investigación</h4>
+        <div class="org" data-en="MEC Colombia · Bogotá">MEC Colombia · Bogotá</div>
+        <p data-en="Delivered analytics and insight as part of clients' communication platforms across banking, technology, pharmaceutical, FMCG, B2B, B2C, entertainment, retail, education, health, automotive, government and tourism. Advised on research solutions and ad-hoc propositions, with command of methodologies such as brand equity, media audiences, consumer segmentation and pre/post testing. Led process efficiencies and internal media training, and participated in new-business pitches. Active in industry committees (IBOPE, EGM, TGI, CICMA) and auditing of syndicated studies.">Entregué analítica e insight como parte de las plataformas de comunicación de clientes en sectores como banca, tecnología, farmacéutico, consumo masivo, B2B, B2C, entretenimiento, retail, educación, salud, automotriz, gobierno y turismo. Asesoré soluciones de investigación y propuestas ad-hoc, con dominio de metodologías como brand equity, audiencias de medios, segmentación de consumidores y pruebas pre y post. Lideré eficiencias de procesos y formación interna en medios, y participé en pitches de nuevo negocio. Participación en comités gremiales (IBOPE, EGM, TGI, CICMA) y auditoría de estudios sindicados.</p>
+        </div>
+      </article>
+      <article class="tl-item" tabindex="0">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <div class="per" data-en="Jun 1998 — Apr 2000">jun. 1998 — abr. 2000</div>
+        <div class="tl-card">
+        <h4 data-en="Research Director">Director de Investigación</h4>
+        <div class="org" data-en="Toro D'Arcy (now Arena Communications) · Colombia">Toro D'Arcy (hoy Arena Communications) · Colombia</div>
+        <p data-en="Within the media department: cost and TV-audience analysis, monitoring negotiations and cost-value efficiency; development of automation processes for negotiation analysis. Member of the technical forum and committee for the EGM media-consumption study in Colombia, supporting credentials decks and consumer/audience analysis for new-business pitches.">En el departamento de medios: análisis de costo y audiencia en TV, monitoreo de negociaciones y eficiencia de costo-valor; desarrollo de procesos de automatización para el análisis de negociaciones. Miembro del foro técnico y comité del estudio EGM de consumo de medios en Colombia, con soporte a credenciales y análisis de consumidores y audiencias para pitches de nuevo negocio.</p>
+        </div>
+      </article>
+      </div>
+      <div class="tl-dots" id="tlDots" aria-hidden="true"></div>
+      <p class="tl-hint" data-en="Swipe to explore →">Desliza para explorar →</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS / CAPACIDADES ============ -->
+<section class="section" id="skills" style="background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-title" data-en="Capability system">Sistema de capacidades</div>
+      <h2 class="section-h" data-en="Competencies by domain, with linked evidence">Competencias por dominio, con evidencia asociada</h2>
+      <p class="section-sub" data-en="Each domain groups skills, the projects where they apply and keywords for ATS processes.">Cada dominio agrupa skills, proyectos donde se aplican y palabras clave para procesos ATS.</p>
+    </div>
+    <div class="tabs" id="skillTabs" role="tablist">
+      <button class="tab active" data-t="t1" data-en="AI Strategy &amp; Governance">Estrategia y Gobierno de IA</button>
+      <button class="tab" data-t="t2" data-en="Generative AI, LLMs &amp; Agents">IA Generativa, LLMs y Agentes</button>
+      <button class="tab" data-t="t3" data-en="Data Science &amp; ML">Ciencia de Datos y ML</button>
+      <button class="tab" data-t="t4" data-en="Analytics Products &amp; BI">Productos Analíticos y BI</button>
+      <button class="tab" data-t="t5" data-en="Cloud, MLOps &amp; Architecture">Cloud, MLOps y Arquitectura</button>
+      <button class="tab" data-t="t6" data-en="Product / Program / Consulting">Producto / Programa / Consultoría</button>
+      <button class="tab" data-t="t7" data-en="Teaching &amp; Adoption">Docencia y Adopción</button>
+    </div>
+
+    <div class="tabpanel active" id="t1">
+      <div class="card">
+        <p style="margin:0 0 12px;color:var(--text)" data-en="I design AI capabilities connected to the business: governance, roadmaps, use-case prioritization, success criteria, operating models and adoption.">Diseño capacidades de IA conectadas con el negocio: gobierno, roadmaps, priorización de casos de uso, criterios de éxito, modelos operativos y adopción.</p>
+        <div>
+          <span class="badge">AI Strategy</span><span class="badge">AI Governance</span><span class="badge">Responsible AI</span><span class="badge">Use Case Prioritization</span><span class="badge">Operating Model</span><span class="badge">Human-in-Control</span><span class="badge">AI Policy</span><span class="badge">Roadmaps</span>
+        </div>
+        <p style="margin:14px 0 0;font-size:13px;color:var(--muted)" data-en-html="<strong>Evidence:</strong> Johnson &amp; Johnson CBT · Connect Bogotá / Impulso IA 360 · Asuntos Digitales · Corporate AI policy (Preflex)."><strong>Evidencia:</strong> Johnson &amp; Johnson CBT · Connect Bogotá / Impulso IA 360 · Asuntos Digitales · Política corporativa de IA (Preflex).</p>
+      </div>
+    </div>
+    <div class="tabpanel" id="t2">
+      <div class="card">
+        <p style="margin:0 0 12px;color:var(--text)" data-en="Generative AI applied to real processes: RAG, agents, multimodal document reading, automated narratives and prompt engineering.">IA generativa aplicada a procesos reales: RAG, agentes, lectura documental multimodal, narrativas automatizadas y prompt engineering.</p>
+        <div>
+          <span class="badge">Generative AI</span><span class="badge">LLMs</span><span class="badge">RAG</span><span class="badge">Agentic AI</span><span class="badge">Google Gemini</span><span class="badge">LangChain</span><span class="badge">LlamaIndex</span><span class="badge">Prompt Engineering</span><span class="badge">NLG</span>
+        </div>
+        <p style="margin:14px 0 0;font-size:13px;color:var(--muted)" data-en-html="<strong>Evidence:</strong> Preflex (invoices with Gemini) · RAC Insights 360 (AI narratives) · GenAI for Entrepreneurs · Prompt Advisor."><strong>Evidencia:</strong> Preflex (facturas con Gemini) · RAC Insights 360 (narrativas IA) · GenAI para Emprendedores · Asesor de Prompts.</p>
+      </div>
+    </div>
+    <div class="tabpanel" id="t3">
+      <div class="card">
+        <p style="margin:0 0 12px;color:var(--text)" data-en="Applied statistics, machine learning, predictive models, time series, NLP and text analytics with methodological rigor.">Estadística aplicada, machine learning, modelos predictivos, series temporales, NLP y text analytics con rigor metodológico.</p>
+        <div>
+          <span class="badge" data-en="Statistics">Estadística</span><span class="badge">Machine Learning</span><span class="badge">Predictive Modeling</span><span class="badge" data-en="Time Series">Series Temporales</span><span class="badge">NLP</span><span class="badge">Text Analytics</span><span class="badge">Python</span><span class="badge">PySpark</span><span class="badge">Forecasting</span>
+        </div>
+        <p style="margin:14px 0 0;font-size:13px;color:var(--muted)" data-en-html="<strong>Evidence:</strong> J&amp;J Procurement (predictive/prescriptive) · Databricks BNA (PySpark, Pareto, deseasonalization) · RAC (purchase prediction model)."><strong>Evidencia:</strong> J&amp;J Procurement (predictiva/prescriptiva) · Databricks BNA (PySpark, Pareto, desestacionalización) · RAC (modelo predictivo de compra).</p>
+      </div>
+    </div>
+    <div class="tabpanel" id="t4">
+      <div class="card">
+        <p style="margin:0 0 12px;color:var(--text)" data-en="Analytical products, executive dashboards, semantic models, KPIs and decision-oriented visualization.">Productos analíticos, dashboards ejecutivos, modelos semánticos, KPIs y visualización orientada a decisión.</p>
+        <div>
+          <span class="badge">Power BI</span><span class="badge">Tableau</span><span class="badge">Dashboards</span><span class="badge">KPIs</span><span class="badge">Data Storytelling</span><span class="badge" data-en="Semantic Models">Modelos semánticos</span><span class="badge">Market Intelligence</span>
+        </div>
+        <p style="margin:14px 0 0;font-size:13px;color:var(--muted)" data-en-html="<strong>Evidence:</strong> RAC Insights 360 (12 analytical modules) · SEC / Asoanei (Power BI) · J&amp;J BI."><strong>Evidencia:</strong> RAC Insights 360 (12 módulos analíticos) · SEC / Asoanei (Power BI) · J&amp;J BI.</p>
+      </div>
+    </div>
+    <div class="tabpanel" id="t5">
+      <div class="card">
+        <p style="margin:0 0 12px;color:var(--text)" data-en="Modern data architectures and AI deployment to production across the three main cloud ecosystems.">Arquitecturas de datos modernas y despliegue de IA en producción sobre los tres principales ecosistemas cloud.</p>
+        <div>
+          <span class="badge">AWS</span><span class="badge">Microsoft Azure</span><span class="badge">Google Cloud</span><span class="badge">Databricks</span><span class="badge">Microsoft Fabric</span><span class="badge">Data Mesh</span><span class="badge">Data Lake</span><span class="badge">Vertex AI</span><span class="badge">Azure ML</span><span class="badge">SAP Business One</span>
+        </div>
+        <p style="margin:14px 0 0;font-size:13px;color:var(--muted)" data-en-html="<strong>Evidence:</strong> NEICON (data architecture) · Preflex (SAP B1, SIADOC, GCP) · Yubarta REP · Databricks."><strong>Evidencia:</strong> NEICON (arquitectura de datos) · Preflex (SAP B1, SIADOC, GCP) · Yubarta REP · Databricks.</p>
+      </div>
+    </div>
+    <div class="tabpanel" id="t6">
+      <div class="card">
+        <p style="margin:0 0 12px;color:var(--text)" data-en="Consultative diagnosis, proposal design, phased roadmaps, stakeholder management and value creation.">Diagnóstico consultivo, diseño de propuestas, roadmaps por fases, gestión de stakeholders y creación de valor.</p>
+        <div>
+          <span class="badge">Advisory</span><span class="badge">Business Transformation</span><span class="badge">Roadmap</span><span class="badge">Stakeholder Management</span><span class="badge">MVP</span><span class="badge">Discovery</span><span class="badge">Agile / Scrum</span><span class="badge">Workshops</span>
+        </div>
+        <p style="margin:14px 0 0;font-size:13px;color:var(--muted)" data-en-html="<strong>Evidence:</strong> Impulso IA 360 · Preflex (production roadmap) · Yubarta (12 weeks) · RAC Evolution."><strong>Evidencia:</strong> Impulso IA 360 · Preflex (roadmap producción) · Yubarta (12 semanas) · RAC Evolution.</p>
+      </div>
+    </div>
+    <div class="tabpanel" id="t7">
+      <div class="card">
+        <p style="margin:0 0 12px;color:var(--text)" data-en="Executive and corporate training, data literacy, AI adoption and instructional design for diverse audiences.">Formación ejecutiva y corporativa, alfabetización en datos, adopción de IA y diseño pedagógico para audiencias diversas.</p>
+        <div>
+          <span class="badge">Executive Education</span><span class="badge">AI Training</span><span class="badge">Data Literacy</span><span class="badge">Corporate Adoption</span><span class="badge">Workshops</span><span class="badge">Curriculum Design</span><span class="badge">Public Speaking</span>
+        </div>
+        <p style="margin:14px 0 0;font-size:13px;color:var(--muted)" data-en-html="<strong>Evidence:</strong> Asuntos Digitales (5 programs, NPS &gt;85) · UMNG (2 diplomas) · Collective Academy (NPS 70/60) · Crehana."><strong>Evidencia:</strong> Asuntos Digitales (5 programas, NPS &gt;85) · UMNG (2 diplomados) · Collective Academy (NPS 70/60) · Crehana.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INDUSTRIAS ============ -->
+<section class="section" id="industrias">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-title" data-en="Industries and domains">Industrias y dominios</div>
+      <h2 class="section-h" data-en="Where I have applied data and AI">Donde he aplicado datos e IA</h2>
+    </div>
+    <div class="grid-4">
+      <div class="card ind"><h4 data-en="Health &amp; Consumer Health">Salud &amp; Consumer Health</h4><p data-en="Johnson &amp; Johnson — global functions, procurement, precision and data.">Johnson &amp; Johnson — funciones globales, procurement, precisión y datos.</p></div>
+      <div class="card ind"><h4 data-en="Manufacturing &amp; Industry">Manufactura &amp; Industria</h4><p data-en="Preflex — Procure-to-Pay, demand and production planning.">Preflex — Procure-to-Pay, planeación de demanda y producción.</p></div>
+      <div class="card ind"><h4 data-en="Marketing, Media &amp; Branding">Marketing, Medios &amp; Branding</h4><p data-en="GroupM / Wavemaker / MEC · RAC Study · creative agencies.">GroupM / Wavemaker / MEC · Estudio RAC · agencias creativas.</p></div>
+      <div class="card ind"><h4 data-en="Public Sector &amp; Territory">Sector público &amp; Territorio</h4><p data-en="CivisAI (Bogotá Planning) · Top 5 Route Cundinamarca (IDC).">CivisAI (Planeación Bogotá) · Ruta Top 5 Cundinamarca (IDC).</p></div>
+      <div class="card ind"><h4 data-en="Circular Economy &amp; Sustainability">Economía circular &amp; Sostenibilidad</h4><p data-en="Yubarta / SEC — REP platform, environmental traceability.">Yubarta / SEC — plataforma REP, trazabilidad ambiental.</p></div>
+      <div class="card ind"><h4 data-en="Education &amp; EdTech">Educación &amp; EdTech</h4><p>Asuntos Digitales · UMNG · Collective Academy · Crehana.</p></div>
+      <div class="card ind"><h4 data-en="Retail &amp; Consumer Goods">Retail &amp; Bienes de consumo</h4><p data-en="Databricks BNA — analysis by industry, Pareto, time series.">Databricks BNA — análisis por industria, Pareto, series temporales.</p></div>
+      <div class="card ind"><h4 data-en="LegalTech &amp; Legal AI">LegalTech &amp; IA Jurídica</h4><p data-en="UMNG — generative-AI diplomas applied to Law: document analysis, legal research, ethics and professional automation.">UMNG — diplomados de IA generativa aplicada al Derecho: análisis documental, investigación jurídica, ética y automatización profesional.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCACIÓN ============ -->
+<section class="section" id="educacion" style="background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-title" data-en="Education &amp; academic training">Educación &amp; formación académica</div>
+      <h2 class="section-h" data-en="Statistical foundation and elite continuous learning">Base estadística y formación continua de élite</h2>
+    </div>
+    <div class="acc open">
+      <button class="acc-h" aria-expanded="true"><span><h4 data-en="Statistician — Universidad Nacional de Colombia">Estadístico — Universidad Nacional de Colombia</h4><div class="sub" data-en="1993 – 1998 · Time Series · Information Systems · Statistical Market Research">1993 – 1998 · Series de Tiempo · Sistemas de Información · Investigación de Mercados Estadística</div></span><span class="ico">+</span></button>
+      <div class="acc-c"><p data-en-html="<strong>Degree thesis:</strong> Construction of the Colombian Stock Exchange price index using cointegration methods. Recurring participation in the International Statistics Symposium of Universidad Nacional (Non-Parametric Statistics, Quality Control, Social Research, Data Science), 1997–2024."><strong>Tesis de grado:</strong> Construcción del índice de precios de la Bolsa de Valores de Colombia mediante métodos de cointegración. Participación recurrente en el Simposio Internacional de Estadística de la Universidad Nacional (Estadística No Paramétrica, Control de Calidad, Investigación Social, Ciencia de Datos), 1997–2024.</p></div>
+    </div>
+    <div class="acc">
+      <button class="acc-h" aria-expanded="false"><span><h4>Data Science in Stratified Healthcare &amp; Precision Medicine — The University of Edinburgh</h4><div class="sub">Coursera · 2023</div></span><span class="ico">+</span></button>
+      <div class="acc-c"><p data-en="Data types and computational methods in stratified healthcare and precision medicine: sequence processing, image analysis, network and probabilistic modelling, machine learning, NLP, process modelling and graph data.">Tipos de datos y métodos computacionales en salud estratificada y medicina de precisión: procesamiento de secuencias, análisis de imágenes, modelamiento de redes y probabilístico, machine learning, NLP, modelamiento de procesos y datos en grafos.</p></div>
+    </div>
+    <div class="acc">
+      <button class="acc-h" aria-expanded="false"><span><h4>Data Science for All (DS4A) — Correlation One / MinTIC</h4><div class="sub" data-en="375-hour program · 2019">Programa de 375 horas · 2019</div></span><span class="ico">+</span></button>
+      <div class="acc-c"><p data-en="First generation of Data Scientists sponsored with support from Colombia's Ministry of Information Technologies and Communications. Intensive training in applied data science, analytics, Python and data-driven business problem solving.">Primera generación de Científicos de Datos patrocinada con apoyo del Ministerio de Tecnologías de la Información y las Comunicaciones de Colombia. Formación intensiva en ciencia de datos aplicada, analítica, Python y resolución de problemas de negocio basados en datos.</p></div>
+    </div>
+    <div class="acc">
+      <button class="acc-h" aria-expanded="false"><span><h4 data-en="Coursera Programs — Michigan &amp; Johns Hopkins">Programas en Coursera — Michigan &amp; Johns Hopkins</h4><div class="sub" data-en="Programming for Everybody (Python) · Data Science (5 courses) · 2016–2019">Programming for Everybody (Python) · Data Science (5 cursos) · 2016–2019</div></span><span class="ico">+</span></button>
+      <div class="acc-c"><p>University of Michigan — Programming for Everybody &amp; Python Data Structures. Johns Hopkins University — Crash Course in Data Science, The Data Scientist's Toolbox, Getting and Cleaning Data, Building a Data Science Team, Managing Data Analysis.</p></div>
+    </div>
+    <div class="acc">
+      <button class="acc-h" aria-expanded="false"><span><h4 data-en="Languages &amp; complementary training">Idiomas &amp; formación complementaria</h4><div class="sub" data-en="Advanced English · Digital leadership">Inglés avanzado · Liderazgo digital</div></span><span class="ico">+</span></button>
+      <div class="acc-c"><p data-en-html="Advanced business English (Saint George International; EF International Language Center). Digital Leadership Program — INALDE Business School / Google. Executive Leadership Flight Path — Twitter. <strong>Languages:</strong> Spanish native · English professional / advanced."><strong>Idiomas:</strong> Español nativo · Inglés profesional / avanzado. Inglés de negocios avanzado (Saint George International; EF International Language Center). Digital Leadership Program — INALDE Business School / Google. Executive Leadership Flight Path — Twitter.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CERTIFICACIONES ============ -->
+<section class="section" id="certificaciones">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-title" data-en="Certifications">Certificaciones</div>
+      <h2 class="section-h" data-en="70+ credentials in AI, data, cloud and leadership">70+ credenciales en IA, datos, cloud y liderazgo</h2>
+      <p class="section-sub" data-en="Filterable explorer · all 70 LinkedIn credentials, classified by domain.">Explorador filtrable por tema · las 70 credenciales de LinkedIn, clasificadas por dominio.</p>
+    </div>
+    <div class="filters" id="certFilters">
+      <button class="chip active" data-cf="all" data-en="All">Todas</button>
+      <button class="chip" data-cf="ai" data-en="AI · GenAI · LLMs · ML">IA · GenAI · LLMs · ML</button>
+      <button class="chip" data-cf="data" data-en="Data Science &amp; Visualization">Ciencia de Datos y Visualización</button>
+      <button class="chip" data-cf="py" data-en="Python &amp; ML Engineering">Python e Ingeniería de ML</button>
+      <button class="chip" data-cf="product" data-en="Product · Agile · Leadership">Producto · Agile · Liderazgo</button>
+      <button class="chip" data-cf="digital" data-en="Digital &amp; Analytics">Digital y Analítica</button>
+    </div>
+    <p class="cert-count" id="certCount"></p>
+    <!-- Contenedor padre compacto: scroll interno + fade. Las tarjetas .cert internas NO cambian. -->
+    <div class="cert-scroll" id="certScroll">
+      <div class="cert-grid" id="certGrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTENIDOS / ECOSISTEMA ============ -->
+<section class="section" id="content" style="background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-title" data-en="Publications &amp; digital ecosystem">Publicaciones &amp; ecosistema digital</div>
+      <h2 class="section-h" data-en="Content, talks and public solutions">Contenidos, charlas y soluciones públicas</h2>
+    </div>
+    <div class="eco">
+      <a class="card" href="https://javierforero.co/soluciones-ia/" target="_blank" rel="noopener"><h4 data-en="AI Solutions">Soluciones IA</h4><p data-en="Repository of solutions, prototypes and real examples of AI applied to productivity, creativity, automation and analysis.">Repositorio de soluciones, prototipos y ejemplos reales de aplicación de IA en productividad, creatividad, automatización y análisis.</p><span class="lnk">javierforero.co/soluciones-ia →</span></a>
+      <a class="card" href="https://www.youtube.com/@JavierForeroRuiz" target="_blank" rel="noopener"><h4 data-en="YouTube Channel">Canal de YouTube</h4><p data-en="Classes, explanations and outreach on AI, data science, analytics and digital transformation. +300 K views (reported).">Clases, explicaciones y divulgación sobre IA, ciencia de datos, analítica y transformación digital. +300 K visualizaciones (dato reportado).</p><span class="lnk">@JavierForeroRuiz →</span></a>
+      <a class="card" href="https://youtube.com/playlist?list=PLcyVLhA67gVyV96tGOEM_ONjpSiTwyfk0" target="_blank" rel="noopener"><h4 data-en="Talks &amp; conferences">Charlas &amp; conferencias</h4><p data-en="Playlist of public talks and sessions on AI, analytics, digital transformation, data and tech adoption.">Playlist de charlas y sesiones públicas sobre IA, analítica, transformación digital, datos y adopción tecnológica.</p><span class="lnk" data-en="View playlist →">Ver playlist →</span></a>
+      <a class="card" href="https://javierforero.co/" target="_blank" rel="noopener"><h4>Blog Philia Sophia</h4><p data-en="Point of view on data science, AI, analytics, technology, marketing, communication and strategic thinking.">Punto de vista sobre ciencia de datos, IA, analítica, tecnología, marketing, comunicación y pensamiento estratégico.</p><span class="lnk">javierforero.co →</span></a>
+      <a class="card" href="https://view.genially.com/661ab691ba07cc0014dc5201" target="_blank" rel="noopener"><h4 data-en="Maestro Digital — AI Tools">Maestro Digital — Herramientas IA</h4><p data-en="A living compendium of AI tools and platforms classified by purpose, constantly updated.">Compendio vivo de herramientas y plataformas de IA clasificadas por propósito, actualizado constantemente.</p><span class="lnk" data-en="View compendium →">Ver compendio →</span></a>
+      <a class="card" href="https://bit.ly/m/jforero" target="_blank" rel="noopener"><h4 data-en="Portfolio">Portafolio</h4><p data-en="Central access to Javier Forero's profile, links and professional materials.">Acceso central a perfil, enlaces y materiales profesionales de Javier Forero.</p><span class="lnk">bit.ly/m/jforero →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIOS ============ -->
+<section class="section" id="testimonios">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-title" data-en="Social proof &amp; validations">Prueba social &amp; validaciones</div>
+      <h2 class="section-h" data-en="What clients and colleagues say">Lo que dicen clientes y colegas</h2>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <p class="quote" data-en="&quot;We needed precision, not just automation. Javier's integration translated the technical complexity of our data into clear commercial insights. We gained agility and depth in delivering value to clients.&quot;">"Necesitábamos precisión, no solo automatización. La integración de Javier tradujo la complejidad técnica de nuestros datos en insights comerciales claros. Ganamos agilidad y profundidad en la entrega de valor al cliente."</p>
+        <div class="quote-who">Maritza Cárdenas Duarte</div>
+        <div class="quote-role" data-en="Commercial Director, B&amp;Optimos — RAC Evolution">Directora Comercial, B&amp;Optimos — RAC Evolution</div>
+      </div>
+      <div class="card">
+        <p class="quote" data-en="&quot;He understands exactly what is required, analyzes problems deeply and proposes innovative solutions that he executes quickly. A research &amp; insight partner I recommend without reservation.&quot;">"Entiende exactamente lo requerido, analiza los problemas con profundidad y propone soluciones innovadoras que ejecuta con rapidez. Un research &amp; insight partner que recomiendo sin reservas."</p>
+        <div class="quote-who">Charlie Hutchinson</div>
+        <div class="quote-role" data-en="Professional recommendation · LinkedIn">Recomendación profesional · LinkedIn</div>
+      </div>
+      <div class="card">
+        <p class="quote" data-en="&quot;Organized, proactive, transparent and client-focused. Open to suggestions, very responsive and committed — a valuable asset for any company.&quot;">"Organizado, proactivo, transparente y enfocado en el cliente. Abierto a sugerencias, muy responsive y comprometido — un activo valioso para cualquier compañía."</p>
+        <div class="quote-who">Noelia Monastirsky</div>
+        <div class="quote-role" data-en="Professional recommendation · LinkedIn">Recomendación profesional · LinkedIn</div>
+      </div>
+      <div class="card">
+        <p class="quote" data-en="&quot;Smart, hard-working, passionate and fun. The kind of person you would always want on your team. He stood out in the training programs within GroupM.&quot;">"Inteligente, trabajador, apasionado y divertido. La clase de persona que siempre querrías tener en tu equipo. Destacó en los programas de entrenamiento dentro de GroupM."</p>
+        <div class="quote-who">Paola Careglio</div>
+        <div class="quote-role" data-en="Professional recommendation · LinkedIn">Recomendación profesional · LinkedIn</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ JD STUDIO — Módulo PRIVADO del propietario (oculto a visitantes) ============ -->
+<!-- No hay enlace público. Se abre solo con Ctrl/Cmd + Shift + J, o con el hash #owner en la URL. -->
+<div class="jd-studio-bg" id="jdStudio" role="dialog" aria-modal="true" aria-label="JD Studio (privado)" hidden>
+  <div class="jd-studio">
+    <div class="jd-studio-head">
+      <div>
+        <p class="eyebrow" data-en="Private tool · owner only">Herramienta privada · solo propietario</p>
+        <h3 data-en="JD Studio — tailor your CV to a Job Description">JD Studio — adapta tu CV a una Job Description</h3>
+        <p class="jd-studio-sub" data-en="Paste a job description and the tool reorders your real experience, skills and projects to match it. Not shown to visitors or recruiters.">Pega una descripción de cargo y la herramienta reordena tu experiencia, skills y proyectos reales para alinearlos. No se muestra a visitantes ni reclutadores.</p>
+      </div>
+      <button class="modal-x" id="jdClose" aria-label="Cerrar">✕</button>
+    </div>
+    <div class="jd-studio-body">
+      <label class="jd-field">
+        <span data-en="Paste the Job Description">Pega la Job Description</span>
+        <textarea id="jdInput" rows="5" placeholder="Pega aquí el cargo, responsabilidades y requisitos…" data-en-attr="placeholder" data-en="Paste the role, responsibilities and requirements here…"></textarea>
+      </label>
+      <div class="jd-actions">
+        <button class="btn sm" id="jdAnalyze" data-en="Analyze &amp; tailor">Analizar y adaptar</button>
+        <button class="btn sm secondary" id="jdClear" data-en="Clear">Limpiar</button>
+        <label class="jd-file-lbl" data-en="…or attach a .txt">…o adjunta un .txt<input type="file" id="jdFile" accept=".txt,.md,.text" hidden></label>
+        <span class="jd-suggest" id="jdSuggest"></span>
+      </div>
+      <div class="jd-roles" id="jdRoles" aria-label="Rol objetivo">
+        <button class="jd-role active" data-r="product">Product Management</button>
+        <button class="jd-role" data-r="program">Program Management</button>
+        <button class="jd-role" data-r="aistrategy">AI Strategy</button>
+        <button class="jd-role" data-r="data">Data &amp; Analytics</button>
+        <button class="jd-role" data-r="digital">Digital Transformation</button>
+        <button class="jd-role" data-r="leadership">Leadership</button>
+        <button class="jd-role" data-r="consulting">Consulting</button>
+      </div>
+      <div class="jd-out" id="jdOut"></div>
+      <div class="jd-studio-foot">
+        <button class="btn sm" id="jdPrint" data-en="Print this variant">Imprimir esta variante</button>
+        <button class="btn sm secondary" id="jdCopy" data-en="Copy summary">Copiar resumen</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ CONTACTO ============ -->
+<section class="section" id="contacto" style="background:var(--white);border-top:1px solid var(--border)">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-title" data-en="Contact">Contacto</div>
+      <h2 class="section-h" data-en="Let's build a real AI capability, not just a proof of concept">Construyamos una capacidad real de IA, no solo una prueba de concepto</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Javier Forero</h3>
+        <p data-en="Analytics, Artificial Intelligence and Digital Transformation Consultant. Available for consulting, leadership of AI/data initiatives, executive teaching and talks.">Consultor en Analítica, Inteligencia Artificial y Transformación Digital. Disponible para consultoría, dirección de iniciativas de IA/datos, docencia ejecutiva y charlas.</p>
+        <ul class="contact-list">
+          <li>✉️ <a href="mailto:mail@javierforero.com">mail@javierforero.com</a></li>
+          <li>📞 <a href="tel:+573208383457">+57 320 838 3457</a></li>
+          <li>🔗 <a href="https://www.linkedin.com/in/jforero/" target="_blank" rel="noopener">linkedin.com/in/jforero</a></li>
+          <li>🌐 <a href="https://javierforero.co/" target="_blank" rel="noopener">javierforero.co</a></li>
+          <li>📁 <a href="https://bit.ly/m/jforero" target="_blank" rel="noopener">bit.ly/m/jforero</a></li>
+        </ul>
+      </div>
+      <div class="cta-side">
+        <div class="card"><h4 data-en="For recruiters">Para recruiters</h4><p data-en="Download a version of my CV tailored to the role you're hiring for.">Descarga una versión de mi CV adaptada al rol que estás buscando.</p><button class="btn sm" onclick="downloadCV()" data-en="⬇ Download CV">⬇ Descargar CV</button></div>
+        <div class="card"><h4 data-en="For clients">Para clientes</h4><p data-en="Let's talk about how to turn your data and processes into actionable decisions.">Conversemos sobre cómo convertir tus datos y procesos en decisiones accionables.</p><a class="btn sm secondary" href="mailto:mail@javierforero.com?subject=Consultor%C3%ADa%20IA%20y%20Datos" data-en="✉ Schedule a conversation">✉ Agendar conversación</a></div>
+        <div class="card"><h4 data-en="Explore more">Explora más</h4><p data-en="My projects, content and AI application cases.">Mis proyectos, contenidos y casos de aplicación de IA.</p><a class="btn sm secondary" href="#proyectos" data-en="View projects">Ver proyectos</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap footer-in">
+    <div>
+      <h4>Javier Forero</h4>
+      <p>Senior Data Scientist · AI Strategy Consultant · Digital Transformation Advisor</p>
+      <p>Bogotá, Colombia · +57 320 838 3457 · mail@javierforero.com</p>
+    </div>
+    <div class="footer-links">
+      <a href="#proyectos" data-en="Projects">Proyectos</a>
+      <a href="#experiencia" data-en="Experience">Experiencia</a>
+      <a href="#skills" data-en="Capabilities">Capacidades</a>
+      <a href="#certificaciones" data-en="Certifications">Certificaciones</a>
+      <a href="https://www.linkedin.com/in/jforero/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://javierforero.co/" target="_blank" rel="noopener">Web</a>
+    </div>
+  </div>
+  <div class="wrap"><div class="footer-bottom" data-en-html="© <span id=&quot;year&quot;></span> Javier Forero · Executive Intelligence Platform. Metrics are shown classified by evidence type (documented · public average · reported · target KPI · expected impact · pending), without claiming unconfirmed data as achievements.">© <span id="year"></span> Javier Forero · Executive Intelligence Platform. Las métricas se presentan clasificadas por tipo de evidencia (documentado · promedio público · dato reportado · KPI objetivo · impacto esperado · pendiente), sin afirmar como logros datos no confirmados.</div></div>
+</footer>
+
+<button class="totop" id="toTop" aria-label="Volver arriba">↑</button>
+
+<!-- ============ MODAL ============ -->
+<div class="modal-bg" id="modalBg" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal" id="modal">
+    <div class="modal-hero">
+      <button class="modal-x" id="modalX" aria-label="Cerrar">✕</button>
+      <div class="ptype" id="modalType"></div>
+      <h3 id="modalTitle"></h3>
+      <div class="pmeta" id="modalMeta"></div>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+/* =========================================================
+   DATOS — PROYECTOS (fuente: documentos del proyecto)
+   evidence labels: doc | kpi | exp | pen
+   ========================================================= */
+const EV={doc:['Documentado','ev-doc'],pub:['Promedio público','ev-pub'],rep:['Dato reportado','ev-rep'],kpi:['KPI objetivo','ev-kpi'],exp:['Impacto esperado','ev-exp'],pen:['Pendiente','ev-pen']};
+const PROJECTS=[
+ {id:'preflex-facturas',cat:'genai',type:'GenAI · Automatización P2P',title:'Preflex — Automatización inteligente de facturas',period:'2025',client:'Preflex',ev:'kpi',
+  summary:'Solución E2E Procure-to-Pay con GenAI, SAP Business One, SIADOC y Google Gemini.',
+  tags:['Generative AI','Google Gemini','SAP Business One','SIADOC','GCP'],
+  context:'Ciclo de facturas de proveedores con captura, validación contra OC/recepciones, contabilización y archivo auditable.',
+  challenge:'Reducir intervención manual y errores en el posteo de facturas manteniendo trazabilidad, control y gestión de excepciones.',
+  role:'Consultor técnico — diseño de la solución, arquitectura GenAI y definición del MVP.',
+  solution:['Captura desde buzón de facturación y lectura multimodal (PDF/XML/correo) con Gemini.','Extracción de NIT, número, fecha, impuestos, líneas, total y OC.','Match contra OC/Recepción en SAP B1; validaciones 2-way / 3-way con matriz de tolerancias.','Posteo de A/P Invoice, archivo cruzado en SIADOC y gestión de excepciones con SLA.','Auditoría, idempotencia, control de duplicados, trazas y tablero de KPIs.'],
+  stack:'SAP Business One · SIADOC · Google Gemini · GCP · Service Layer / DI API · reglas declarativas.',
+  metrics:[['STP esperado 70–80% de facturas posteadas sin intervención humana','kpi'],['Match ≥95% · extracción ≥99,5% · reducción de ciclo 60–80% vs baseline · ≥90% excepciones en SLA','kpi']],
+  note:'Cifras = criterios de salida / objetivos del MVP. No se presentan como resultados reales hasta validar ejecución.'},
+
+ {id:'preflex-produccion',cat:'genai',type:'Automatización industrial',title:'Preflex — Planeación de demanda y órdenes de producción',period:'2026',client:'Preflex',ev:'exp',
+  summary:'Roadmap para conectar forecast, SAP B1, WMS, calendario intranet, motor de reglas y captura en planta.',
+  tags:['Automatización','SAP B1','WMS','RPA','Motor de reglas'],
+  context:'Planeación de demanda y lanzamiento de órdenes de producción manteniendo FlowSoft como forecast y SAP B1 como fuente de verdad.',
+  challenge:'Reducir intervención manual sin reemplazar FlowSoft ni obligar a operarios a interactuar directamente con SAP.',
+  role:'Consultor estratégico — diseño del roadmap de automatización industrial por fases.',
+  solution:['FlowSoft como origen del sugerido/predicción inicial.','Programación conectada al calendario visual de intranet.','SAP B1 como fuente de verdad; WMS conectado; motor de reglas para programación y validación.','Captura operativa en planta con apps simples/tablets y trazabilidad end-to-end por orden.'],
+  stack:'SAP Business One · FlowSoft · WMS · Service Layer / DI API · RPA · apps operativas.',
+  metrics:[['Potencial de cobertura ~70% de órdenes en plantas 1 y 2','exp'],['Forecast operativo, órdenes automáticas, validaciones y control de piso digital','exp']],
+  note:'Alcance comunicado como potencial inicial; métricas reales de reducción de tiempos y ROI requieren baseline operativo. Roadmap 16–20 semanas.'},
+
+ {id:'rac-insights-360',cat:'analytics',type:'Producto analítico · Market Intelligence',title:'RAC Insights 360 — Inteligencia longitudinal de marca',period:'2025',client:'B&Optimos',ev:'doc',
+  summary:'Base longitudinal 2003–2025, 12 módulos analíticos y narrativas ejecutivas con IA.',
+  tags:['Branding Analytics','Longitudinal Data','Dashboards','AI Narratives','Predictive'],
+  context:'Estudio RAC como activo analítico longitudinal de recordación de marca, actitudes y decisión de compra en Colombia.',
+  challenge:'Convertir 22+ años de datos históricos en inteligencia accionable, con análisis dinámico por sector, categoría, marca y target.',
+  role:'Diseño analítico, infraestructura de datos y framework de automatización de insights.',
+  solution:['Consolidación de base histórica 2003–2025 con 19 sectores y 120+ categorías.','Consulta dinámica por mes, trimestre, año y target.','12 módulos analíticos (Brand Momentum, Matriz RAC, Modelo Predictivo de Compra, Brand Velocity, Gap de Conversión, etc.).','Narrativas automatizadas "Qué – Y qué – Ahora qué" con Step-Back Prompting y Tree-of-Thoughts.'],
+  stack:'Base longitudinal · dashboards · Google Gemini · modelos predictivos.',
+  metrics:[['Base 2003–2025 · 19 sectores · 120+ categorías','doc'],['12 módulos analíticos automatizados con narrativas IA','doc']],
+  note:'Sin ROI documentado aún: se comunica como producto de automatización y escalamiento analítico, no como ahorro probado.'},
+
+ {id:'rac-evolution',cat:'analytics',type:'Evolución de producto analítico',title:'RAC Evolution — Filtro TARGET y rediseño',period:'2025–2026',client:'B&Optimos / Estudio RAC',ev:'exp',
+  summary:'Nuevo filtro TARGET y recálculo selectivo de indicadores con control de costos cloud.',
+  tags:['Dashboards','Segmentación','Cloud / S3','Market Intelligence'],
+  context:'Evolución del dashboard RAC para incorporar segmentación avanzada por target.',
+  challenge:'Ampliar el valor comercial del análisis equilibrando profundidad, desempeño y costos cloud.',
+  role:'Diseño de la evolución de producto y estrategia técnica add-on.',
+  solution:['Nuevo filtro TARGET y recálculo de indicadores por segmento.','Rediseño del dashboard para alojar filtros adicionales.','Priorización de los últimos 5 años para controlar rendimiento y costos.','Estrategia add-on que reutiliza infraestructura e inversión previa.'],
+  stack:'Dashboard RAC · recálculo de indicadores · arquitectura cloud/S3.',
+  metrics:[['Ampliación del valor comercial vía segmentación por target','exp'],['Recálculo limitado a 5 años para balancear costo/desempeño','doc']],
+  note:'Pendiente validar costo incremental de cloud, tiempo de recálculo y disposición de pago del cliente.'},
+
+ {id:'sec-asoanei',cat:'public',type:'Datos · Gobernanza · BI',title:'SEC / Asoanei — Modelo de datos y Power BI',period:'2025',client:'SEC Colombia / Swisscontact / Asoanei',ev:'doc',
+  summary:'Modelo de datos unificado, visión 360° del productor, gobernanza y roadmap Microsoft.',
+  tags:['Power BI','Microsoft Fabric','Purview','Data Governance','SharePoint'],
+  context:'Misión de consultoría voluntaria para unificar datos de Asoanei con trazabilidad y visión 360° del productor.',
+  challenge:'Habilitar decisiones más rápidas mejorando calidad, oportunidad y uso de la información.',
+  role:'Líder de la misión — diseño e implementación inicial del modelo, dashboard y roadmap.',
+  solution:['Modelo de datos unificado con visión 360° y trazabilidad operativa.','Glosario, diccionario de datos y roles.','Dashboard Power BI y resolución de acceso a SharePoint.','Roadmap escalable con Microsoft Fabric + Purview y simulación de costos.'],
+  stack:'Power BI · SharePoint · Microsoft Fabric · Purview · gobierno de datos.',
+  metrics:[['Misión completada: modelo unificado, dashboard y roadmap','doc'],['Habilitación de decisiones más rápidas y efectivas','doc']],
+  note:'Pendiente cuantificar reducción de tiempos de reporte, adopción y ROI operativo.'},
+
+ {id:'yubarta-sec',cat:'public',type:'Arquitectura · Gobernanza de datos',title:'Yubarta / SEC — Plataforma REP de economía circular',period:'2026',client:'Yubarta / SEC',ev:'doc',
+  summary:'Acompañamiento experto en arquitectura, gobernanza y trazabilidad para una plataforma REP.',
+  tags:['Data Governance','Circular Economy','Interoperabilidad','Trazabilidad','SMEs'],
+  context:'Plataforma REP que conecta Productores, Gestores y Transformadores para cumplimiento ambiental y trazabilidad de materiales.',
+  challenge:'Evaluar propuestas de desarrolladores y orientar el MVP en datos, seguridad, calidad e interoperabilidad.',
+  role:'Consultor experto independiente — evaluación técnica y seguimiento del MVP (voluntariado SEC).',
+  solution:['Revisión de TDR y propuestas; participación en comité de evaluación.','Acompañamiento al desarrollador seleccionado y seguimiento del MVP.','Matriz de observaciones sobre datos, seguridad, trazabilidad, calidad e interoperabilidad.'],
+  stack:'Arquitectura de datos · gobernanza · criterios técnicos de evaluación.',
+  metrics:[['Acompañamiento técnico de 12 semanas','doc'],['MVP inicial previsto para ~15 actores del ecosistema','doc']],
+  note:'Pendiente cuantificar reducción de riesgos, cumplimiento documental y eficiencia del proceso REP.'},
+
+ {id:'civisai',cat:'public',type:'POC · IA pública · NLP',title:'CivisAI — IA para planeación urbana',period:'2024',client:'Secretaría de Planeación de Bogotá',ev:'doc',
+  summary:'POC con NLP para clasificar información cualitativa y apoyar decisiones públicas basadas en evidencia.',
+  tags:['NLP','Clasificación automática','Visualización','Política pública'],
+  context:'Análisis y categorización de grandes volúmenes de datos cualitativos de participación ciudadana y seguimiento de política pública.',
+  challenge:'Facilitar acceso, análisis y presentación de información cualitativa para decisiones públicas.',
+  role:'Diseño estratégico y POC en convocatoria de innovación pública.',
+  solution:['Clasificación de información cualitativa y automatización del análisis de aportes ciudadanos.','Apoyo a seguimiento de política pública y monitoreo de inversión.','POC con IA/NLP y visualización avanzada.'],
+  stack:'NLP · clasificación automática · visualización · análisis cualitativo.',
+  metrics:[['Tercer lugar entre los 6 proponentes finalistas','doc'],['Primer equipo de innovadores independientes en ese resultado','doc']],
+  note:'Diseño estratégico y POC, no implementación completa.'},
+
+ {id:'jnj-cbt',cat:'corporate',type:'IA corporativa global',title:'Johnson & Johnson — Corporate Business Technology',period:'2021–2024',client:'Johnson & Johnson',ev:'doc',
+  summary:'IA, GenAI y analítica avanzada para funciones globales (HR, Finance, Procurement, Legal).',
+  tags:['Generative AI','Machine Learning','Text Analytics','Data Governance','Automation'],
+  context:'Área Corporate Business Technology apoyando funciones corporativas globales con tecnologías emergentes.',
+  challenge:'Conectar IA y GenAI con procesos de decisión ejecutiva, con adopción responsable y gobierno.',
+  role:'Data Scientist / líder de analítica — estrategia, ejecución analítica y formación interna.',
+  solution:['IA y GenAI aplicadas a HR, Finance, Procurement y Legal.','Machine learning, text analytics y automatización de procesos.','Frameworks operativos de datos, data literacy y gobierno de datos.','Identity & access pipelines y expert advisory services.'],
+  stack:'ML · text analytics · GenAI · automatización · plataformas corporativas.',
+  metrics:[['14 Inspire Awards y 1 Encore Award','doc'],['Reducción de tiempos de procesamiento vía automatización e IA','doc']],
+  note:'Pendiente cuantificar reducción de tiempos, adopción interna y ahorros por proceso.'},
+
+ {id:'jnj-procurement',cat:'corporate',type:'BI · Analítica predictiva',title:'J&J — Procurement Shared Services Americas',period:'2018–2021',client:'Johnson & Johnson',ev:'doc',
+  summary:'BI, analítica predictiva y prescriptiva con automatización y señales en tiempo real.',
+  tags:['Business Intelligence','Predictive Analytics','NLP','Automation','Real-time'],
+  context:'Integración de métricas de desempeño y analítica para responder preguntas de negocio en Procurement.',
+  challenge:'Entregar análisis oportunos y de alta calidad automatizando procesos e integrando flujos de datos.',
+  role:'Líder de BI y analítica avanzada para Procurement Americas.',
+  solution:['Performance metrics, BI, analítica predictiva y prescriptiva.','Automatización de análisis y señales/disparadores en tiempo real.','Contribución a un centro de excelencia en experiencia de usuario y NLP.'],
+  stack:'BI · predictive/prescriptive analytics · automatización · NLP.',
+  metrics:[['Aumento de eficiencia analítica por automatización','doc'],['Centro de excelencia en UX y procesamiento de lenguaje natural','doc']],
+  note:'Pendiente cuantificar reducción de horas de análisis y procesos automatizados.'},
+
+ {id:'connect-bogota',cat:'ai',type:'AI Adoption · Consulting',title:'Impulso IA 360 — Connect Bogotá',period:'2025',client:'Connect',ev:'exp',
+  summary:'Consultoría + formación por áreas para identificar, priorizar y prototipar casos de uso de IA.',
+  tags:['AI Adoption','Use Cases','Prototyping','Scrum/Kanban','Training'],
+  context:'Modelo de acompañamiento para desarrollar oportunidades de IA en distintas áreas de la empresa.',
+  challenge:'Convertir ideas de IA en iniciativas accionables mediante diagnóstico, formación y prototipado.',
+  role:'Diseño del modelo de consultoría y formación por bolsa de horas.',
+  solution:['Kick-off ejecutivo y diagnóstico por área.','Bolsa de horas por departamento (ej.: Finanzas, Marketing, Operaciones, Talento, TI).','Talleres teórico-prácticos, prototipado MVP y sprints cortos.','Indicadores de productividad, costos, adopción e innovación.'],
+  stack:'IA · ML · analítica avanzada · Google · Azure · Python · MVPs ágiles.',
+  metrics:[['Modelo transversal: 140 horas de ejemplo en 5 áreas','doc'],['Medición de reducción de tiempos, ahorro y adopción','exp']],
+  note:'Las métricas del modelo son indicadores propuestos, no resultados alcanzados.'},
+
+ {id:'asuntos-digitales',cat:'teaching',type:'Docencia · Adopción IA',title:'Asuntos Digitales — IA aplicada para negocios',period:'2025–2026',client:'Asuntos Digitales',ev:'doc',
+  summary:'Docencia y contenidos B2B en diplomados de IA aplicada para audiencias LATAM.',
+  tags:['Executive Education','ChatGPT','Copilot','Gemini','Data Storytelling'],
+  context:'Formación aplicada de IA para profesionales y equipos corporativos de LATAM (Argentina, Chile, Venezuela, México).',
+  challenge:'Que equipos técnicos y no técnicos apliquen IA en contextos reales de trabajo.',
+  role:'Docente, creador de contenidos y facilitador en ≥5 programas.',
+  solution:['Diplomados de productividad, operaciones, marketing, negocios y ventas con IA.','Análisis de datos, KPIs, dashboards, chatbots, automatización y storytelling.','Contenidos B2B pregrabados y sesiones prácticas.'],
+  stack:'ChatGPT · Gemini · NotebookLM · Microsoft Copilot · Power BI Copilot · Notion AI.',
+  metrics:[['Participación en ≥5 programas de formación aplicada','doc'],['NPS público institucional >85 de la escuela','pub']],
+  note:'El NPS >85 es promedio público institucional, no por diplomado específico.'},
+
+ {id:'umng',cat:'teaching',type:'Docencia universitaria',title:'Universidad Militar Nueva Granada — IA &amp; Legal Tech',period:'2025–2026',client:'UMNG',ev:'doc',
+  summary:'Diplomados de IA generativa, Legal Tech, ética e investigación, en grupos de alta intensidad.',
+  tags:['Generative AI','Legal Tech','Ethics','Research','Academia'],
+  context:'Programas académicos de alta intensidad con grupos pequeños (10–15 estudiantes) y sesiones de hasta 20 horas en una semana.',
+  challenge:'Aplicación práctica, ética y profesional de la IA generativa en disciplinas específicas.',
+  role:'Docente y conferencista en 2 diplomados documentados.',
+  solution:['Diplomado en IA y Legal Tech — herramientas tecnológicas al servicio del Derecho.','Diplomado en Urbanismo y Patrimonio — IA generativa para investigación y trabajo ético.','Análisis documental, investigación jurídica asistida, ética y pensamiento crítico.'],
+  stack:'IA generativa · análisis documental · investigación · ética de IA.',
+  metrics:[['2 diplomados con enfoque en IA aplicada, Legal Tech y ética','doc'],['Grupos de 10–15 estudiantes · 20 horas/semana','doc']],
+  note:'Pendiente número de estudiantes, horas y evaluaciones docentes.'},
+
+ {id:'collective-ai',cat:'teaching',type:'Mentoría · Productividad IA',title:'Collective Academy — AI Productivity Tools',period:'2023–2024',client:'Collective Academy',ev:'doc',
+  summary:'Mentoría de 2 cohortes (40+ participantes) en productividad con IA. NPS 70 y 60.',
+  tags:['AI Productivity','Automation','Data Analysis','Mentoring'],
+  context:'Serie de cuatro semanas sobre herramientas de productividad con IA para profesionales.',
+  challenge:'Llevar IA aplicada a la práctica profesional y cotidiana con automatización y análisis de datos.',
+  role:'Mentor de dos cohortes de más de 40 estudiantes.',
+  solution:['Principios de IA, aplicaciones profesionales y automatización de tareas.','Análisis de datos y modelos predictivos basados en datos históricos.','Uso de GenAI Toolbox.'],
+  stack:'GenAI Toolbox · IA aplicada a productividad · análisis de datos.',
+  metrics:[['NPS 70 en una cohorte','doc'],['NPS 60 en otra cohorte','doc']],
+  note:''},
+
+ {id:'genai-emprendedores',cat:'genai',type:'MVP propio · GenAI',title:'GenAI para Emprendedores — Asistente con RAG y Gemini',period:'2025',client:'Proyecto propio',ev:'doc',
+  summary:'MVP que resume documentos oficiales y genera planes de negocio para emprendedores hispanohablantes.',
+  tags:['Generative AI','RAG','Gemini 2.0 Flash','Kaggle'],
+  context:'Asistente inteligente para emprendedores que comprende documentos oficiales y genera contenido estructurado.',
+  challenge:'Facilitar comprensión de información de emprendimiento y planes de negocio para usuarios no técnicos.',
+  role:'Desarrollo del MVP demostrativo (buenas prácticas del curso intensivo GenAI de Google).',
+  solution:['Comprensión y resumen de documentos oficiales.','Generación de planes de negocio y estrategias de marketing.','Prototipo en Kaggle con Gemini 2.0 Flash y RAG.'],
+  stack:'Google Gemini 2.0 Flash · RAG · notebooks Kaggle.',
+  metrics:[['MVP demostrativo creado con Gemini 2.0 Flash','doc'],['Comprensión documental y generación estructurada para no técnicos','exp']],
+  note:'Pendiente número de usuarios, pruebas y satisfacción.'},
+
+ {id:'vibrawave',cat:'creative',type:'Producto propio · Creatividad IA',title:'VibraWave Studio — Visualización de audio reactiva',period:'2025–2026',client:'Producto propio',ev:'doc',
+  summary:'App web que transforma música en videos con gráficos reactivos y exportación cinematográfica.',
+  tags:['Web App','Audio-reactive','Creative AI','Video Export'],
+  context:'Estudio profesional de visualización de audio basado en navegador.',
+  challenge:'Acelerar la producción de videos musicales/reactivos con experiencia browser-based.',
+  role:'Creación del producto web propio.',
+  solution:['Visualización de audio reactiva y transformación de música en video.','Overlays de texto y variantes visuales (BARS, NEON, ZEN, GEN).','Exportación cinematográfica desde el navegador.'],
+  stack:'Web app · audio-reactive visuals · exportación de video.',
+  metrics:[['Producto web propio creado','doc'],['Aceleración de producción de videos reactivos','exp']],
+  note:'Pendiente usuarios activos, videos exportados y engagement.'},
+
+ {id:'asesor-prompts',cat:'creative',type:'Producto propio · GPT',title:'Asesor de Prompts — GPT de prompt engineering',period:'2025–2026',client:'Producto propio',ev:'doc',
+  summary:'GPT que convierte necesidades difusas en prompts estructurados, reutilizables y listos para copiar.',
+  tags:['Custom GPT','Prompt Engineering','Automation'],
+  context:'Herramienta para mejorar la calidad y reutilización de instrucciones para herramientas de IA.',
+  challenge:'Convertir necesidades difusas en prompts claros adaptados a distintos niveles y herramientas.',
+  role:'Diseño del GPT propio.',
+  solution:['Detector automático de intención (contenido, marketing, código, investigación, IA visual, automatización).','Versiones básica/avanzada/experta y modos rápido/profesional/ultra.','Variables editables y frameworks modernos de prompting.'],
+  stack:'GPTs personalizados · prompt engineering · detección de intención.',
+  metrics:[['GPT propio diseñado para generación de prompts','doc'],['Mejora de calidad y reutilización de instrucciones','exp']],
+  note:'Pendiente usuarios, prompts generados y recurrencia.'},
+
+ {id:'databricks-bna',cat:'analytics',type:'Analítica avanzada · PySpark',title:'Databricks — Análisis de clientes por industria (BNA)',period:'2025',client:'Proyecto analítico',ev:'exp',
+  summary:'Análisis de ventas, volumen, precio y drop size por industria con Pareto y series temporales.',
+  tags:['Databricks','PySpark','Spark SQL','Delta Lake','Time Series'],
+  context:'Análisis por industrias con foco en bebidas no alcohólicas (BNA): enriquecimiento de clientes y validación de joins.',
+  challenge:'Mejorar el diagnóstico macro y granular separando total vs clientes Pareto.',
+  role:'Desarrollo del análisis avanzado y notebook reproducible.',
+  solution:['Variables: ventas, volumen, precio, descuento, drop size.','Lógica de ID_CLIENTE, validación de huérfanos y Pareto 80%.','Series temporales, correlación y desestacionalización.'],
+  stack:'Databricks · Spark SQL · PySpark · Delta Lake · Python.',
+  metrics:[['Diagnóstico por industria (total vs Pareto)','exp'],['Notebook completo y reproducible','doc']],
+  note:'Pendiente insights finales e impacto en decisiones comerciales.'},
+
+ {id:'neicon',cat:'corporate',type:'Consultoría · Arquitectura de datos',title:'NEICON — Arquitectura de datos, BI e IA',period:'2025',client:'NEICON',ev:'exp',
+  summary:'Asesoría en arquitecturas de datos modernas, BI y despliegue de IA en producción.',
+  tags:['Microsoft Fabric','Power BI','Azure','GCP','AWS','Data Mesh'],
+  context:'Diseño y asesoramiento estratégico para arquitecturas de datos, analítica avanzada, BI e IA.',
+  challenge:'Evaluar infraestructura, optimizar BI y plantear despliegue de IA en producción.',
+  role:'Consultor en arquitectura de datos y estrategia analítica.',
+  solution:['Diseño para datos estructurados y no estructurados; Data Fabric, Mesh y Lakes.','Arquitecturas cloud (Azure, GCP, AWS) e integración Power BI / Microsoft Fabric.','Optimización de modelos semánticos y arquitecturas para despliegue de IA (Azure ML, Vertex AI).'],
+  stack:'Power BI · Microsoft Fabric · Azure · GCP · AWS · Vertex AI · Azure ML.',
+  metrics:[['Propuesta de consultoría en arquitectura, BI, cloud e IA','doc'],['Mejorar eficiencia, escalabilidad e integración estratégica','exp']],
+  note:'Pendiente confirmar proyectos ejecutados, clientes y resultados.'},
+
+
+ {id:'collective-bi',cat:'teaching',type:'Mentoría MBA · BI',title:'Collective Academy — BI & Data Analytics',period:'2022',client:'Collective Academy',ev:'doc',
+  summary:'Mentoría de 2 cohortes MBA en Business Intelligence & Data Analytics. NPS 40 y 50.',
+  tags:['Business Intelligence','Data Analytics','KPIs','MBA'],
+  context:'Cohortes MBA (principalmente mexicanas) en programas de seis semanas.',
+  challenge:'Fortalecer análisis, visualización, KPIs y toma de decisiones basada en evidencia.',
+  role:'Mentor de dos cohortes MBA.',
+  solution:['Business Intelligence y Data Analytics.','Interpretación de KPIs, storytelling de datos y visualización ejecutiva.','Toma de decisiones basada en evidencia.'],
+  stack:'BI · analítica de datos · KPIs · visualización.',
+  metrics:[['NPS 40 (Q3 2022)','doc'],['NPS 50 (Q4 2022)','doc']],
+  note:''},
+
+ {id:'crehana',cat:'teaching',type:'Curso online',title:'Crehana — Business Analytics con Python y Excel',period:'2021',client:'Crehana',ev:'doc',
+  summary:'Curso publicado que combina Excel, Python y analítica aplicada para decisiones basadas en datos.',
+  tags:['Python','Excel','Business Analytics','Online Course'],
+  context:'Curso online para combinar Excel y Python en técnicas avanzadas de análisis de negocios.',
+  challenge:'Formar profesionales que tomen decisiones informadas sin depender de herramientas complejas.',
+  role:'Diseño y enseñanza del curso.',
+  solution:['Excel y Python para análisis de negocio.','Análisis exploratorio, descriptivo y explicativo.','Identificación de insights y comunicación de resultados.'],
+  stack:'Excel · Python · business analytics.',
+  metrics:[['Curso publicado en Crehana','doc'],['Formación práctica en analítica aplicada','exp']],
+  note:'Pendiente estudiantes inscritos, calificación y NPS.'}
+];
+
+/* =========================================================
+   PROYECTOS — capa en inglés (keyed por id)
+   ========================================================= */
+const PROJ_EN={
+ 'preflex-facturas':{type:'GenAI · P2P Automation',title:'Preflex — Intelligent invoice automation',summary:'End-to-end Procure-to-Pay solution with GenAI, SAP Business One, SIADOC and Google Gemini.',
+  context:'Supplier invoice cycle with capture, validation against POs/receipts, posting and auditable archiving.',
+  challenge:'Reduce manual work and posting errors while keeping traceability, control and exception management.',
+  role:'Technical consultant — solution design, GenAI architecture and MVP definition.',
+  solution:['Capture from the billing inbox and multimodal reading (PDF/XML/email) with Gemini.','Extraction of tax ID, number, date, taxes, lines, total and PO.','Match against PO/Receipt in SAP B1; 2-way / 3-way validations with a tolerance matrix.','A/P Invoice posting, cross-archiving in SIADOC and exception management with SLA.','Auditing, idempotency, duplicate control, traces and a KPI dashboard.'],
+  stack:'SAP Business One · SIADOC · Google Gemini · GCP · Service Layer / DI API · declarative rules.',
+  metrics:[['Expected STP 70–80% of invoices posted without human intervention','kpi'],['Match ≥95% · extraction ≥99.5% · cycle reduction 60–80% vs baseline · ≥90% exceptions within SLA','kpi']],
+  note:'Figures are MVP exit/target criteria. Not presented as real results until execution is validated.'},
+ 'preflex-produccion':{type:'Industrial automation',title:'Preflex — Demand planning & production orders',summary:'Roadmap to connect forecast, SAP B1, WMS, intranet calendar, rules engine and shop-floor capture.',
+  context:'Demand planning and production order release keeping FlowSoft as forecast and SAP B1 as source of truth.',
+  challenge:'Reduce manual intervention without replacing FlowSoft or forcing operators to interact directly with SAP.',
+  role:'Strategic consultant — phased industrial automation roadmap design.',
+  solution:['FlowSoft as the source of initial suggestion/prediction.','Scheduling connected to the intranet visual calendar.','SAP B1 as source of truth; WMS connected; rules engine for scheduling and validation.','Shop-floor capture with simple apps/tablets and end-to-end traceability per order.'],
+  stack:'SAP Business One · FlowSoft · WMS · Service Layer / DI API · RPA · operational apps.',
+  metrics:[['Coverage potential ~70% of orders in plants 1 and 2','exp'],['Operational forecast, automatic orders, validations and digital floor control','exp']],
+  note:'Scope communicated as initial potential; real time-reduction and ROI metrics require an operational baseline. 16–20 week roadmap.'},
+ 'rac-insights-360':{type:'Analytical product · Market Intelligence',title:'RAC Insights 360 — Longitudinal brand intelligence',summary:'Longitudinal base 2003–2025, 12 analytical modules and executive AI narratives.',
+  context:'RAC Study as a longitudinal analytical asset of brand recall, attitudes and purchase decision in Colombia.',
+  challenge:'Turn 22+ years of historical data into actionable intelligence, with dynamic analysis by sector, category, brand and target.',
+  role:'Analytical design, data infrastructure and insight-automation framework.',
+  solution:['Consolidation of a historical base 2003–2025 with 19 sectors and 120+ categories.','Dynamic querying by month, quarter, year and target.','12 analytical modules (Brand Momentum, RAC Matrix, Purchase Prediction Model, Brand Velocity, Conversion Gap, etc.).','Automated "What – So what – Now what" narratives with Step-Back Prompting and Tree-of-Thoughts.'],
+  stack:'Longitudinal base · dashboards · Google Gemini · predictive models.',
+  metrics:[['Base 2003–2025 · 19 sectors · 120+ categories','doc'],['12 automated analytical modules with AI narratives','doc']],
+  note:'No documented ROI yet: communicated as an automation and analytical-scaling product, not as proven savings.'},
+ 'rac-evolution':{type:'Analytical product evolution',title:'RAC Evolution — TARGET filter & redesign',summary:'New TARGET filter and selective indicator recalculation with cloud cost control.',
+  context:'Evolution of the RAC dashboard to incorporate advanced segmentation by target.',
+  challenge:'Expand commercial value of the analysis balancing depth, performance and cloud costs.',
+  role:'Product-evolution design and add-on technical strategy.',
+  solution:['New TARGET filter and indicator recalculation by segment.','Dashboard redesign to host additional filters.','Prioritization of the last 5 years to control performance and costs.','Add-on strategy reusing prior infrastructure and investment.'],
+  stack:'RAC dashboard · indicator recalculation · cloud/S3 architecture.',
+  metrics:[['Commercial value expansion via target segmentation','exp'],['Recalculation limited to 5 years to balance cost/performance','doc']],
+  note:'Pending validation of incremental cloud cost, recalculation time and client willingness to pay.'},
+ 'sec-asoanei':{type:'Data · Governance · BI',title:'SEC / Asoanei — Data model & Power BI',summary:'Unified data model, 360° producer view, governance and Microsoft roadmap.',
+  context:'Volunteer consulting mission to unify Asoanei data with traceability and a 360° producer view.',
+  challenge:'Enable faster decisions by improving data quality, timeliness and usage.',
+  role:'Mission lead — initial design and implementation of the model, dashboard and roadmap.',
+  solution:['Unified data model with 360° view and operational traceability.','Glossary, data dictionary and roles.','Power BI dashboard and SharePoint access resolution.','Scalable roadmap with Microsoft Fabric + Purview and cost simulation.'],
+  stack:'Power BI · SharePoint · Microsoft Fabric · Purview · data governance.',
+  metrics:[['Mission completed: unified model, dashboard and roadmap','doc'],['Enablement of faster, more effective decisions','doc']],
+  note:'Pending to quantify reporting time reduction, adoption and operational ROI.'},
+ 'yubarta-sec':{type:'Architecture · Data governance',title:'Yubarta / SEC — Circular-economy REP platform',summary:'Expert support in architecture, governance and traceability for a REP platform.',
+  context:'REP platform connecting Producers, Managers and Transformers for environmental compliance and material traceability.',
+  challenge:'Evaluate developer proposals and steer the MVP on data, security, quality and interoperability.',
+  role:'Independent expert consultant — technical evaluation and MVP follow-up (SEC volunteering).',
+  solution:['Review of ToR and proposals; participation in the evaluation committee.','Support to the selected developer and MVP follow-up.','Observation matrix on data, security, traceability, quality and interoperability.'],
+  stack:'Data architecture · governance · technical evaluation criteria.',
+  metrics:[['12-week technical support','doc'],['Initial MVP planned for ~15 ecosystem actors','doc']],
+  note:'Pending to quantify risk reduction, documentary compliance and REP process efficiency.'},
+ 'civisai':{type:'POC · Public AI · NLP',title:'CivisAI — AI for urban planning',summary:'NLP POC to classify qualitative information and support evidence-based public decisions.',
+  context:'Analysis and categorization of large volumes of qualitative citizen-participation and policy-monitoring data.',
+  challenge:'Facilitate access, analysis and presentation of qualitative information for public decisions.',
+  role:'Strategic design and POC in a public-innovation call.',
+  solution:['Classification of qualitative information and automation of citizen-input analysis.','Support to public-policy monitoring and investment tracking.','AI/NLP POC with advanced visualization.'],
+  stack:'NLP · automatic classification · visualization · qualitative analysis.',
+  metrics:[['Third place among the 6 finalist proposers','doc'],['First independent-innovator team in that result','doc']],
+  note:'Strategic design and POC, not a full implementation.'},
+ 'jnj-cbt':{type:'Global corporate AI',title:'Johnson & Johnson — Corporate Business Technology',summary:'AI, GenAI and advanced analytics for global functions (HR, Finance, Procurement, Legal).',
+  context:'Corporate Business Technology area supporting global corporate functions with emerging technologies.',
+  challenge:'Connect AI and GenAI with executive decision processes, with responsible adoption and governance.',
+  role:'Data Scientist / analytics lead — strategy, analytical execution and internal training.',
+  solution:['AI and GenAI applied to HR, Finance, Procurement and Legal.','Machine learning, text analytics and process automation.','Operational data frameworks, data literacy and data governance.','Identity & access pipelines and expert advisory services.'],
+  stack:'ML · text analytics · GenAI · automation · corporate platforms.',
+  metrics:[['14 Inspire Awards and 1 Encore Award','doc'],['Processing-time reduction via automation and AI','doc']],
+  note:'Pending to quantify time reduction, internal adoption and per-process savings.'},
+ 'jnj-procurement':{type:'BI · Predictive analytics',title:'J&J — Procurement Shared Services Americas',summary:'BI, predictive and prescriptive analytics with automation and real-time signals.',
+  context:'Integration of performance metrics and analytics to answer business questions in Procurement.',
+  challenge:'Deliver timely, high-quality analysis by automating processes and integrating data flows.',
+  role:'BI and advanced-analytics lead for Procurement Americas.',
+  solution:['Performance metrics, BI, predictive and prescriptive analytics.','Analysis automation and real-time signals/triggers.','Contribution to a center of excellence in user experience and NLP.'],
+  stack:'BI · predictive/prescriptive analytics · automation · NLP.',
+  metrics:[['Increased analytical efficiency through automation','doc'],['Center of excellence in UX and natural language processing','doc']],
+  note:'Pending to quantify analysis-hour reduction and automated processes.'},
+ 'connect-bogota':{type:'AI Adoption · Consulting',title:'Impulso IA 360 — Connect Bogotá',summary:'Consulting + training by area to identify, prioritize and prototype AI use cases.',
+  context:'Support model to develop AI opportunities across different company areas.',
+  challenge:'Turn AI ideas into actionable initiatives through diagnosis, training and prototyping.',
+  role:'Design of the consulting and training model by hour bank.',
+  solution:['Executive kick-off and diagnosis by area.','Hour bank per department (e.g., Finance, Marketing, Operations, HR, IT).','Theory-practice workshops, MVP prototyping and short sprints.','Indicators of productivity, costs, adoption and innovation.'],
+  stack:'AI · ML · advanced analytics · Google · Azure · Python · agile MVPs.',
+  metrics:[['Cross-area model: 140 example hours across 5 areas','doc'],['Measurement of time reduction, savings and adoption','exp']],
+  note:'Model metrics are proposed indicators, not achieved results.'},
+ 'asuntos-digitales':{type:'Teaching · AI adoption',title:'Asuntos Digitales — Applied AI for business',summary:'Teaching and B2B content in applied-AI diplomas for LATAM audiences.',
+  context:'Applied AI training for LATAM professionals and corporate teams (Argentina, Chile, Venezuela, Mexico).',
+  challenge:'Enable technical and non-technical teams to apply AI in real work contexts.',
+  role:'Lecturer, content creator and facilitator across ≥5 programs.',
+  solution:['Diplomas in productivity, operations, marketing, business and sales with AI.','Data analysis, KPIs, dashboards, chatbots, automation and storytelling.','Pre-recorded B2B content and practical sessions.'],
+  stack:'ChatGPT · Gemini · NotebookLM · Microsoft Copilot · Power BI Copilot · Notion AI.',
+  metrics:[['Participation in ≥5 applied-training programs','doc'],['Public institutional NPS >85 of the school','pub']],
+  note:'The NPS >85 is a public institutional average, not per specific program.'},
+ 'umng':{type:'University teaching',title:'Universidad Militar Nueva Granada — AI &amp; Legal Tech',summary:'Diplomas in generative AI, Legal Tech, ethics and research, in high-intensity groups.',
+  context:'High-intensity academic programs with small groups (10–15 students) and sessions of up to 20 hours in one week.',
+  challenge:'Practical, ethical and professional application of generative AI in specific disciplines.',
+  role:'Lecturer and speaker in 2 documented diplomas.',
+  solution:['Diploma in AI and Legal Tech — technology tools serving Law.','Diploma in Urbanism and Heritage — generative AI for research and ethical work.','Document analysis, assisted legal research, ethics and critical thinking.'],
+  stack:'Generative AI · document analysis · research · AI ethics.',
+  metrics:[['2 diplomas focused on applied AI, Legal Tech and ethics','doc'],['Groups of 10–15 students · 20 hours/week','doc']],
+  note:'Pending number of students, hours and teaching evaluations.'},
+ 'collective-ai':{type:'Mentoring · AI productivity',title:'Collective Academy — AI Productivity Tools',summary:'Mentoring of 2 cohorts (40+ participants) in AI productivity. NPS 70 and 60.',
+  context:'Four-week series on AI productivity tools for professionals.',
+  challenge:'Bring applied AI to professional and everyday practice with automation and data analysis.',
+  role:'Mentor of two cohorts of more than 40 students.',
+  solution:['AI principles, professional applications and task automation.','Data analysis and predictive models based on historical data.','Use of the GenAI Toolbox.'],
+  stack:'GenAI Toolbox · AI applied to productivity · data analysis.',
+  metrics:[['NPS 70 in one cohort','doc'],['NPS 60 in another cohort','doc']],
+  note:''},
+ 'genai-emprendedores':{type:'Own MVP · GenAI',title:'GenAI for Entrepreneurs — Assistant with RAG and Gemini',summary:'MVP that summarizes official documents and generates business plans for Spanish-speaking entrepreneurs.',
+  context:'Intelligent assistant for entrepreneurs that understands official documents and generates structured content.',
+  challenge:'Facilitate understanding of entrepreneurship information and business plans for non-technical users.',
+  role:'Development of the demonstrative MVP (best practices from Google’s intensive GenAI course).',
+  solution:['Understanding and summarizing official documents.','Generation of business plans and marketing strategies.','Kaggle prototype with Gemini 2.0 Flash and RAG.'],
+  stack:'Google Gemini 2.0 Flash · RAG · Kaggle notebooks.',
+  metrics:[['Demonstrative MVP built with Gemini 2.0 Flash','doc'],['Document understanding and structured generation for non-technical users','exp']],
+  note:'Pending number of users, tests and satisfaction.'},
+ 'vibrawave':{type:'Own product · Creative AI',title:'VibraWave Studio — Reactive audio visualization',summary:'Web app that turns music into videos with reactive graphics and cinematic export.',
+  context:'Professional browser-based audio-visualization studio.',
+  challenge:'Accelerate production of musical/reactive videos with a browser-based experience.',
+  role:'Creation of the own web product.',
+  solution:['Reactive audio visualization and transformation of music into video.','Text overlays and visual variants (BARS, NEON, ZEN, GEN).','Cinematic export from the browser.'],
+  stack:'Web app · audio-reactive visuals · video export.',
+  metrics:[['Own web product created','doc'],['Acceleration of reactive-video production','exp']],
+  note:'Pending active users, exported videos and engagement.'},
+ 'asesor-prompts':{type:'Own product · GPT',title:'Prompt Advisor — Prompt-engineering GPT',summary:'A GPT that turns fuzzy needs into structured, reusable, copy-ready prompts.',
+  context:'Tool to improve the quality and reuse of instructions for AI tools.',
+  challenge:'Turn fuzzy needs into clear prompts adapted to different levels and tools.',
+  role:'Design of the own GPT.',
+  solution:['Automatic intent detector (content, marketing, code, research, visual AI, automation).','Basic/advanced/expert versions and fast/professional/ultra modes.','Editable variables and modern prompting frameworks.'],
+  stack:'Custom GPTs · prompt engineering · intent detection.',
+  metrics:[['Own GPT designed for prompt generation','doc'],['Improved quality and reuse of instructions','exp']],
+  note:'Pending users, generated prompts and recurrence.'},
+ 'databricks-bna':{type:'Advanced analytics · PySpark',title:'Databricks — Customer analysis by industry (BNA)',summary:'Analysis of sales, volume, price and drop size by industry with Pareto and time series.',
+  context:'Analysis by industries focused on non-alcoholic beverages (BNA): customer enrichment and join validation.',
+  challenge:'Improve macro and granular diagnosis separating total vs Pareto customers.',
+  role:'Development of the advanced analysis and reproducible notebook.',
+  solution:['Variables: sales, volume, price, discount, drop size.','ID_CLIENTE logic, orphan validation and 80% Pareto.','Time series, correlation and deseasonalization.'],
+  stack:'Databricks · Spark SQL · PySpark · Delta Lake · Python.',
+  metrics:[['Diagnosis by industry (total vs Pareto)','exp'],['Complete, reproducible notebook','doc']],
+  note:'Pending final insights and impact on commercial decisions.'},
+ 'neicon':{type:'Consulting · Data architecture',title:'NEICON — Data architecture, BI and AI',summary:'Advisory on modern data architectures, BI and AI deployment to production.',
+  context:'Design and strategic advisory for data architectures, advanced analytics, BI and AI.',
+  challenge:'Evaluate infrastructure, optimize BI and outline AI deployment to production.',
+  role:'Consultant in data architecture and analytical strategy.',
+  solution:['Design for structured and unstructured data; Data Fabric, Mesh and Lakes.','Cloud architectures (Azure, GCP, AWS) and Power BI / Microsoft Fabric integration.','Semantic-model optimization and architectures for AI deployment (Azure ML, Vertex AI).'],
+  stack:'Power BI · Microsoft Fabric · Azure · GCP · AWS · Vertex AI · Azure ML.',
+  metrics:[['Consulting proposal in architecture, BI, cloud and AI','doc'],['Improve efficiency, scalability and strategic integration','exp']],
+  note:'Pending confirmation of executed projects, clients and results.'},
+ 'collective-bi':{type:'MBA mentoring · BI',title:'Collective Academy — BI & Data Analytics',summary:'Mentoring of 2 MBA cohorts in Business Intelligence & Data Analytics. NPS 40 and 50.',
+  context:'MBA cohorts (mainly Mexican) in six-week programs.',
+  challenge:'Strengthen analysis, visualization, KPIs and evidence-based decision-making.',
+  role:'Mentor of two MBA cohorts.',
+  solution:['Business Intelligence and Data Analytics.','KPI interpretation, data storytelling and executive visualization.','Evidence-based decision-making.'],
+  stack:'BI · data analytics · KPIs · visualization.',
+  metrics:[['NPS 40 (Q3 2022)','doc'],['NPS 50 (Q4 2022)','doc']],
+  note:''},
+ 'crehana':{type:'Online course',title:'Crehana — Business Analytics with Python and Excel',summary:'Published course combining Excel, Python and applied analytics for data-driven decisions.',
+  context:'Online course to combine Excel and Python in advanced business-analysis techniques.',
+  challenge:'Train professionals to make informed decisions without relying on complex tools.',
+  role:'Course design and teaching.',
+  solution:['Excel and Python for business analysis.','Exploratory, descriptive and explanatory analysis.','Insight identification and communication of results.'],
+  stack:'Excel · Python · business analytics.',
+  metrics:[['Course published on Crehana','doc'],['Practical training in applied analytics','exp']],
+  note:'Pending enrolled students, rating and NPS.'}
+};
+/* JD — English layer */
+const JD_EN={
+ product:{narr:'A senior profile blending AI, data and product vision: I turn problems into measurable MVPs, define metrics and prioritize user value across analytical and GenAI products.',
+  up:['RAC Insights 360','VibraWave','GenAI for Entrepreneurs','Prompt Advisor'],down:['Very technical certifications','Extensive work history'],
+  skills:['Product Strategy','MVP','Roadmap','Metrics','User Value','AI Products','Discovery','Prioritization']},
+ program:{narr:'Global experience and stakeholder management to deliver complex programs in phases, with governance, roadmaps and risk management.',
+  up:['Preflex Production','Yubarta / SEC','Impulso IA 360'],down:['Deep technical detail','Historical marketing'],
+  skills:['Program Delivery','Stakeholder Mgmt','Cross-functional','Governance','Execution','Risk Management','Roadmap']},
+ aistrategy:{narr:'I connect AI with business: governance, GenAI, adoption and roadmaps that take organizations from curiosity to measurable execution.',
+  up:['J&J CBT','Preflex Invoices','Connect Bogotá','Asuntos Digitales'],down:['Historical marketing','Tactical tools'],
+  skills:['AI Strategy','Generative AI','AI Governance','Roadmap','Use Cases','Responsible AI','Adoption','Operating Model']},
+ data:{narr:'Statistical rigor, ML and BI in action: from predictive models to executive dashboards and cloud architectures that sustain decisions.',
+  up:['J&J Procurement','RAC Insights 360','SEC / Asoanei','Databricks BNA'],down:['Extensive teaching'],
+  skills:['Data Science','Advanced Analytics','Machine Learning','Power BI','Tableau','Forecasting','NLP','Data Governance']},
+ digital:{narr:'A hybrid profile connecting automation, processes and adoption: I translate emerging technology into real, sustainable capabilities.',
+  up:['J&J CBT','Preflex','Asuntos Digitales'],down:['Low-fit certifications'],
+  skills:['Digital Transformation','Automation','Process Optimization','Change Adoption','AI','Operating Model','Data Strategy']},
+ leadership:{narr:'Seniority and executive communication: I lead teams, engage C-level and build a data and AI-adoption culture.',
+  up:['J&J CBT','Wavemaker / MEC','Collective Academy'],down:['Tactical tools'],
+  skills:['Executive Communication','Team Leadership','C-level Stakeholders','Data Culture','Mentoring','Strategy','Adoption']},
+ consulting:{narr:'End-to-end consulting capability: diagnosis, proposal, roadmap and capability transfer, focused on value creation.',
+  up:['Connect Bogotá','Preflex','RAC','Yubarta / SEC'],down:['Very long work history'],
+  skills:['Advisory','Business Transformation','Diagnosis','Strategic Roadmap','Client Engagement','Workshops','Value Creation']}
+};
+/* Evidence labels EN */
+const EV_EN={doc:'Documented',pub:'Public average',rep:'Reported',kpi:'Target KPI',exp:'Expected impact',pen:'Pending'};
+/* UI strings i18n */
+const UI={
+ es:{ctx:'Contexto',chal:'Reto',role:'Rol de Javier',sol:'Solución diseñada',arch:'Arquitectura / stack',met:'Métricas &amp; evidencia',ctrl:'Nota de control',more:'Ver caso →',up:'Reordenar arriba',down:'Reducir énfasis',jdskills:'Skills / keywords prioritarias',certcount:n=>`Mostrando ${n} de 70 credenciales · lista completa de LinkedIn`},
+ en:{ctx:'Context',chal:'Challenge',role:"Javier's role",sol:'Designed solution',arch:'Architecture / stack',met:'Metrics &amp; evidence',ctrl:'Control note',more:'View case →',up:'Move up',down:'De-emphasize',jdskills:'Priority skills / keywords',certcount:n=>`Showing ${n} of 70 credentials · full LinkedIn list`}
+};
+
+/* =========================================================
+   CERTIFICACIONES (selección representativa)
+   ========================================================= */
+const CERTS=[
+ {t:"Agentic AI: Challenges & Opportunities for Leadership",i:"LinkedIn",y:"2025",c:"ai"},
+ {t:"Generative AI with Large Language Models",i:"DeepLearning.AI / AWS",y:"2024",c:"ai"},
+ {t:"Building Agentic RAG with LlamaIndex",i:"DeepLearning.AI",y:"2024",c:"ai"},
+ {t:"Introducing Multimodal Llama 3.2",i:"DeepLearning.AI",y:"2024",c:"ai"},
+ {t:"LangChain for LLM Application Development",i:"DeepLearning.AI",y:"2024",c:"ai"},
+ {t:"ChatGPT Prompt Engineering for Developers",i:"DeepLearning.AI",y:"2023",c:"ai"},
+ {t:"ChatGPT Prompt Engineering for Developers",i:"DeepLearning.AI",y:"2023",c:"ai"},
+ {t:"What Is Generative AI?",i:"LinkedIn",y:"2023",c:"ai"},
+ {t:"Generative AI for Business Leaders",i:"LinkedIn",y:"2023",c:"ai"},
+ {t:"Get Ready for Generative AI",i:"LinkedIn",y:"2023",c:"ai"},
+ {t:"Introduction to Prompt Engineering for Generative AI",i:"LinkedIn",y:"2023",c:"ai"},
+ {t:"Prompt Engineering: How to Talk to the AIs",i:"LinkedIn",y:"2023",c:"ai"},
+ {t:"Nano Tips for Using ChatGPT for Business (Rachel Woods)",i:"LinkedIn",y:"2023",c:"ai"},
+ {t:"Next Generation AI: An Intro to GPT-3",i:"LinkedIn",y:"2023",c:"ai"},
+ {t:"Intelligent Automation Foundations",i:"LinkedIn",y:"2023",c:"ai"},
+ {t:"Deep Learning: Model Optimization and Tuning",i:"LinkedIn",y:"2022",c:"ai"},
+ {t:"Deep Learning: Getting Started",i:"LinkedIn",y:"2022",c:"ai"},
+ {t:"Model Management: Building ML Models & Pipelines",i:"Skillsoft",y:"2022",c:"ai"},
+ {t:"Model Management: Deploying ML Models in Production",i:"Skillsoft",y:"2022",c:"ai"},
+ {t:"Reinforcement Learning: Essentials",i:"Skillsoft",y:"2022",c:"ai"},
+ {t:"Data Science in Stratified Healthcare & Precision Medicine",i:"Coursera / U. of Edinburgh",y:"2023",c:"data"},
+ {t:"Microsoft Azure Relational Databases",i:"Coursera",y:"2023",c:"data"},
+ {t:"Architecting Big Data Applications: Real-Time",i:"LinkedIn",y:"2022",c:"data"},
+ {t:"Twelve Myths About Data Science",i:"LinkedIn",y:"2022",c:"data"},
+ {t:"J&J Demystifying — Data Analysis & AI",i:"Udacity",y:"2022",c:"data"},
+ {t:"Learning Data Science: Tell Stories With Data",i:"LinkedIn",y:"2021",c:"data"},
+ {t:"Data Science for All (DS4A)",i:"Correlation One / MinTIC",y:"2019",c:"data"},
+ {t:"Python: Data Analysis",i:"LinkedIn",y:"2019",c:"data"},
+ {t:"Data Visualization: Storytelling",i:"LinkedIn",y:"2019",c:"data"},
+ {t:"Data Visualization: Storytelling 2016",i:"LinkedIn",y:"2019",c:"data"},
+ {t:"Shane Snow on Storytelling",i:"LinkedIn",y:"2019",c:"data"},
+ {t:"Data Visualization, Storytelling & Information Design",i:"LinkedIn",y:"2018",c:"data"},
+ {t:"Excel Business Intelligence: Power Query",i:"LinkedIn",y:"2018",c:"data"},
+ {t:"Excel 2016: Power Query (Get & Transform)",i:"LinkedIn",y:"2018",c:"data"},
+ {t:"Managing Data Analysis",i:"Coursera / Johns Hopkins",y:"2018",c:"data"},
+ {t:"A Crash Course in Data Science",i:"Coursera / Johns Hopkins",y:"2017",c:"data"},
+ {t:"The Data Scientist’s Toolbox",i:"Coursera / Johns Hopkins",y:"2015",c:"data"},
+ {t:"Getting and Cleaning Data",i:"Coursera / Johns Hopkins",y:"2015",c:"data"},
+ {t:"NLP for ML with Python: spaCy & Scikit-learn",i:"Skillsoft",y:"2022",c:"py"},
+ {t:"NLP for ML with Python: NLTK",i:"Skillsoft",y:"2022",c:"py"},
+ {t:"Python: Working with Predictive Analytics",i:"LinkedIn",y:"2022",c:"py"},
+ {t:"Linear Regression: Logistic Regression",i:"Skillsoft",y:"2022",c:"py"},
+ {t:"Linear Regression: Scikit Learn & Keras",i:"Skillsoft",y:"2022",c:"py"},
+ {t:"Simplifying Regression & Classification with Estimators",i:"Skillsoft",y:"2022",c:"py"},
+ {t:"Linear Algebra & Probability: Advanced Linear Algebra",i:"Skillsoft",y:"2022",c:"py"},
+ {t:"Computational Theory: Turing, Transducers & Complexity",i:"Skillsoft",y:"2022",c:"py"},
+ {t:"Web Scraping with Python",i:"LinkedIn",y:"2022",c:"py"},
+ {t:"Flask Essential Training",i:"LinkedIn",y:"2022",c:"py"},
+ {t:"Python Data Structures",i:"Coursera / U. of Michigan",y:"2019",c:"py"},
+ {t:"Programming for Everybody (Python)",i:"Coursera / U. of Michigan",y:"2019",c:"py"},
+ {t:"Rocking Your Job as a Remote Product Manager",i:"LinkedIn",y:"2024",c:"product"},
+ {t:"Creating a Product-Centric Organization",i:"LinkedIn",y:"2023",c:"product"},
+ {t:"Learning Design Thinking",i:"LinkedIn",y:"2023",c:"product"},
+ {t:"Metrics",i:"Product Institute",y:"2022",c:"product"},
+ {t:"Product Management Foundations",i:"Product Institute",y:"2022",c:"product"},
+ {t:"Building Agile Capabilities in Your Organization",i:"Skillsoft",y:"2022",c:"product"},
+ {t:"Agile Foundations",i:"LinkedIn",y:"2021",c:"product"},
+ {t:"Adaptive Project Leadership",i:"LinkedIn",y:"2021",c:"product"},
+ {t:"Making Decisions",i:"LinkedIn",y:"2019",c:"product"},
+ {t:"Building a Data Science Team",i:"Coursera / Johns Hopkins",y:"2017",c:"product"},
+ {t:"Digital Leadership Program — Google",i:"INALDE Business School",y:"2017",c:"product"},
+ {t:"Executive Leadership Flight Path",i:"Twitter",y:"2016",c:"product"},
+ {t:"Blockchain Basics",i:"LinkedIn",y:"2022",c:"digital"},
+ {t:"IMS Certification on Snapchat",i:"Aleph LATAM",y:"2017",c:"digital"},
+ {t:"Google Advertising Fundamentals Exam",i:"Google",y:"2016",c:"digital"},
+ {t:"Certified Expert in MyMetrix",i:"Comscore",y:"2015",c:"digital"},
+ {t:"Google Analytics Individual Qualification (IQ)",i:"Google",y:"2014",c:"digital"},
+ {t:"Mobile App Analytics Fundamentals",i:"Google",y:"2014",c:"digital"},
+ {t:"Google Advanced Display Exam",i:"Google",y:"2013",c:"digital"},
+ {t:"Digital Analytics Fundamentals",i:"Google",y:"2013",c:"digital"}
+];
+
+/* =========================================================
+   JD MODE — narrativa por rol
+   ========================================================= */
+const JD={
+ product:{title:'Product Management',narr:'Perfil senior que combina IA, datos y visión de producto: convierto problemas en MVPs medibles, defino métricas y priorizo valor de usuario sobre productos analíticos y GenAI.',
+  up:['RAC Insights 360','VibraWave','GenAI Emprendedores','Asesor de Prompts'],down:['Certificaciones muy técnicas','Historia laboral extensa'],
+  skills:['Product Strategy','MVP','Roadmap','Metrics','User Value','AI Products','Discovery','Prioritization']},
+ program:{title:'Program Management',narr:'Experiencia global y manejo de stakeholders para entregar programas complejos por fases, con gobierno, roadmaps y gestión de riesgos.',
+  up:['Preflex Producción','Yubarta / SEC','Impulso IA 360'],down:['Detalle técnico profundo','Marketing histórico'],
+  skills:['Program Delivery','Stakeholder Mgmt','Cross-functional','Governance','Execution','Risk Management','Roadmap']},
+ aistrategy:{title:'AI Strategy',narr:'Conecto IA con negocio: gobierno, GenAI, adopción y roadmaps que llevan a las organizaciones de la curiosidad a la ejecución medible.',
+  up:['J&J CBT','Preflex Facturas','Connect Bogotá','Asuntos Digitales'],down:['Marketing histórico','Herramientas tácticas'],
+  skills:['AI Strategy','Generative AI','AI Governance','Roadmap','Use Cases','Responsible AI','Adoption','Operating Model']},
+ data:{title:'Data & Analytics',narr:'Criterio estadístico, ML y BI aplicados: de modelos predictivos a dashboards ejecutivos y arquitecturas cloud que sostienen la decisión.',
+  up:['J&J Procurement','RAC Insights 360','SEC / Asoanei','Databricks BNA'],down:['Docencia extensa'],
+  skills:['Data Science','Advanced Analytics','Machine Learning','Power BI','Tableau','Forecasting','NLP','Data Governance']},
+ digital:{title:'Digital Transformation',narr:'Perfil híbrido que conecta automatización, procesos y adopción: traduzco tecnología emergente en capacidades reales y sostenibles.',
+  up:['J&J CBT','Preflex','Asuntos Digitales'],down:['Certificaciones de bajo fit'],
+  skills:['Digital Transformation','Automation','Process Optimization','Change Adoption','AI','Operating Model','Data Strategy']},
+ leadership:{title:'Leadership',narr:'Seniority y comunicación ejecutiva: lidero equipos, dialogo con C-level y construyo cultura de datos y adopción de IA.',
+  up:['J&J CBT','Wavemaker / MEC','Collective Academy'],down:['Herramientas tácticas'],
+  skills:['Executive Communication','Team Leadership','C-level Stakeholders','Data Culture','Mentoring','Strategy','Adoption']},
+ consulting:{title:'Consulting',narr:'Capacidad consultiva de extremo a extremo: diagnóstico, propuesta, roadmap y transferencia de capacidades, con foco en creación de valor.',
+  up:['Connect Bogotá','Preflex','RAC','Yubarta / SEC'],down:['Historia laboral muy larga'],
+  skills:['Advisory','Business Transformation','Diagnosis','Strategic Roadmap','Client Engagement','Workshops','Value Creation']}
+};
+
+/* =========================================================
+   RENDER
+   ========================================================= */
+let LANG=(function(){try{return localStorage.getItem('jf_lang')||'es'}catch(e){return 'es'}})();
+/* Descarga del PDF maestro según el idioma activo */
+function downloadCV(){
+ var f=(LANG==='en')?'Javier_Forero_Master_CV_EN_2026.pdf':'Javier_Forero_CV_Base_Maestra_ES_2026.pdf';
+ var a=document.createElement('a');a.href=encodeURI(f);a.download=f;a.rel='noopener';
+ document.body.appendChild(a);a.click();a.remove();
+}
+const grid=document.getElementById('projGrid');
+/* Vista de proyecto según idioma (mezcla base ES + capa EN) */
+function PV(p){if(LANG==='en'&&PROJ_EN[p.id]){return Object.assign({},p,PROJ_EN[p.id])}return p}
+function badgesHTML(tags){return tags.map(t=>`<span class="badge">${t}</span>`).join('')}
+function evHTML(k){const e=EV[k];const label=LANG==='en'?EV_EN[k]:e[0];return `<span class="ev ${e[1]}">${label}</span>`}
+function cardHTML(p){
+ const v=PV(p);
+ return `<article class="proj card" data-cat="${p.cat}" data-id="${p.id}" tabindex="0" role="button" aria-label="${v.title}">
+   <div class="ptype">${v.type}</div>
+   <h4>${v.title}</h4>
+   <p>${v.summary}</p>
+   <div class="tags">${badgesHTML(p.tags.slice(0,3))}</div>
+   <div class="proj-foot">${evHTML(p.ev)}<span class="more">${UI[LANG].more}</span></div>
+ </article>`;
+}
+function renderProjects(list){
+ grid.innerHTML=list.map(cardHTML).join('');
+ document.getElementById('projEmpty').style.display=list.length?'none':'block';
+}
+renderProjects(PROJECTS);
+
+/* Filtros + búsqueda combinados */
+let curFilter='all',curSearch='';
+function applyProj(){
+ const q=curSearch.trim().toLowerCase();
+ const list=PROJECTS.filter(p=>{
+  const okF=curFilter==='all'||p.cat===curFilter;
+  const hay=(p.title+' '+p.summary+' '+p.tags.join(' ')+' '+p.stack+' '+p.client+' '+p.type).toLowerCase();
+  const okS=!q||hay.includes(q);
+  return okF&&okS;
+ });
+ renderProjects(list);
+}
+document.querySelectorAll('#projFilters .chip').forEach(c=>c.addEventListener('click',()=>{
+ document.querySelectorAll('#projFilters .chip').forEach(x=>x.classList.remove('active'));
+ c.classList.add('active');curFilter=c.dataset.f;applyProj();
+}));
+document.getElementById('search').addEventListener('input',e=>{
+ curSearch=e.target.value;
+ if(curSearch){curFilter='all';document.querySelectorAll('#projFilters .chip').forEach(x=>x.classList.toggle('active',x.dataset.f==='all'));}
+ applyProj();
+});
+
+/* Modal deep dive */
+const modalBg=document.getElementById('modalBg');
+let modalId=null;
+function openModal(id){
+ const base=PROJECTS.find(x=>x.id===id);if(!base)return;
+ modalId=id;const p=PV(base);const u=UI[LANG];
+ document.getElementById('modalType').textContent=p.type;
+ document.getElementById('modalTitle').innerHTML=p.title;
+ document.getElementById('modalMeta').textContent=`${base.client} · ${base.period}`;
+ const m=p.metrics.map(x=>`<li>${x[0]} ${evHTML(x[1])}</li>`).join('');
+ document.getElementById('modalBody').innerHTML=
+   `<h5>${u.ctx}</h5><p>${p.context}</p>
+    <h5>${u.chal}</h5><p>${p.challenge}</p>
+    <h5>${u.role}</h5><p>${p.role}</p>
+    <h5>${u.sol}</h5><ul>${p.solution.map(s=>`<li>${s}</li>`).join('')}</ul>
+    <h5>${u.arch}</h5><p>${p.stack}</p>
+    <h5>${u.met}</h5><ul>${m}</ul>
+    ${p.note?`<h5>${u.ctrl}</h5><p style="color:var(--muted);font-size:13px">${p.note}</p>`:''}
+    <div style="margin-top:18px">${badgesHTML(base.tags)}</div>`;
+ modalBg.classList.add('open');document.body.style.overflow='hidden';
+ document.getElementById('modalX').focus();
+}
+function closeModal(){modalBg.classList.remove('open');document.body.style.overflow='';modalId=null}
+grid.addEventListener('click',e=>{const c=e.target.closest('.proj');if(c)openModal(c.dataset.id)});
+grid.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.closest('.proj')){e.preventDefault();openModal(e.target.closest('.proj').dataset.id)}});
+document.getElementById('modalX').addEventListener('click',closeModal);
+modalBg.addEventListener('click',e=>{if(e.target===modalBg)closeModal()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+
+/* Certificaciones */
+const certGrid=document.getElementById('certGrid'),certCount=document.getElementById('certCount');
+const certScroll=document.getElementById('certScroll');
+let curCert='all';
+/* Micro-métricas: conteo real por categoría inyectado como data-count (lo pinta el ::after del CSS) */
+(function(){const cc={all:CERTS.length};CERTS.forEach(x=>{cc[x.c]=(cc[x.c]||0)+1;});
+ document.querySelectorAll('#certFilters .chip').forEach(ch=>{const k=ch.dataset.cf;if(cc[k]!=null)ch.setAttribute('data-count',cc[k]);});})();
+/* Muestra/oculta el fade según si queda contenido por debajo */
+function certFade(){if(!certScroll)return;const more=certGrid.scrollHeight-certGrid.scrollTop-certGrid.clientHeight>6;certScroll.classList.toggle('more',more);}
+function renderCerts(f){
+ curCert=f;
+ const list=f==='all'?CERTS:CERTS.filter(c=>c.c===f);
+ certGrid.innerHTML=list.map(c=>`<div class="cert"><div><div class="ct">${c.t}</div><div class="ci">${c.i}</div></div><div class="cy">${c.y}</div></div>`).join('');
+ certCount.textContent=UI[LANG].certcount(list.length);
+ certGrid.scrollTop=0;            /* reset del scroll interno al cambiar de categoría */
+ requestAnimationFrame(certFade); /* recalcula el fade tras pintar */
+}
+certGrid.addEventListener('scroll',certFade,{passive:true});
+renderCerts('all');
+document.querySelectorAll('#certFilters .chip').forEach(c=>c.addEventListener('click',()=>{
+ document.querySelectorAll('#certFilters .chip').forEach(x=>x.classList.remove('active'));
+ c.classList.add('active');renderCerts(c.dataset.cf);
+}));
+
+/* Skills tabs */
+document.querySelectorAll('#skillTabs .tab').forEach(t=>t.addEventListener('click',()=>{
+ document.querySelectorAll('#skillTabs .tab').forEach(x=>x.classList.remove('active'));
+ document.querySelectorAll('.tabpanel').forEach(x=>x.classList.remove('active'));
+ t.classList.add('active');document.getElementById(t.dataset.t).classList.add('active');
+}));
+
+/* Acordeones */
+document.querySelectorAll('.acc-h').forEach(b=>b.addEventListener('click',()=>{
+ const acc=b.parentElement,open=acc.classList.toggle('open');
+ b.setAttribute('aria-expanded',open);
+}));
+
+/* JD Mode */
+const jdOut=document.getElementById('jdOut');
+let curRole='product';
+/* Vocabulario REAL del propietario (tags de proyectos + skills de roles) para detectar keywords de la JD */
+const JD_VOCAB=(function(){var s={};PROJECTS.forEach(function(p){p.tags.forEach(function(t){s[t.toLowerCase()]=t;});});Object.keys(JD).forEach(function(r){JD[r].skills.forEach(function(k){s[k.toLowerCase()]=k;});});return s;})();
+function jdLbl(){return LANG==='en'
+  ?{match:'Keywords you already cover',compat:'Most compatible projects',aligned:'Aligned skills (✓ present in the JD)',surface:'Surface in this application',none:'No direct keyword overlap yet — pick a role to tailor manually.',suggest:function(r){return 'Suggested role: '+r;},copied:'Summary copied ✓'}
+  :{match:'Keywords que ya cubres',compat:'Proyectos más compatibles',aligned:'Habilidades alineadas (✓ presentes en la JD)',surface:'Destaca en esta aplicación',none:'Aún sin coincidencias directas — elige un rol para adaptar manualmente.',suggest:function(r){return 'Rol sugerido: '+r;},copied:'Resumen copiado ✓'};}
+function renderJD(r){
+ curRole=r;
+ var d=Object.assign({},JD[r],LANG==='en'?JD_EN[r]:{});var u=UI[LANG];var L=jdLbl();
+ var jt=(window.__jdText||'').toLowerCase();
+ var skillBadges=d.skills.map(function(s){var hit=jt&&jt.indexOf(s.toLowerCase())>=0;return '<span class="badge'+(hit?' jd-hit':'')+'">'+s+(hit?' ✓':'')+'</span>';}).join('');
+ var matched=[];Object.keys(JD_VOCAB).forEach(function(k){if(jt&&jt.indexOf(k)>=0&&matched.indexOf(JD_VOCAB[k])<0)matched.push(JD_VOCAB[k]);});
+ var matchHtml=matched.length?matched.map(function(m){return '<span class="badge jd-hit">'+m+'</span>';}).join(''):'<span style="font-size:13px;color:var(--muted)">'+L.none+'</span>';
+ var projHtml='';
+ if(jt){
+   var sc=PROJECTS.map(function(p){var s=0;p.tags.forEach(function(t){if(jt.indexOf(t.toLowerCase())>=0)s++;});return {p:p,s:s};}).filter(function(x){return x.s>0;}).sort(function(a,b){return b.s-a.s;}).slice(0,4);
+   projHtml=sc.map(function(x){var v=PV(x.p);return '<article class="proj card" data-id="'+x.p.id+'" tabindex="0" role="button"><div class="ptype">'+v.type+'</div><h4>'+v.title+'</h4><p>'+v.summary+'</p><div>'+badgesHTML(x.p.tags.slice(0,4))+'</div></article>';}).join('');
+ }
+ jdOut.innerHTML=
+   '<h4>'+d.title+'</h4>'+
+   '<p class="jd-narr">'+d.narr+'</p>'+
+   '<div class="jd-sec-label">'+L.match+'</div><div class="jd-match">'+matchHtml+'</div>'+
+   (projHtml?('<div class="jd-sec-label">'+L.compat+'</div><div class="jd-compat">'+projHtml+'</div>'):'')+
+   '<div class="jd-sec-label">'+L.aligned+'</div><div class="jd-skills" style="margin-top:0">'+skillBadges+'</div>'+
+   '<div class="jd-sec-label">'+L.surface+'</div><div class="jd-skills" style="margin-top:0">'+d.up.map(function(x){return '<span class="badge">'+x+'</span>';}).join('')+'</div>';
+}
+renderJD('product');
+jdOut.addEventListener('click',function(e){var c=e.target.closest('.proj');if(c&&c.dataset.id)openModal(c.dataset.id);});
+document.querySelectorAll('#jdRoles .jd-role').forEach(function(b){b.addEventListener('click',function(){
+ document.querySelectorAll('#jdRoles .jd-role').forEach(function(x){x.classList.remove('active');});
+ b.classList.add('active');renderJD(b.dataset.r);
+});});
+/* ===== Controles del módulo privado (apertura oculta + análisis de JD) ===== */
+(function(){
+ var bg=document.getElementById('jdStudio');if(!bg)return;
+ var input=document.getElementById('jdInput'),sg=document.getElementById('jdSuggest');
+ function openS(){bg.hidden=false;document.body.style.overflow='hidden';setTimeout(function(){if(input)input.focus();},40);}
+ function closeS(){bg.hidden=true;document.body.style.overflow='';}
+ document.addEventListener('keydown',function(e){
+   if((e.metaKey||e.ctrlKey)&&e.shiftKey&&(e.key==='J'||e.key==='j')){e.preventDefault();bg.hidden?openS():closeS();}
+   else if(e.key==='Escape'&&!bg.hidden){closeS();}
+ });
+ if(/#(owner|jd|studio)$/i.test(location.hash))openS();
+ window.addEventListener('hashchange',function(){if(/#(owner|jd|studio)$/i.test(location.hash))openS();});
+ var x=document.getElementById('jdClose');if(x)x.addEventListener('click',closeS);
+ bg.addEventListener('click',function(e){if(e.target===bg)closeS();});
+ function analyze(){
+   window.__jdText=(input&&input.value)||'';
+   var jt=window.__jdText.toLowerCase();
+   if(jt){
+     var best=curRole,bs=-1;
+     Object.keys(JD).forEach(function(r){var s=0;JD[r].skills.forEach(function(k){if(jt.indexOf(k.toLowerCase())>=0)s++;});if(s>bs){bs=s;best=r;}});
+     document.querySelectorAll('#jdRoles .jd-role').forEach(function(c){c.classList.toggle('active',c.dataset.r===best);});
+     var lab=document.querySelector('#jdRoles .jd-role[data-r="'+best+'"]');
+     if(sg)sg.textContent=jdLbl().suggest(lab?lab.textContent:best);
+     renderJD(best);
+   }else{if(sg)sg.textContent='';renderJD(curRole);}
+ }
+ var an=document.getElementById('jdAnalyze');if(an)an.addEventListener('click',analyze);
+ var cl=document.getElementById('jdClear');if(cl)cl.addEventListener('click',function(){if(input)input.value='';window.__jdText='';if(sg)sg.textContent='';renderJD(curRole);});
+ var f=document.getElementById('jdFile');if(f)f.addEventListener('change',function(){var fl=f.files&&f.files[0];if(!fl)return;var rd=new FileReader();rd.onload=function(){if(input)input.value=rd.result;};rd.readAsText(fl);});
+ var pr=document.getElementById('jdPrint');if(pr)pr.addEventListener('click',function(){document.body.classList.add('jd-print');window.print();});
+ window.addEventListener('afterprint',function(){document.body.classList.remove('jd-print');});
+ var cp=document.getElementById('jdCopy');if(cp)cp.addEventListener('click',function(){var t=jdOut.innerText||jdOut.textContent||'';if(navigator.clipboard&&t){navigator.clipboard.writeText(t).then(function(){cp.textContent=jdLbl().copied;setTimeout(function(){applyLang(LANG);},1300);});}});
+})();
+
+/* Nav móvil */
+const navToggle=document.getElementById('navToggle'),navLinks=document.getElementById('navLinks');
+navToggle.addEventListener('click',()=>{const o=navLinks.classList.toggle('open');navToggle.setAttribute('aria-expanded',o)});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');navToggle.setAttribute('aria-expanded',false)}));
+
+/* Back to top */
+const toTop=document.getElementById('toTop');
+window.addEventListener('scroll',()=>{toTop.classList.toggle('show',window.scrollY>600)});
+toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+/* Año footer */
+function setYear(){const y=document.getElementById('year');if(y)y.textContent=new Date().getFullYear();}
+setYear();
+
+/* =========================================================
+   IDIOMA — ES / EN
+   ========================================================= */
+function applyLang(lang){
+ LANG=lang;
+ document.documentElement.lang=lang;
+ /* Texto plano */
+ document.querySelectorAll('[data-en]').forEach(el=>{
+   if(el.hasAttribute('data-en-attr')){
+     const a=el.getAttribute('data-en-attr');
+     if(el._esAttr===undefined)el._esAttr=el.getAttribute(a)||'';
+     el.setAttribute(a,lang==='en'?el.getAttribute('data-en'):el._esAttr);
+   }else{
+     if(el._es===undefined)el._es=el.innerHTML;
+     el.innerHTML=lang==='en'?el.getAttribute('data-en'):el._es;
+   }
+ });
+ /* HTML con markup */
+ document.querySelectorAll('[data-en-html]').forEach(el=>{
+   if(el._esh===undefined)el._esh=el.innerHTML;
+   el.innerHTML=lang==='en'?el.getAttribute('data-en-html'):el._esh;
+ });
+ /* Tooltips */
+ document.querySelectorAll('[data-en-tip]').forEach(el=>{
+   if(el._estip===undefined)el._estip=el.getAttribute('data-tip')||'';
+   el.setAttribute('data-tip',lang==='en'?el.getAttribute('data-en-tip'):el._estip);
+ });
+ /* Re-render contenido dinámico */
+ applyProj();renderCerts(curCert);renderJD(curRole);
+ if(modalId)openModal(modalId);
+ setYear();
+ document.querySelectorAll('#langSeg .seg-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
+ try{localStorage.setItem('jf_lang',lang)}catch(e){}
+}
+document.querySelectorAll('#langSeg .seg-btn').forEach(b=>b.addEventListener('click',()=>applyLang(b.dataset.lang)));
+
+/* =========================================================
+   TEMA — claro / oscuro
+   ========================================================= */
+function applyTheme(t){
+ document.documentElement.setAttribute('data-theme',t);
+ const btn=document.getElementById('themeBtn');
+ btn.textContent=t==='dark'?'☀️':'🌙';
+ btn.setAttribute('aria-pressed',t==='dark');
+ try{localStorage.setItem('jf_theme',t)}catch(e){}
+}
+const savedTheme=(function(){try{return localStorage.getItem('jf_theme')}catch(e){return null}})()||((window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light');
+applyTheme(savedTheme);
+document.getElementById('themeBtn').addEventListener('click',()=>{
+ applyTheme(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark');
+});
+
+/* Aplicar idioma inicial */
+applyLang(LANG);
+
+/* Timeline horizontal: dots + flechas + estado activo */
+(function(){
+ var tl=document.getElementById("tl"); if(!tl) return;
+ var items=[].slice.call(tl.querySelectorAll(".tl-item"));
+ var dots=document.getElementById("tlDots");
+ function go(L){if(tl.scrollTo){tl.scrollTo({left:L,behavior:"smooth"})}else{tl.scrollLeft=L}}
+ function rel(D){if(tl.scrollBy){tl.scrollBy({left:D,behavior:"smooth"})}else{tl.scrollLeft+=D}}
+ if(dots){dots.innerHTML=items.map(function(_,i){return '<button class="tl-dotnav" data-i="'+i+'" aria-label="'+(i+1)+'"></button>'}).join("");}
+ var dotEls=dots?[].slice.call(dots.children):[];
+ function active(){var c=tl.scrollLeft+tl.clientWidth/2,best=0,bd=1e9;items.forEach(function(it,i){var cen=it.offsetLeft+it.offsetWidth/2,dd=Math.abs(cen-c);if(dd<bd){bd=dd;best=i}});dotEls.forEach(function(d,i){d.classList.toggle("active",i===best)});}
+ var raf;tl.addEventListener("scroll",function(){cancelAnimationFrame(raf);raf=requestAnimationFrame(active)});
+ dotEls.forEach(function(d){d.addEventListener("click",function(){var it=items[+d.dataset.i];go(it.offsetLeft-(tl.clientWidth-it.offsetWidth)/2)})});
+ function byCard(dir){var w=items[0]?items[0].offsetWidth+16:300;rel(dir*w)}
+ var p=document.querySelector(".tl-prev"),n=document.querySelector(".tl-next");
+ if(p)p.addEventListener("click",function(){byCard(-1)});
+ if(n)n.addEventListener("click",function(){byCard(1)});
+ active();
+})();
+
+/* =========================================================
+   CAPA BI / SCROLLYTELLING — interacciones con propósito narrativo
+   (no altera la arquitectura; inyecta elementos y observers)
+   ========================================================= */
+(function(){
+ var RM = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+ /* 1) Barra de progreso de lectura del "reporte" */
+ var pb=document.createElement('div'); pb.id='progress'; document.body.appendChild(pb);
+ function prog(){var st=window.scrollY||document.documentElement.scrollTop;
+   var h=document.documentElement.scrollHeight-window.innerHeight;
+   pb.style.width=(h>0?(st/h*100):0)+'%';}
+ window.addEventListener('scroll',prog,{passive:true}); prog();
+
+ /* 2) Tarjetas KPI: medidor BI DATA-DRIVEN — la barra = valor real / referencia declarada.
+       Cada gauge expone su ratio en un tooltip accesible (regla de cero alucinación). */
+ var gauges=[];
+ var KPI=[
+   {v:27, max:30,  es:'27 años de trayectoria (1998–2025), normalizado sobre una referencia de 30 años.', en:'27 years of experience (1998–2025), normalized against a 30-year reference.'},
+   {v:22, max:30,  es:'22 años de historia longitudinal del estudio RAC (2003–2025), sobre una referencia de 30.', en:'22 years of RAC longitudinal history (2003–2025), against a 30-year reference.'},
+   {v:85, max:100, es:'NPS público institucional ≥85 (escala NPS 0–100).', en:'Public institutional NPS ≥85 (NPS scale 0–100).'},
+   {v:70, max:100, es:'70+ credenciales, sobre un hito de referencia de 100.', en:'70+ credentials, against a 100-credential milestone.'},
+   {v:65, max:100, es:'Promedio NPS de 65 (cohortes documentadas con 70 y 60).', en:'Average NPS of 65 (documented cohorts of 70 and 60).'},
+   {v:300,max:500, es:'+300 K visualizaciones, sobre una referencia de 500 K (métrica dinámica, dato reportado).', en:'+300 K views, against a 500 K reference (dynamic, reported metric).'},
+   {v:3,  max:3,   es:'Cobertura completa de los 3 hyperscalers: AWS, Azure y GCP (3/3).', en:'Full coverage of the 3 hyperscalers: AWS, Azure and GCP (3/3).'},
+   {v:15, max:20,  es:'15 reconocimientos (14 Inspire + 1 Encore), sobre una referencia de 20.', en:'15 awards (14 Inspire + 1 Encore), against a 20-award reference.'}
+ ];
+ document.querySelectorAll('#snapshot .metric').forEach(function(m,i){
+   m.classList.add('kpi');
+   var cfg=KPI[i]||{v:0,max:1,es:'',en:''};
+   var pct=Math.max(0,Math.min(100,Math.round(cfg.v/cfg.max*100)));
+   var g=document.createElement('div'); g.className='kpi-gauge'; g.setAttribute('role','img');
+   var bar=document.createElement('i'); bar.style.setProperty('--w',pct+'%');
+   g.appendChild(bar); m.appendChild(g);
+   g._set=function(){var lang=(typeof LANG!=='undefined'&&LANG==='en')?'en':'es';
+     var t=cfg[lang]+' · '+pct+'%'; g.title=t; g.setAttribute('aria-label',t);};
+   g._set(); gauges.push(g);
+ });
+
+ /* 3) Reveal on scroll — "descubrir insights" sección a sección */
+ ['.section-head','.vp-lead','#experiencia .tl-item','.eco a.card','#testimonios .card','#educacion .acc','.contact-card','.cta-side .card']
+   .forEach(function(sel){document.querySelectorAll(sel).forEach(function(el){el.classList.add('reveal');});});
+ ['.metrics','.pillars','#industrias .grid-4'].forEach(function(sel){var el=document.querySelector(sel);if(el)el.classList.add('reveal-stagger');});
+
+ if('IntersectionObserver' in window && !RM){
+   var io=new IntersectionObserver(function(es){es.forEach(function(e){
+     if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},
+     {threshold:.12,rootMargin:'0px 0px -8% 0px'});
+   document.querySelectorAll('.reveal,.reveal-stagger').forEach(function(el){io.observe(el);});
+ }else{
+   document.querySelectorAll('.reveal,.reveal-stagger').forEach(function(el){el.classList.add('in');});
+ }
+
+ /* 4) Timeline: "Ver más / Ver menos" con altura uniforme (bilingüe) */
+ var MORE={es:['Ver más','Ver menos'],en:['Show more','Show less']};
+ function curLang(){return (typeof LANG!=='undefined'&&LANG==='en')?'en':'es';}
+ document.querySelectorAll('#tl .tl-card').forEach(function(card){
+   var p=card.querySelector('p'); if(!p) return;
+   if(p.scrollHeight-p.clientHeight<=3) return; /* texto no truncado → sin botón */
+   var btn=document.createElement('button'); btn.type='button'; btn.className='tl-more';
+   btn.appendChild(document.createTextNode(''));
+   function relabel(){var l=MORE[curLang()]; btn.firstChild.nodeValue=card.classList.contains('open')?l[1]:l[0];}
+   card.appendChild(btn); relabel();
+   btn.addEventListener('click',function(){card.classList.toggle('open'); relabel();});
+   card._relabel=relabel;
+ });
+ /* refrescar etiquetas (Ver más + tooltips de gauges KPI) al cambiar idioma */
+ document.querySelectorAll('#langSeg .seg-btn').forEach(function(b){
+   b.addEventListener('click',function(){setTimeout(function(){
+     document.querySelectorAll('#tl .tl-card').forEach(function(c){if(c._relabel)c._relabel();});
+     gauges.forEach(function(g){if(g._set)g._set();});},0);});
+ });
+
+ /* 5) Scrollspy — resaltar la sección activa del "reporte" en la nav */
+ var navmap={}; document.querySelectorAll('.nav-links a').forEach(function(a){
+   var id=a.getAttribute('href'); if(id&&id.charAt(0)==='#')navmap[id.slice(1)]=a;});
+ var secs=Object.keys(navmap).map(function(id){return document.getElementById(id);}).filter(Boolean);
+ if('IntersectionObserver' in window){
+   var sio=new IntersectionObserver(function(es){es.forEach(function(e){
+     if(e.isIntersecting){var a=navmap[e.target.id];
+       if(a){document.querySelectorAll('.nav-links a.active').forEach(function(x){x.classList.remove('active');});a.classList.add('active');}}});},
+     {rootMargin:'-45% 0px -50% 0px'});
+   secs.forEach(function(s){sio.observe(s);});
+ }
+})();
+</script>
+</body>
+</html>
