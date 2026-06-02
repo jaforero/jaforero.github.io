@@ -17,15 +17,30 @@
 <link rel="alternate" hreflang="es" href="https://cv.javierforero.co/">
 <link rel="alternate" hreflang="x-default" href="https://cv.javierforero.co/">
 <link rel="preconnect" href="https://javierforero.com" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="https://javierforero.com/fonts/IgraSans.woff2" crossorigin>
+<!-- Favicons / branding en pestañas y resultados de búsqueda -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!-- Verificación de identidad (E-E-A-T) -->
+<link rel="me" href="https://www.linkedin.com/in/jforero/">
+<link rel="me" href="https://www.youtube.com/@JavierForeroRuiz">
+<link rel="me" href="https://javierforero.co/">
 
 <!-- ============ Open Graph / Social ============ -->
 <meta property="og:type" content="profile">
+<meta property="profile:first_name" content="Javier">
+<meta property="profile:last_name" content="Forero">
+<meta property="profile:username" content="jforero">
 <meta property="og:site_name" content="Javier Forero">
 <meta property="og:title" content="Javier Forero · Consultor en IA, Datos y Analítica">
 <meta property="og:description" content="25+ años conectando datos, inteligencia artificial y decisiones de negocio. Proyectos, casos de impacto y CV ejecutivo descargable.">
 <meta property="og:url" content="https://cv.javierforero.co/">
 <meta property="og:locale" content="es_CO">
 <meta property="og:locale:alternate" content="en_US">
+<meta property="og:updated_time" content="2026-06-02T09:00:00-05:00">
+<meta property="article:published_time" content="2026-06-02T09:00:00-05:00">
+<meta property="article:modified_time" content="2026-06-02T09:00:00-05:00">
 <!-- [IMAGEN_OG]: reemplazar por una imagen real 1200x630 alojada en el subdominio -->
 <meta property="og:image" content="https://cv.javierforero.co/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -43,14 +58,25 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "BreadcrumbList",
+      "@id": "https://cv.javierforero.co/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Javier Forero", "item": "https://javierforero.co/" },
+        { "@type": "ListItem", "position": 2, "name": "CV", "item": "https://cv.javierforero.co/" }
+      ]
+    },
+    {
       "@type": "ProfilePage",
       "@id": "https://cv.javierforero.co/#profilepage",
       "url": "https://cv.javierforero.co/",
       "name": "Javier Forero · CV — Consultor en IA, Datos y Analítica",
       "inLanguage": "es",
+      "datePublished": "2026-06-02",
+      "dateModified": "2026-06-02",
       "isPartOf": { "@id": "https://javierforero.co/#website" },
       "about": { "@id": "https://javierforero.co/#person" },
-      "mainEntity": { "@id": "https://javierforero.co/#person" }
+      "mainEntity": { "@id": "https://javierforero.co/#person" },
+      "breadcrumb": { "@id": "https://cv.javierforero.co/#breadcrumb" }
     },
     {
       "@type": "WebSite",
@@ -75,6 +101,25 @@
       "knowsLanguage": ["es", "en"],
       "address": { "@type": "PostalAddress", "addressLocality": "Bogotá", "addressCountry": "CO" },
       "worksFor": { "@type": "Organization", "name": "Consultoría independiente" },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "business",
+        "email": "mail@javierforero.com",
+        "telephone": "+57 320 838 3457",
+        "availableLanguage": ["es", "en"]
+      },
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "degree",
+        "name": "Estadístico",
+        "recognizedBy": { "@type": "CollegeOrUniversity", "name": "Universidad Nacional de Colombia" }
+      },
+      "makesOffer": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Consultoría en Inteligencia Artificial y estrategia de datos" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dirección de iniciativas de IA, analítica y automatización" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Formación ejecutiva y docencia en IA aplicada" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conferencias y charlas sobre IA, datos y transformación digital" } }
+      ],
       "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universidad Nacional de Colombia" },
       "hasOccupation": {
         "@type": "Occupation",
