@@ -238,6 +238,7 @@ h1,h2,h3,h4{line-height:1.18;margin:0}
 .nav-in{display:flex;align-items:center;gap:12px;height:64px;max-width:var(--maxw);margin:0 auto;padding:0 24px}
 .brand{font-weight:800;color:var(--deep-blue);font-size:16px;letter-spacing:-.01em;white-space:nowrap;flex:0 0 auto}
 .brand span{color:var(--purple)}
+.brand:hover{text-decoration:none;opacity:.9}
 .nav-links{display:flex;gap:1px;margin-left:6px;flex:1 1 auto;min-width:0;flex-wrap:nowrap;align-items:center;
   overflow-x:auto;scrollbar-width:none}
 .nav-links::-webkit-scrollbar{display:none}
@@ -734,7 +735,7 @@ h1,h2,h3,h4{line-height:1.18;margin:0}
 <!-- ============ NAV ============ -->
 <nav class="nav" aria-label="Navegación principal">
   <div class="nav-in">
-    <div class="brand">Javier<span>Forero</span></div>
+    <a class="brand" href="https://cv.javierforero.co/" aria-label="Inicio — Javier Forero">Javier<span>Forero</span></a>
     <div class="nav-links" id="navLinks">
       <a href="#valor" data-en="Value">Valor</a>
       <a href="#proyectos" data-en="Projects">Proyectos</a>
@@ -799,24 +800,20 @@ h1,h2,h3,h4{line-height:1.18;margin:0}
         <div class="lab" data-en="Years in data, analytics, AI and digital transformation">Años en datos, analítica, IA y transformación digital</div>
       </div>
       <div class="metric">
-        <div class="num" data-en="22+ yrs">+22 años</div>
-        <div class="lab" data-en="Longitudinal brand intelligence (RAC): 19 sectors · 120+ categories">Inteligencia longitudinal de branding (RAC): 19 sectores · 120+ categorías</div>
+        <div class="num">70+</div>
+        <div class="lab" data-en="Credentials in AI, data, cloud, analytics, product and leadership">Credenciales en IA, datos, cloud, analítica, producto y liderazgo</div>
       </div>
       <div class="metric">
         <div class="num">NPS &gt;85</div>
         <div class="lab" data-en="Public institutional average in AI training (Asuntos Digitales)">Promedio público institucional en formación de IA (Asuntos Digitales)</div>
       </div>
       <div class="metric">
-        <div class="num">70+</div>
-        <div class="lab" data-en="Credentials in AI, data, cloud, analytics, product and leadership">Credenciales en IA, datos, cloud, analítica, producto y liderazgo</div>
-      </div>
-      <div class="metric">
         <div class="num">NPS 70 / 60</div>
         <div class="lab" data-en="AI Productivity Tools — Collective Academy (two cohorts)">AI Productivity Tools — Collective Academy (dos cohortes)</div>
       </div>
       <div class="metric">
-        <div class="num">+300 K</div>
-        <div class="lab" data-en="Views of educational content on YouTube">Visualizaciones de contenidos educativos en YouTube</div>
+        <div class="num">1.6K</div>
+        <div class="lab" data-en="YouTube subscribers">Suscriptores en YouTube</div>
       </div>
       <div class="metric">
         <div class="num">3 clouds</div>
@@ -825,6 +822,10 @@ h1,h2,h3,h4{line-height:1.18;margin:0}
       <div class="metric">
         <div class="num">14 + 1</div>
         <div class="lab" data-en="Inspire Awards and 1 Encore Award at Johnson &amp; Johnson">Inspire Awards y 1 Encore Award en Johnson &amp; Johnson</div>
+      </div>
+      <div class="metric">
+        <div class="num" data-en="22+ yrs">+22 años</div>
+        <div class="lab" data-en="Longitudinal brand intelligence (RAC): 19 sectors · 120+ categories">Inteligencia longitudinal de branding (RAC): 19 sectores · 120+ categorías</div>
       </div>
     </div>
   </div>
@@ -1115,7 +1116,7 @@ h1,h2,h3,h4{line-height:1.18;margin:0}
     <div class="section-head">
       <div class="section-title" data-en="Certifications">Certificaciones</div>
       <h2 class="section-h" data-en="70+ credentials in AI, data, cloud and leadership">70+ credenciales en IA, datos, cloud y liderazgo</h2>
-      <p class="section-sub" data-en="Filterable explorer · all 70 LinkedIn credentials, classified by domain.">Explorador filtrable por tema · las 70 credenciales de LinkedIn, clasificadas por dominio.</p>
+      <p class="section-sub" data-en="Filterable explorer · 71 credentials classified by domain (LinkedIn, Google/Kaggle).">Explorador filtrable por tema · 71 credenciales clasificadas por dominio (LinkedIn, Google/Kaggle).</p>
     </div>
     <div class="filters" id="certFilters">
       <button class="chip active" data-cf="all" data-en="All">Todas</button>
@@ -1709,14 +1710,15 @@ const JD_EN={
 const EV_EN={doc:'Documented',pub:'Public average',rep:'Reported',kpi:'Target KPI',exp:'Expected impact',pen:'Pending'};
 /* UI strings i18n */
 const UI={
- es:{ctx:'Contexto',chal:'Reto',role:'Rol de Javier',sol:'Solución diseñada',arch:'Arquitectura / stack',met:'Métricas &amp; evidencia',ctrl:'Nota de control',more:'Ver caso →',up:'Reordenar arriba',down:'Reducir énfasis',jdskills:'Skills / keywords prioritarias',certcount:n=>`Mostrando ${n} de 70 credenciales · lista completa de LinkedIn`},
- en:{ctx:'Context',chal:'Challenge',role:"Javier's role",sol:'Designed solution',arch:'Architecture / stack',met:'Metrics &amp; evidence',ctrl:'Control note',more:'View case →',up:'Move up',down:'De-emphasize',jdskills:'Priority skills / keywords',certcount:n=>`Showing ${n} of 70 credentials · full LinkedIn list`}
+ es:{ctx:'Contexto',chal:'Reto',role:'Rol de Javier',sol:'Solución diseñada',arch:'Arquitectura / stack',met:'Métricas &amp; evidencia',ctrl:'Nota de control',more:'Ver caso →',up:'Reordenar arriba',down:'Reducir énfasis',jdskills:'Skills / keywords prioritarias',certcount:n=>`Mostrando ${n} de 71 credenciales · lista completa`},
+ en:{ctx:'Context',chal:'Challenge',role:"Javier's role",sol:'Designed solution',arch:'Architecture / stack',met:'Metrics &amp; evidence',ctrl:'Control note',more:'View case →',up:'Move up',down:'De-emphasize',jdskills:'Priority skills / keywords',certcount:n=>`Showing ${n} of 71 credentials · full list`}
 };
 
 /* =========================================================
    CERTIFICACIONES (selección representativa)
    ========================================================= */
 const CERTS=[
+ {t:"5-Day Gen AI Intensive Course with Google",i:"Google / Kaggle",y:"2025",c:"ai"},
  {t:"Agentic AI: Challenges & Opportunities for Leadership",i:"LinkedIn",y:"2025",c:"ai"},
  {t:"Generative AI with Large Language Models",i:"DeepLearning.AI / AWS",y:"2024",c:"ai"},
  {t:"Building Agentic RAG with LlamaIndex",i:"DeepLearning.AI",y:"2024",c:"ai"},
@@ -2110,13 +2112,13 @@ applyLang(LANG);
  var gauges=[];
  var KPI=[
    {v:27, max:30,  es:'27 años de trayectoria (1998–2025), normalizado sobre una referencia de 30 años.', en:'27 years of experience (1998–2025), normalized against a 30-year reference.'},
-   {v:22, max:30,  es:'22 años de historia longitudinal del estudio RAC (2003–2025), sobre una referencia de 30.', en:'22 years of RAC longitudinal history (2003–2025), against a 30-year reference.'},
-   {v:85, max:100, es:'NPS público institucional ≥85 (escala NPS 0–100).', en:'Public institutional NPS ≥85 (NPS scale 0–100).'},
    {v:70, max:100, es:'70+ credenciales, sobre un hito de referencia de 100.', en:'70+ credentials, against a 100-credential milestone.'},
+   {v:85, max:100, es:'NPS público institucional ≥85 (escala NPS 0–100).', en:'Public institutional NPS ≥85 (NPS scale 0–100).'},
    {v:65, max:100, es:'Promedio NPS de 65 (cohortes documentadas con 70 y 60).', en:'Average NPS of 65 (documented cohorts of 70 and 60).'},
-   {v:300,max:500, es:'+300 K visualizaciones, sobre una referencia de 500 K (métrica dinámica, dato reportado).', en:'+300 K views, against a 500 K reference (dynamic, reported metric).'},
+   {v:1.6,max:2.5, es:'1.6K suscriptores en YouTube, sobre una referencia de 2.5K (métrica dinámica, dato reportado).', en:'1.6K YouTube subscribers, against a 2.5K reference (dynamic, reported metric).'},
    {v:3,  max:3,   es:'Cobertura completa de los 3 hyperscalers: AWS, Azure y GCP (3/3).', en:'Full coverage of the 3 hyperscalers: AWS, Azure and GCP (3/3).'},
-   {v:15, max:20,  es:'15 reconocimientos (14 Inspire + 1 Encore), sobre una referencia de 20.', en:'15 awards (14 Inspire + 1 Encore), against a 20-award reference.'}
+   {v:15, max:20,  es:'15 reconocimientos (14 Inspire + 1 Encore), sobre una referencia de 20.', en:'15 awards (14 Inspire + 1 Encore), against a 20-award reference.'},
+   {v:22, max:30,  es:'22 años de historia longitudinal del estudio RAC (2003–2025), sobre una referencia de 30.', en:'22 years of RAC longitudinal history (2003–2025), against a 30-year reference.'}
  ];
  document.querySelectorAll('#snapshot .metric').forEach(function(m,i){
    m.classList.add('kpi');
