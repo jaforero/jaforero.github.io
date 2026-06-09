@@ -3,6 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ Google Analytics 4 (G-MQ3K8EVKV0) ============ -->
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MQ3K8EVKV0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  // Subdominio de javierforero.co: la misma propiedad mide ambos sin cambiar el ID.
+  gtag('config', 'G-MQ3K8EVKV0');
+</script>
+
 <title>Javier Forero · CV Consultor IA, Datos y Analítica</title>
 
 <!-- ============ SEO ============ -->
@@ -812,7 +824,7 @@ h1,h2,h3,h4{line-height:1.18;margin:0}
         <div class="lab" data-en="AI Productivity Tools — Collective Academy (two cohorts)">AI Productivity Tools — Collective Academy (dos cohortes)</div>
       </div>
       <div class="metric">
-        <div class="num">1.1K</div>
+        <div class="num">1.6K</div>
         <div class="lab" data-en="YouTube subscribers">Suscriptores en YouTube</div>
       </div>
       <div class="metric">
@@ -1825,6 +1837,7 @@ let LANG=(function(){try{return localStorage.getItem('jf_lang')||'es'}catch(e){r
 /* Descarga del PDF maestro según el idioma activo */
 function downloadCV(){
  var f=(LANG==='en')?'Javier_Forero_Master_CV_EN_2026.pdf':'Javier_Forero_CV_Base_Maestra_ES_2026.pdf';
+ if(window.gtag)gtag('event','cv_download',{language:LANG,file_name:f});
  var a=document.createElement('a');a.href=encodeURI(f);a.download=f;a.rel='noopener';
  document.body.appendChild(a);a.click();a.remove();
 }
@@ -1876,6 +1889,7 @@ const modalBg=document.getElementById('modalBg');
 let modalId=null;
 function openModal(id){
  const base=PROJECTS.find(x=>x.id===id);if(!base)return;
+ if(window.gtag)gtag('event','project_open',{project_id:id});
  modalId=id;const p=PV(base);const u=UI[LANG];
  document.getElementById('modalType').textContent=p.type;
  document.getElementById('modalTitle').innerHTML=p.title;
@@ -2177,6 +2191,51 @@ applyLang(LANG);
      {rootMargin:'-45% 0px -50% 0px'});
    secs.forEach(function(s){sio.observe(s);});
  }
+})();
+
+/* =========================================================
+   GA4 — eventos personalizados (medición de comportamiento)
+   ========================================================= */
+(function(){
+ function track(n,p){ try{ if(window.gtag) gtag('event', n, p||{}); }catch(e){} }
+ window.__track = track;
+ // Cambio de idioma (ES/EN)
+ document.querySelectorAll('#langSeg .seg-btn').forEach(function(b){
+   b.addEventListener('click', function(){ track('language_switch', {language: b.dataset.lang}); });
+ });
+ // Cambio de tema (claro/oscuro)
+ var tb=document.getElementById('themeBtn');
+ if(tb) tb.addEventListener('click', function(){
+   setTimeout(function(){ track('theme_switch', {theme: document.documentElement.getAttribute('data-theme')||'light'}); },0);
+ });
+ // Filtros de proyectos
+ document.querySelectorAll('#projFilters .chip').forEach(function(c){
+   c.addEventListener('click', function(){ track('project_filter', {filter: c.dataset.f}); });
+ });
+ // Filtros de certificaciones
+ document.querySelectorAll('#certFilters .chip').forEach(function(c){
+   c.addEventListener('click', function(){ track('cert_filter', {filter: c.dataset.cf}); });
+ });
+ // Pestañas de capacidades
+ document.querySelectorAll('#skillTabs .tab').forEach(function(t){
+   t.addEventListener('click', function(){ track('skill_tab', {tab: t.dataset.t}); });
+ });
+ // Búsqueda de proyectos (al escribir)
+ var srch=document.getElementById('search');
+ if(srch){ var sT; srch.addEventListener('input', function(){ clearTimeout(sT); sT=setTimeout(function(){
+   var q=(srch.value||'').trim(); if(q.length>=3) track('project_search', {search_term:q.toLowerCase()});
+ },900); }); }
+ // Clics de contacto y salientes (delegación)
+ document.addEventListener('click', function(e){
+   var a=e.target.closest('a'); if(!a) return;
+   var href=a.getAttribute('href')||'';
+   if(href.indexOf('mailto:')===0) track('contact_click', {method:'email'});
+   else if(href.indexOf('tel:')===0) track('contact_click', {method:'phone'});
+   else if(/linkedin\.com/.test(href)) track('contact_click', {method:'linkedin'});
+   else if(/bit\.ly\/m\/jforero/.test(href)) track('contact_click', {method:'portfolio'});
+   else if(/youtube\.com|youtu\.be/.test(href)) track('outbound_click', {destination:'youtube', url:href});
+   else if(/^https?:\/\//.test(href) && href.indexOf(location.host)<0) track('outbound_click', {url:href});
+ });
 })();
 </script>
 </body>
