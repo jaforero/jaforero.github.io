@@ -369,7 +369,7 @@ h1,h2,h3,h4{line-height:1.18;margin:0}
 .tl-wrap{position:relative;margin-top:6px}
 .tl{position:relative;display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:6px 2px 14px;scrollbar-width:none}
 .tl::-webkit-scrollbar{display:none}
-.tl-item{position:relative;flex:0 0 84%;max-width:340px;scroll-snap-align:center;padding-top:46px;display:flex;flex-direction:column}
+.tl-item{position:relative;flex:0 0 84%;max-width:340px;scroll-snap-align:start;padding-top:46px;display:flex;flex-direction:column}
 .tl-item::before{content:"";position:absolute;top:21px;left:-8px;right:-8px;height:3px;background:var(--border);z-index:0}
 .tl-item:first-child::before{left:50%}
 .tl-item:last-child::before{right:50%}
@@ -393,7 +393,7 @@ h1,h2,h3,h4{line-height:1.18;margin:0}
   .tl-arrow:hover{border-color:var(--purple);color:var(--purple)}
   .tl-hint{display:none}
 }
-@media(min-width:1000px){.tl-item{flex-basis:31.5%}}
+@media(min-width:1000px){.tl-item{flex-basis:23%;max-width:300px}}
 
 /* =========================================================
    ACCORDION (skills, education, certs)
@@ -622,9 +622,9 @@ h1,h2,h3,h4{line-height:1.18;margin:0}
 
 /* ===== Timeline analítico: altura uniforme + "Ver más" ===== */
 .tl{align-items:flex-start}
-.tl-card{min-height:252px}
-.tl-card p{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
-.tl-card.open p{-webkit-line-clamp:unset;overflow:visible}
+.tl-card{min-height:132px}
+.tl-card p{display:none;margin-top:8px}            /* colapsado: solo título + subtítulo */
+.tl-card.open p{display:block}                     /* "Ver más" revela el detalle */
 .tl-more{margin-top:11px;align-self:flex-start;background:none;border:0;cursor:pointer;
   color:var(--vibrant-blue);font-family:inherit;font-weight:800;font-size:12.5px;
   display:inline-flex;align-items:center;gap:5px;padding:4px 0}
@@ -635,7 +635,7 @@ h1,h2,h3,h4{line-height:1.18;margin:0}
 @media print{
   #progress{display:none!important}
   .reveal,.reveal-stagger>*{opacity:1!important;transform:none!important}
-  .tl-card p{-webkit-line-clamp:unset!important;overflow:visible!important}
+  .tl-card p{display:block!important}
   .tl-more,.kpi-gauge{display:none!important}
 }
 
@@ -727,6 +727,7 @@ h1,h2,h3,h4{line-height:1.18;margin:0}
 .proj .badge{font-size:10.5px;padding:3px 8px;margin:2px 3px 2px 0;font-weight:700}
 .proj-foot{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:auto}
 .proj-foot .ev{margin-top:0}
+.proj-more-wrap{text-align:center;margin-top:22px}
 .proj .more{font-size:12px;font-weight:800;color:var(--vibrant-blue);white-space:nowrap}
 @media(max-width:620px){
   #projGrid{grid-template-columns:repeat(2,1fr);gap:9px}
@@ -740,6 +741,55 @@ h1,h2,h3,h4{line-height:1.18;margin:0}
 #snapshot .metric .lab{margin-top:6px;font-size:12px;line-height:1.35}
 #snapshot .kpi-gauge{margin-top:12px;height:5px}
 #snapshot .metric .ev{display:none}
+
+/* =========================================================
+   MOBILE-FIRST v2 — táctil, performance, accesibilidad, bottom sheet
+   ========================================================= */
+
+/* 1) Evitar el zoom automático de iOS al enfocar inputs (>=16px en móvil) */
+@media(max-width:620px){
+  .search-box input,#jdInput{font-size:16px}
+}
+
+/* 2) Tap targets cómodos (>=44px) en móvil */
+@media(max-width:620px){
+  .icon-btn{width:44px;height:44px}
+  .nav-toggle{width:44px;height:44px}
+  .chip{padding:10px 15px}
+  /* puntos del timeline: área táctil grande, punto visual pequeño */
+  .tl-dotnav{box-sizing:content-box;padding:9px;background-clip:content-box}
+  .tl-dotnav.active{background-clip:content-box}
+  .tl-dots{gap:2px}
+}
+
+/* 3) Safe-area (notch / Dynamic Island / home indicator) */
+.totop{bottom:max(22px, env(safe-area-inset-bottom))}
+@media(max-width:620px){
+  .nav-in{padding-left:max(18px, env(safe-area-inset-left));padding-right:max(18px, env(safe-area-inset-right))}
+}
+
+/* 4) Render diferido de secciones fuera de pantalla (perf en móvil) */
+.section{content-visibility:auto;contain-intrinsic-size:auto 600px}
+@media print{.section{content-visibility:visible}}
+
+/* 5) Foco visible para teclado / lector de pantalla (WCAG) */
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
+.chip:focus-visible,.tab:focus-visible,.jd-role:focus-visible,.seg-btn:focus-visible,
+.proj:focus-visible,.acc-h:focus-visible,[tabindex]:focus-visible{
+  outline:3px solid var(--purple);outline-offset:2px;border-radius:8px;
+}
+
+/* 6) Modal de proyecto como BOTTOM SHEET en móvil */
+@media(max-width:620px){
+  .modal-bg{align-items:flex-end;padding:0}
+  .modal{max-width:none;width:100%;border-radius:20px 20px 0 0;max-height:92vh;overflow-y:auto;
+    animation:sheetUp .3s cubic-bezier(.22,1,.36,1)}
+  .modal-hero{position:sticky;top:0;z-index:2;border-radius:20px 20px 0 0;padding-top:26px}
+  .modal-hero::before{content:"";position:absolute;top:9px;left:50%;transform:translateX(-50%);
+    width:42px;height:4px;border-radius:999px;background:rgba(255,255,255,.55)}
+  .modal-body{padding:22px 20px calc(26px + env(safe-area-inset-bottom))}
+}
+@keyframes sheetUp{from{transform:translateY(100%)}to{transform:none}}
 </style>
 </head>
 <body>
@@ -886,6 +936,7 @@ h1,h2,h3,h4{line-height:1.18;margin:0}
     </div>
     <div class="grid-3" id="projGrid"></div>
     <p class="empty" id="projEmpty" data-en="No projects found for that filter or search.">No se encontraron proyectos para ese filtro o búsqueda.</p>
+    <div class="proj-more-wrap"><button class="btn secondary" id="projMore" type="button" hidden>Ver más</button></div>
   </div>
 </section>
 
@@ -1860,10 +1911,10 @@ function renderProjects(list){
  grid.innerHTML=list.map(cardHTML).join('');
  document.getElementById('projEmpty').style.display=list.length?'none':'block';
 }
-renderProjects(PROJECTS);
-
-/* Filtros + búsqueda combinados */
-let curFilter='all',curSearch='';
+/* Filtros + búsqueda + "Ver más proyectos" (sección compacta: 6 iniciales) */
+let curFilter='all',curSearch='',projExpanded=false;
+const PROJ_LIMIT=6;
+const projMore=document.getElementById('projMore');
 function applyProj(){
  const q=curSearch.trim().toLowerCase();
  const list=PROJECTS.filter(p=>{
@@ -1872,16 +1923,31 @@ function applyProj(){
   const okS=!q||hay.includes(q);
   return okF&&okS;
  });
- renderProjects(list);
+ const shown=projExpanded?list:list.slice(0,PROJ_LIMIT);
+ renderProjects(shown);
+ if(projMore){
+  const hidden=list.length-shown.length;
+  if(list.length>PROJ_LIMIT){
+   projMore.hidden=false;
+   projMore.textContent=projExpanded?(LANG==='en'?'Show less':'Ver menos'):(LANG==='en'?('Show '+hidden+' more'):('Ver '+hidden+' más'));
+  }else{projMore.hidden=true;}
+ }
 }
+applyProj();
 document.querySelectorAll('#projFilters .chip').forEach(c=>c.addEventListener('click',()=>{
  document.querySelectorAll('#projFilters .chip').forEach(x=>x.classList.remove('active'));
- c.classList.add('active');curFilter=c.dataset.f;applyProj();
+ c.classList.add('active');curFilter=c.dataset.f;projExpanded=false;applyProj();
 }));
 document.getElementById('search').addEventListener('input',e=>{
  curSearch=e.target.value;
  if(curSearch){curFilter='all';document.querySelectorAll('#projFilters .chip').forEach(x=>x.classList.toggle('active',x.dataset.f==='all'));}
+ projExpanded=false;applyProj();
+});
+if(projMore)projMore.addEventListener('click',function(){
+ projExpanded=!projExpanded;
+ if(window.__track)window.__track(projExpanded?'projects_expand':'projects_collapse',{});
  applyProj();
+ if(!projExpanded){var s=document.getElementById('proyectos');if(s&&s.scrollIntoView)s.scrollIntoView({behavior:'smooth'});}
 });
 
 /* Modal deep dive */
@@ -2165,7 +2231,7 @@ applyLang(LANG);
  function curLang(){return (typeof LANG!=='undefined'&&LANG==='en')?'en':'es';}
  document.querySelectorAll('#tl .tl-card').forEach(function(card){
    var p=card.querySelector('p'); if(!p) return;
-   if(p.scrollHeight-p.clientHeight<=3) return; /* texto no truncado → sin botón */
+   /* la descripción siempre inicia oculta; el botón la revela */
    var btn=document.createElement('button'); btn.type='button'; btn.className='tl-more';
    btn.appendChild(document.createTextNode(''));
    function relabel(){var l=MORE[curLang()]; btn.firstChild.nodeValue=card.classList.contains('open')?l[1]:l[0];}
