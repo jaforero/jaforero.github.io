@@ -790,6 +790,39 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
   .modal-body{padding:22px 20px calc(26px + env(safe-area-inset-bottom))}
 }
 @keyframes sheetUp{from{transform:translateY(100%)}to{transform:none}}
+
+/* =========================================================
+   NEXT-LEVEL — radar, franja de marcas, vCard/QR, hero vivo
+   ========================================================= */
+/* Radar de competencias (SVG inline, sin librerías) */
+.radar-wrap{display:flex;flex-direction:column;align-items:center;margin:6px auto 28px;text-align:center;max-width:460px}
+.radar{width:100%;height:auto;max-width:420px;overflow:visible}
+.radar-cap{font-size:12.5px;color:var(--muted);margin:8px 0 0}
+@media(prefers-reduced-motion:no-preference){
+  .radar-shape{opacity:0;transform:scale(.55);transform-box:fill-box;transform-origin:center}
+  .radar-wrap.in .radar-shape{animation:radarIn .9s cubic-bezier(.22,1,.36,1) forwards}
+  @keyframes radarIn{to{opacity:1;transform:scale(1)}}
+}
+/* Franja de marcas */
+.brandstrip-sec{padding:16px 0 4px}
+.brandstrip-label{text-align:center;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+.brandstrip{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 12px}
+.brandstrip span{font-size:13.5px;font-weight:700;color:var(--deep-blue);opacity:.7;padding:7px 15px;border:1px solid var(--border);border-radius:999px;background:var(--white);white-space:nowrap;transition:opacity .2s,transform .2s}
+.brandstrip span:hover{opacity:1;transform:translateY(-2px)}
+@media(max-width:620px){
+  .brandstrip{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;scrollbar-width:none;margin:0 -18px;padding:0 18px 4px}
+  .brandstrip::-webkit-scrollbar{display:none}
+  .brandstrip span{flex:0 0 auto}
+}
+/* Tarjeta vCard + QR */
+.vcard-row{display:flex;gap:14px;align-items:center}
+.vcard-qr{width:84px;height:84px;border-radius:10px;border:1px solid var(--border);background:#fff;flex:0 0 auto}
+.vcard-row p{margin:0 0 10px}
+/* Hero "vivo": gradiente animado lento */
+@media(prefers-reduced-motion:no-preference){
+  .hero{background-size:170% 170%;animation:heroShift 16s ease-in-out infinite}
+  @keyframes heroShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+}
 </style>
 </head>
 <body>
@@ -889,6 +922,23 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
         <div class="num" data-en="22+ yrs">+22 años</div>
         <div class="lab" data-en="Longitudinal brand intelligence (RAC): 19 sectors · 120+ categories">Inteligencia longitudinal de branding (RAC): 19 sectores · 120+ categorías</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FRANJA DE MARCAS ============ -->
+<section class="brandstrip-sec" aria-label="Experiencia en organizaciones líderes">
+  <div class="wrap">
+    <p class="brandstrip-label" data-en="Experience at leading organizations">Experiencia en organizaciones líderes</p>
+    <div class="brandstrip">
+      <span>Johnson &amp; Johnson</span>
+      <span>GroupM</span>
+      <span>Wavemaker</span>
+      <span>MEC</span>
+      <span>Universidad Nacional</span>
+      <span>Universidad Militar (UMNG)</span>
+      <span>Asuntos Digitales</span>
+      <span>Collective Academy</span>
     </div>
   </div>
 </section>
@@ -1047,6 +1097,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
       <h2 class="section-h" data-en="Competencies by domain, with linked evidence">Competencias por dominio, con evidencia asociada</h2>
       <p class="section-sub" data-en="Each domain groups skills, the projects where they apply and keywords for ATS processes.">Cada dominio agrupa skills, proyectos donde se aplican y palabras clave para procesos ATS.</p>
     </div>
+    <figure class="radar-wrap reveal">
+      <svg class="radar" viewBox="0 0 380 360" role="img" aria-label="Perfil de competencias por dominio" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="radarFill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4e00ff" stop-opacity="0.34"/><stop offset="1" stop-color="#7c4dff" stop-opacity="0.22"/></linearGradient></defs><polygon points="190.0,155.0 213.5,166.3 219.2,191.7 203.0,212.0 177.0,212.0 160.8,191.7 166.5,166.3" fill="none" stroke="var(--border)" stroke-width="1"/><polygon points="190.0,125.0 236.9,147.6 248.5,198.4 216.0,239.1 164.0,239.1 131.5,198.4 143.1,147.6" fill="none" stroke="var(--border)" stroke-width="1"/><polygon points="190.0,95.0 260.4,128.9 277.7,205.0 229.0,266.1 151.0,266.1 102.3,205.0 119.6,128.9" fill="none" stroke="var(--border)" stroke-width="1"/><polygon points="190.0,65.0 283.8,110.2 307.0,211.7 242.1,293.1 137.9,293.1 73.0,211.7 96.2,110.2" fill="none" stroke="var(--border)" stroke-width="1"/><line x1="190" y1="185" x2="190.0" y2="65.0" stroke="var(--border)" stroke-width="1"/><line x1="190" y1="185" x2="283.8" y2="110.2" stroke="var(--border)" stroke-width="1"/><line x1="190" y1="185" x2="307.0" y2="211.7" stroke="var(--border)" stroke-width="1"/><line x1="190" y1="185" x2="242.1" y2="293.1" stroke="var(--border)" stroke-width="1"/><line x1="190" y1="185" x2="137.9" y2="293.1" stroke="var(--border)" stroke-width="1"/><line x1="190" y1="185" x2="73.0" y2="211.7" stroke="var(--border)" stroke-width="1"/><line x1="190" y1="185" x2="96.2" y2="110.2" stroke="var(--border)" stroke-width="1"/><polygon class="radar-shape" points="190.0,71.0 279.1,113.9 295.3,209.0 235.8,280.1 148.3,271.5 90.6,207.7 113.1,123.6" fill="url(#radarFill)" stroke="#4e00ff" stroke-width="2" stroke-linejoin="round"/><circle cx="190.0" cy="71.0" r="3.5" fill="#4e00ff"/><circle cx="279.1" cy="113.9" r="3.5" fill="#4e00ff"/><circle cx="295.3" cy="209.0" r="3.5" fill="#4e00ff"/><circle cx="235.8" cy="280.1" r="3.5" fill="#4e00ff"/><circle cx="148.3" cy="271.5" r="3.5" fill="#4e00ff"/><circle cx="90.6" cy="207.7" r="3.5" fill="#4e00ff"/><circle cx="113.1" cy="123.6" r="3.5" fill="#4e00ff"/><text x="190.0" y="43.0" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--muted)">AI Strategy</text><text x="299.5" y="95.7" text-anchor="start" font-size="11.5" font-weight="700" fill="var(--muted)">GenAI · LLMs</text><text x="326.5" y="226.2" text-anchor="start" font-size="11.5" font-weight="700" fill="var(--muted)">Data Science</text><text x="250.7" y="321.1" text-anchor="start" font-size="11.5" font-weight="700" fill="var(--muted)">Analytics · BI</text><text x="129.3" y="321.1" text-anchor="end" font-size="11.5" font-weight="700" fill="var(--muted)">Cloud · MLOps</text><text x="53.5" y="226.2" text-anchor="end" font-size="11.5" font-weight="700" fill="var(--muted)">Consulting</text><text x="80.5" y="95.7" text-anchor="end" font-size="11.5" font-weight="700" fill="var(--muted)">Teaching</text></svg>
+      <figcaption class="radar-cap" data-en="Competency profile — emphasis by domain (qualitative)">Perfil de competencias — énfasis por dominio (cualitativo)</figcaption>
+    </figure>
     <div class="tabs" id="skillTabs" role="tablist">
       <button class="tab active" data-t="t1" data-en="AI Strategy &amp; Governance">Estrategia y Gobierno de IA</button>
       <button class="tab" data-t="t2" data-en="Generative AI, LLMs &amp; Agents">IA Generativa, LLMs y Agentes</button>
@@ -1311,6 +1365,15 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
         <div class="card"><h4 data-en="For recruiters">Para recruiters</h4><p data-en="Download a version of my CV tailored to the role you're hiring for.">Descarga una versión de mi CV adaptada al rol que estás buscando.</p><button class="btn sm" onclick="downloadCV()" data-en="⬇ Download CV">⬇ Descargar CV</button></div>
         <div class="card"><h4 data-en="For clients">Para clientes</h4><p data-en="Let's talk about how to turn your data and processes into actionable decisions.">Conversemos sobre cómo convertir tus datos y procesos en decisiones accionables.</p><a class="btn sm secondary" href="mailto:mail@javierforero.com?subject=Consultor%C3%ADa%20IA%20y%20Datos" data-en="✉ Schedule a conversation">✉ Agendar conversación</a></div>
         <div class="card"><h4 data-en="Explore more">Explora más</h4><p data-en="My projects, content and AI application cases.">Mis proyectos, contenidos y casos de aplicación de IA.</p><a class="btn sm secondary" href="#proyectos" data-en="View projects">Ver proyectos</a></div>
+        <div class="card"><h4 data-en="Save my contact">Guarda mi contacto</h4>
+          <div class="vcard-row">
+            <img src="/qr-cv.png" alt="Código QR hacia cv.javierforero.co" width="84" height="84" class="vcard-qr" loading="lazy">
+            <div>
+              <p data-en="Scan the QR or save my vCard.">Escanea el QR o guarda mi vCard.</p>
+              <button class="btn sm" type="button" onclick="downloadVCard()" data-en="⤓ Save contact (vCard)">⤓ Guardar contacto (vCard)</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1892,6 +1955,18 @@ function downloadCV(){
  var a=document.createElement('a');a.href=encodeURI(f);a.download=f;a.rel='noopener';
  document.body.appendChild(a);a.click();a.remove();
 }
+/* Descarga de tarjeta de contacto (vCard .vcf) */
+function downloadVCard(){
+ var v=['BEGIN:VCARD','VERSION:3.0','N:Forero;Javier;;;','FN:Javier Forero',
+   'TITLE:Consultor en Analítica, Inteligencia Artificial y Transformación Digital',
+   'EMAIL;TYPE=INTERNET:mail@javierforero.com','TEL;TYPE=CELL:+573208383457',
+   'URL:https://cv.javierforero.co/','URL:https://www.linkedin.com/in/jforero/',
+   'ADR;TYPE=WORK:;;;Bogotá;;;Colombia','END:VCARD'].join('\r\n');
+ var a=document.createElement('a');
+ a.href='data:text/vcard;charset=utf-8,'+encodeURIComponent(v);
+ a.download='Javier_Forero.vcf';document.body.appendChild(a);a.click();a.remove();
+ if(window.gtag)gtag('event','save_contact',{method:'vcard'});
+}
 const grid=document.getElementById('projGrid');
 /* Vista de proyecto según idioma (mezcla base ES + capa EN) */
 function PV(p){if(LANG==='en'&&PROJ_EN[p.id]){return Object.assign({},p,PROJ_EN[p.id])}return p}
@@ -2303,6 +2378,31 @@ applyLang(LANG);
    else if(/youtube\.com|youtu\.be/.test(href)) track('outbound_click', {destination:'youtube', url:href});
    else if(/^https?:\/\//.test(href) && href.indexOf(location.host)<0) track('outbound_click', {url:href});
  });
+})();
+
+/* =========================================================
+   Count-up de los KPIs al entrar en viewport (dashboard vivo)
+   ========================================================= */
+(function(){
+ var box=document.querySelector('#snapshot .metrics'); if(!box) return;
+ var RM=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ if(RM) return;                       /* respeta reduced-motion: deja el valor final */
+ function countUp(el){
+   var full=el.textContent;
+   var m=full.match(/^([^\d]*)(\d+(?:\.\d+)?)([\s\S]*)$/); if(!m) return;
+   var pre=m[1], target=parseFloat(m[2]), post=m[3], dec=(m[2].indexOf('.')>=0)?1:0;
+   var t0=null, dur=1100;
+   function step(ts){ if(!t0)t0=ts; var p=Math.min(1,(ts-t0)/dur); var e=1-Math.pow(1-p,3);
+     var val=target*e; el.textContent=pre+(dec?val.toFixed(1):Math.round(val))+post;
+     if(p<1)requestAnimationFrame(step); else el.textContent=full; }
+   requestAnimationFrame(step);
+ }
+ if(!('IntersectionObserver' in window)){return;}
+ var done=false;
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){
+   if(e.isIntersecting&&!done){done=true; box.querySelectorAll('.metric .num').forEach(countUp); io.disconnect();}
+ });},{threshold:.35});
+ io.observe(box);
 })();
 </script>
 </body>
