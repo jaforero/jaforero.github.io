@@ -2557,6 +2557,31 @@ applyLang(LANG);
  });},{threshold:.35});
  io.observe(box);
 })();
+
+/* =========================================================
+   Enlaces limpios a javierforero.co — evita que el cross-domain
+   linker de GA4 añada ?_gl=... (rompe las landings WPCode que
+   dependen de la URL exacta sin query string).
+   ========================================================= */
+(function(){
+  function snapshot(){
+    document.querySelectorAll('a[href*="javierforero.co"]').forEach(function(a){
+      if(!a.dataset.cleanHref) a.dataset.cleanHref=a.getAttribute('href');
+    });
+  }
+  if(document.readyState!=='loading') snapshot();
+  else document.addEventListener('DOMContentLoaded',snapshot);
+  document.addEventListener('click',function(e){
+    var a=e.target.closest?e.target.closest('a[href*="javierforero.co"]'):null;
+    if(!a) return;
+    var clean=a.dataset.cleanHref||a.getAttribute('href');
+    // respeta cmd/ctrl/shift/clic central (abrir en pestaña): solo limpia el href
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.button===1){ a.setAttribute('href',clean); return; }
+    e.preventDefault(); e.stopImmediatePropagation();
+    if(a.target==='_blank') window.open(clean,'_blank','noopener');
+    else window.location.href=clean;
+  },true);
+})();
 </script>
 </body>
 </html>
