@@ -856,7 +856,8 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
 /* =========================================================
    SHOWCASE — storytelling de datos en vivo (demos interactivas)
    ========================================================= */
-.showcase-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:18px;align-items:stretch}
+.showcase-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch}
+.showcase-mini-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
 .showcase-hero{padding:0;overflow:hidden;display:flex;flex-direction:column}
 .showcase-thumb{display:block;aspect-ratio:1200/630;background:var(--soft-lilac);overflow:hidden;border-bottom:1px solid var(--border)}
 .showcase-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
@@ -875,7 +876,7 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
 .showcase-mini .lnk{font-size:13px;font-weight:800;color:var(--vibrant-blue);margin-top:12px}
 .showcase-side{display:flex;flex-direction:column;gap:18px;min-width:0}
 .showcase-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
-@media(max-width:820px){.showcase-grid{grid-template-columns:1fr}}
+@media(max-width:820px){.showcase-grid,.showcase-mini-row{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -1242,6 +1243,25 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
     </div>
     <div class="showcase-grid">
       <article class="showcase-hero card reveal">
+        <a class="showcase-thumb" href="https://javierforero.co/2026/06/15/inflacion-america-latina-2025/" target="_blank" rel="noopener" aria-label="Leer el artículo: Inflación en América Latina 2025 — 19 años de historia">
+          <img src="inflacion-latam-hero.jpg" width="1707" height="896" loading="lazy" alt="Inflación en América Latina — mapa 3D de datos por país, 19 años de historia">
+        </a>
+        <div class="showcase-body">
+          <div class="ptype" data-en="End-to-end case · open data to story">Caso end-to-end · del dato abierto a la historia</div>
+          <h3 data-en="Latin America Inflation 2025 — 19 years, one full pipeline">Inflación en América Latina 2025 — 19 años, un flujo completo</h3>
+          <p data-en="One topic, the entire data pipeline: open dataset on Kaggle → analysis notebook → Tableau dashboard (my most-viewed) → a custom JS dashboard inside the full narrative on my blog → a findings carousel on LinkedIn.">Un tema, todo el flujo de datos: dataset abierto en Kaggle → notebook de análisis → dashboard en Tableau (el más visto) → un dashboard en JS dentro del storytelling completo en mi blog → un carrusel de hallazgos en LinkedIn.</p>
+          <div class="showcase-tags"><span class="badge"><strong>26K+</strong>&nbsp;<span data-en="Tableau views">vistas Tableau</span></span><span class="badge"><strong>799</strong>&nbsp;<span data-en="dataset downloads">descargas dataset</span></span><span class="badge" data-en="19 years of data">19 años de datos</span><span class="badge" data-en="18 countries">18 países</span><span class="badge" data-en="Open data">Datos abiertos</span></div>
+          <p class="showcase-demo" data-en="What it proves: the complete loop — sourcing open data, analyzing it, visualizing it and telling the story across channels.">Qué demuestra: el ciclo completo — conseguir datos abiertos, analizarlos, visualizarlos y contar la historia en varios canales.</p>
+          <div class="showcase-actions">
+            <a class="btn sm" href="https://javierforero.co/2026/06/15/inflacion-america-latina-2025/" target="_blank" rel="noopener" data-en="Read the story →">Leer la historia →</a>
+            <a class="btn sm secondary" href="https://public.tableau.com/shared/6ZTJZ8BF4?:display_count=n&amp;:origin=viz_share_link" target="_blank" rel="noopener" data-en="Tableau dashboard →">Dashboard Tableau →</a>
+            <a class="btn sm secondary" href="https://www.linkedin.com/posts/jforero_inflaci%C3%B3n-en-am%C3%A9rica-latina-2025-18-pa%C3%ADses-ugcPost-7472659732416131073-Lp1_/" target="_blank" rel="noopener" data-en="LinkedIn carousel →">Carrusel LinkedIn →</a>
+            <a class="btn sm secondary" href="https://www.kaggle.com/datasets/jaforero/inflation-ipc-in-latam" target="_blank" rel="noopener" data-en="Dataset →">Dataset →</a>
+            <a class="btn sm secondary" href="https://www.kaggle.com/code/jaforero/inflaci-n-en-am-rica-latina-2025" target="_blank" rel="noopener" data-en="Notebook →">Notebook →</a>
+          </div>
+        </div>
+      </article>
+      <article class="showcase-hero card reveal">
         <a class="showcase-thumb" href="https://mundial.javierforero.co/" target="_blank" rel="noopener" aria-label="Abrir demo en vivo: Mundial FIFA 2026 — Benchmark de IA">
           <img src="https://mundial.javierforero.co/og-image.png" width="1200" height="630" loading="lazy" alt="Benchmark IA · Mundial 2026 — Claude, ChatGPT y Gemini">
         </a>
@@ -1257,37 +1277,25 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
           </div>
         </div>
       </article>
-      <div class="showcase-side">
-        <div class="showcase-mini card reveal">
-          <div class="ptype" data-en="Open source · community">Código abierto · comunidad</div>
-          <h3 data-en="Code, collaboration &amp; knowledge sharing">Código, colaboración y conocimiento</h3>
-          <p data-en="Public repositories and data-science notebooks — open source as evidence of how I build, collaborate and share knowledge.">Repositorios públicos y notebooks de ciencia de datos — open source como evidencia de cómo construyo, colaboro y comparto conocimiento.</p>
-          <p class="showcase-demo" data-en="What it proves: real, reviewable code and an open way of collaborating and teaching.">Qué demuestra: código real y revisable, y una forma abierta de colaborar y enseñar.</p>
-          <div class="showcase-links">
-            <a class="btn sm secondary" href="https://github.com/jaforero" target="_blank" rel="noopener">GitHub →</a>
-            <a class="btn sm secondary" href="https://www.kaggle.com/jaforero" target="_blank" rel="noopener">Kaggle →</a>
-          </div>
+    </div>
+    <div class="showcase-mini-row">
+      <div class="showcase-mini card reveal">
+        <div class="ptype" data-en="Open source · community">Código abierto · comunidad</div>
+        <h3 data-en="Code, collaboration &amp; knowledge sharing">Código, colaboración y conocimiento</h3>
+        <p data-en="Public repositories and data-science notebooks — open source as evidence of how I build, collaborate and share knowledge.">Repositorios públicos y notebooks de ciencia de datos — open source como evidencia de cómo construyo, colaboro y comparto conocimiento.</p>
+        <p class="showcase-demo" data-en="What it proves: real, reviewable code and an open way of collaborating and teaching.">Qué demuestra: código real y revisable, y una forma abierta de colaborar y enseñar.</p>
+        <div class="showcase-links">
+          <a class="btn sm secondary" href="https://github.com/jaforero" target="_blank" rel="noopener">GitHub →</a>
+          <a class="btn sm secondary" href="https://www.kaggle.com/jaforero" target="_blank" rel="noopener">Kaggle →</a>
         </div>
-        <div class="showcase-mini card reveal">
-          <div class="ptype" data-en="End-to-end case · open data to story">Caso end-to-end · del dato abierto a la historia</div>
-          <h3 data-en="Latin America Inflation — 19 years, one pipeline">Inflación en América Latina — 19 años, un flujo completo</h3>
-          <p data-en="One topic, the full data pipeline: open dataset on Kaggle → analysis notebook → Tableau dashboard (my most-viewed) → a custom JS dashboard inside the full narrative on my blog.">Un tema, todo el flujo de datos: dataset abierto en Kaggle → notebook de análisis → dashboard en Tableau (el más visto) → un dashboard en JS dentro del storytelling completo en mi blog.</p>
-          <div class="showcase-tags"><span class="badge"><strong>26K+</strong>&nbsp;<span data-en="Tableau views">vistas Tableau</span></span><span class="badge"><strong>799</strong>&nbsp;<span data-en="dataset downloads">descargas dataset</span></span><span class="badge" data-en="19 years of data">19 años de datos</span><span class="badge" data-en="Open data">Datos abiertos</span></div>
-          <p class="showcase-demo" data-en="What it proves: the complete loop — sourcing open data, analyzing it, visualizing it and telling the story across channels.">Qué demuestra: el ciclo completo — conseguir datos abiertos, analizarlos, visualizarlos y contar la historia en varios canales.</p>
-          <div class="showcase-links">
-            <a class="btn sm" href="https://javierforero.co/2026/06/15/inflacion-america-latina-2025/" target="_blank" rel="noopener" data-en="Read the story →">Leer la historia →</a>
-            <a class="btn sm secondary" href="https://public.tableau.com/shared/6ZTJZ8BF4?:display_count=n&amp;:origin=viz_share_link" target="_blank" rel="noopener" data-en="Tableau dashboard →">Dashboard Tableau →</a>
-            <a class="btn sm secondary" href="https://www.kaggle.com/datasets/jaforero/inflation-ipc-in-latam" target="_blank" rel="noopener" data-en="Dataset →">Dataset →</a>
-            <a class="btn sm secondary" href="https://www.kaggle.com/code/jaforero/inflaci-n-en-am-rica-latina-2025" target="_blank" rel="noopener" data-en="Notebook →">Notebook →</a>
-          </div>
-        </div>
-        <a class="showcase-mini card reveal" href="https://view.genially.com/661ab691ba07cc0014dc5201" target="_blank" rel="noopener">
-          <div class="ptype" data-en="Living visual compendium">Compendio visual vivo</div>
-          <h3 data-en="Maestro Digital — AI Tools">Maestro Digital — Herramientas IA</h3>
-          <p data-en="An interactive compendium of AI tools and platforms classified by purpose, continuously updated.">Compendio interactivo de herramientas y plataformas de IA clasificadas por propósito, en actualización constante.</p>
-          <span class="lnk" data-en="Open compendium →">Abrir compendio →</span>
-        </a>
       </div>
+      <a class="showcase-mini card reveal" href="https://view.genially.com/661ab691ba07cc0014dc5201" target="_blank" rel="noopener">
+        <div class="ptype" data-en="Living visual compendium">Compendio visual vivo</div>
+        <h3 data-en="Maestro Digital — AI Tools">Maestro Digital — Herramientas IA</h3>
+        <p data-en="An interactive compendium of AI tools and platforms classified by purpose, continuously updated.">Compendio interactivo de herramientas y plataformas de IA clasificadas por propósito, en actualización constante.</p>
+        <span class="lnk" data-en="Open compendium →">Abrir compendio →</span>
+      </a>
+    </div>
     </div>
   </div>
 </section>
