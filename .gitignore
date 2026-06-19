@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Node (se reinstala con: npm install cheerio)
+node_modules/
+
+# Artefactos de build / temporales (no van al sitio)
+CV_ATS/
+_cv_tmp_*.html
+*.tmp
+
+# NOTA: los scripts de build SÍ se versionan a propósito
+# (regen-projects.js, build-en.js, build-cvs.py, IgraSans.otf, README.md)

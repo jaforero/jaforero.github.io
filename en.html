@@ -1256,31 +1256,31 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
         <div class="lab">Inspire Awards and 1 Encore Award at Johnson &amp; Johnson</div>
       </div>
       <div class="metric">
-        <div class="num">NPS &gt;85</div>
-        <div class="lab">Public institutional average in AI training (Asuntos Digitales)</div>
+        <div class="num">Global</div>
+        <div class="lab">Global and LATAM corporate experience: Johnson &amp; Johnson and the WPP group (GroupM · Wavemaker)</div>
       </div>
       <div class="metric">
-        <div class="num">NPS 70 / 60</div>
-        <div class="lab">AI Productivity Tools — Collective Academy (two cohorts)</div>
-      </div>
-      <div class="metric">
-        <div class="num">3 clouds</div>
-        <div class="lab">Experience across AWS, Microsoft Azure and Google Cloud</div>
-      </div>
-      <div class="metric">
-        <div class="num">70+</div>
-        <div class="lab">Curated credentials in AI, data science, cloud and applied analytics</div>
+        <div class="num">4 functions</div>
+        <div class="lab">AI, data and analytics across corporate functions: HR, Finance, Procurement and Legal</div>
       </div>
       <div class="metric">
         <div class="num">1.6K</div>
         <div class="lab">YouTube subscribers (AI &amp; analytics outreach)</div>
+      </div>
+      <div class="metric">
+        <div class="num">NPS 60–85</div>
+        <div class="lab">Satisfaction across AI &amp; analytics training (Asuntos Digitales · Collective Academy)</div>
+      </div>
+      <div class="metric">
+        <div class="num">3 clouds</div>
+        <div class="lab">Experience across AWS, Microsoft Azure and Google Cloud</div>
       </div>
     </div>
     <div class="card snap30" style="margin-top:24px;padding:22px 26px;border-left:3px solid var(--purple)">
       <p class="eyebrow" style="color:var(--purple);margin:0 0 12px">If you only have 30 seconds</p>
       <ul style="margin:0;padding-left:18px;line-height:1.75;color:var(--text);font-size:14.5px">
         <li>Senior profile in AI, data, analytics and digital transformation.</li>
-        <li>Global and regional corporate experience at Johnson &amp; Johnson and GroupM / Wavemaker.</li>
+        <li>Global and regional corporate experience at Johnson &amp; Johnson and the WPP communications group (GroupM / Wavemaker / MEC / Y&amp;R).</li>
         <li>A strong bridge between business, technology, adoption and executive storytelling.</li>
         <li>Track record building analytical products, automations, executive training and AI capabilities.</li>
         <li>Best fit: AI/Data Strategy, GenAI Adoption, Analytics Transformation, Data Products, Decision Intelligence and Executive AI Education.</li>
@@ -1560,11 +1560,7 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
       </article>
 <!-- PROJECTS:END -->
     </div>
-    <div class="empty" id="projEmpty" hidden="">
-      <p style="margin:0 0 6px;font-weight:700">I couldn't find cases matching that exact term.</p>
-      <p style="margin:0 0 14px;color:var(--muted);font-size:13.5px"><span>Try:</span> GenAI · RAG · BI · Procurement · J&amp;J · Python · <span>Automation</span></p>
-      <button class="btn sm secondary" id="projClear" type="button">See all cases</button>
-    </div>
+    <div class="empty" id="projEmpty" hidden=""></div>
     <div class="proj-more-wrap"><button class="btn secondary" id="projMore" type="button" aria-expanded="false" hidden="">Ver más</button></div>
   </div>
 </section>
@@ -1604,7 +1600,7 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
         <div class="tl-card">
         <h3>Data Scientist / Analytics Lead — Corporate Business Technology</h3>
         <div class="org">Johnson &amp; Johnson · Global</div>
-        <p>Contributed to the design and implementation of AI, GenAI and advanced analytics solutions for global corporate functions (HR, Finance, Procurement and Legal), focused on automation, insight generation, data governance and responsible adoption. 14 Inspire Awards and 1 Encore Award.</p>
+        <p>Co-led the design and implementation of AI, GenAI and advanced analytics solutions for global corporate functions (HR, Finance, Procurement and Legal), focused on automation, insight generation, data governance and responsible adoption. Led and coordinated analytics and consulting teams (5–6 analysts and 3–4 consultants), bridging business, technology, data and adoption across global corporate functions and LATAM markets. 14 Inspire Awards and 1 Encore Award.</p>
         </div>
       </article>
       <article class="tl-item" tabindex="0">
@@ -1613,7 +1609,7 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
         <div class="tl-card">
         <h3>BI &amp; Advanced Analytics — Procurement Shared Services Americas</h3>
         <div class="org">Johnson &amp; Johnson · Regional</div>
-        <p>Led Business Intelligence, predictive and prescriptive analytics capabilities for Procurement Americas, automating analysis, integrating data flows and enabling decisions with real-time signals. Contributed to a center of excellence in user experience and NLP.</p>
+        <p>Led Business Intelligence, predictive and prescriptive analytics capabilities for Procurement Americas, automating analysis, integrating data flows and enabling decisions with real-time signals. Built regional analytics capabilities from the ground up and managed stakeholders across LATAM markets. Contributed to a center of excellence in user experience and NLP.</p>
         </div>
       </article>
       <article class="tl-item" tabindex="0">
@@ -1622,7 +1618,7 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
         <div class="tl-card">
         <h3>Digital &amp; Data Director</h3>
         <div class="org">MEC / GroupM · Colombia</div>
-        <p>Led a consultancy team delivering intelligent business-analysis outputs for clients through the latest data-visualization tools and sophisticated BI platforms. Special emphasis on digital analytics for performance clients, defining trafficking guidelines and delivering analytics for campaign and content optimization.</p>
+        <p>Led a team of 10–15+ collaborators within the WPP communications group (GroupM), building regional analytics capability and delivering intelligent business-analysis outputs for clients through the latest data-visualization tools and sophisticated BI platforms. Special emphasis on digital analytics for performance clients, defining trafficking guidelines and delivering analytics for campaign and content optimization.</p>
         </div>
       </article>
       <article class="tl-item" tabindex="0">
@@ -2545,9 +2541,17 @@ function cardHTML(p){
    <div class="proj-foot">${evHTML(p.ev)}<span class="more">${UI[LANG].more}</span></div>
  </article>`;
 }
+/* Empty state: se inyecta por JS solo cuando hace falta (no va en el HTML inicial → sin ruido para crawlers/parsers) */
+function emptyStateHTML(){var en=LANG==='en';return ''+
+ '<p style="margin:0 0 6px;font-weight:700">'+(en?"I couldn't find cases matching that exact term.":'No encontré casos con ese término exacto.')+'</p>'+
+ '<p style="margin:0 0 14px;color:var(--muted);font-size:13.5px">'+(en?'Try:':'Prueba con:')+' GenAI · RAG · BI · Procurement · J&amp;J · Python · '+(en?'Automation':'Automatización')+'</p>'+
+ '<button class="btn sm secondary" id="projClear" type="button">'+(en?'See all cases':'Ver todos los casos')+'</button>';
+}
 function renderProjects(list){
  grid.innerHTML=list.map(cardHTML).join('');
- document.getElementById('projEmpty').style.display=list.length?'none':'block';
+ var pe=document.getElementById('projEmpty');
+ if(list.length){pe.hidden=true;pe.innerHTML='';}
+ else{pe.innerHTML=emptyStateHTML();pe.hidden=false;}
 }
 /* Filtros + búsqueda + "Ver más proyectos" (sección compacta: 6 iniciales) */
 let curFilter='all',curSearch='',projExpanded=false;
@@ -2582,7 +2586,8 @@ document.getElementById('search').addEventListener('input',e=>{
  if(curSearch){curFilter='all';document.querySelectorAll('#projFilters .chip').forEach(x=>x.classList.toggle('active',x.dataset.f==='all'));}
  projExpanded=false;applyProj();
 });
-(function(){var pc=document.getElementById('projClear');if(!pc)return;pc.addEventListener('click',function(){
+(function(){var pe=document.getElementById('projEmpty');if(!pe)return;pe.addEventListener('click',function(e){
+ if(!e.target.closest('#projClear'))return;
  var s=document.getElementById('search');if(s)s.value='';
  curSearch='';curFilter='all';projExpanded=false;
  document.querySelectorAll('#projFilters .chip').forEach(function(x){var on=x.dataset.f==='all';x.classList.toggle('active',on);x.setAttribute('aria-pressed',on?'true':'false');});
