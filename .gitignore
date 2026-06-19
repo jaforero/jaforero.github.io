@@ -12,3 +12,4 @@ _cv_tmp_*.html
 
 # NOTA: los scripts de build SÍ se versionan a propósito
 # (regen-projects.js, build-en.js, build-cvs.py, IgraSans.otf, README.md)
+.DS_Store
