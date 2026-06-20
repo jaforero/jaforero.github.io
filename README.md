@@ -124,3 +124,24 @@ git push -u origin mejoras-AAAA-MM
 Los 5 comparten experiencia/educación reales; cambian título, perfil, casos y skills clave por
 macroperfil. Una columna, A4, texto seleccionable (ATS), paleta de marca. Se editan en `build-cvs.py`
 (diccionarios `L` para contenido común y `PROFILES` para el tailoring).
+
+---
+
+## 7. Analítica (GA4) — eventos de intención
+
+Property `G-MQ3K8EVKV0`. El objetivo no es solo medir visitas sino **qué ángulo profesional convierte**.
+Eventos clave (se disparan vía `gtag`/`window.__track`):
+
+| Evento | Qué mide |
+|---|---|
+| `download_cv_general_es` / `_en` | Descarga del CV maestro (por idioma) |
+| `download_cv_ai_strategy`, `_genai`, `_data_products`, `_consulting`, `_education` | Descarga del CV por macroperfil (interés de rol) |
+| `select_recruiter_view` (param `view`) | Uso del selector y ángulo elegido |
+| `open_project_case` (param `project_id`) | Interés por un caso |
+| `click_contact_email` / `click_linkedin` / `click_contact_phone` / `click_portfolio` | Conversión directa y validación social |
+| `change_language_en` / `_es` | Interés internacional |
+| `save_vcard` | Señal de contacto |
+| Extras | `anchor_case_open`, `project_filter`, `project_search`, `scroll_depth`, `cert_filter`, `skill_tab` |
+
+> En GA4, marcar como conversiones los `download_cv_*`, `select_recruiter_view`, `click_contact_email` y `save_vcard`
+> para medir el embudo de intención por ángulo profesional.

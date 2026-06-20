@@ -32,8 +32,8 @@ L = {
   "exp_h": "Experiencia profesional", "prev_h": "Trayectoria previa", "teach_h": "Docencia, mentoría y liderazgo de pensamiento",
   "skills_h": "Skills clave", "edu_h": "Educación, idiomas y reconocimientos", "present": "Presente",
   "kpis": [("25+","Años en datos, analítica e IA"),("8","Países / hubs globales"),
-           ("14 + 1","Premios J&amp;J (Inspire + Encore)"),("3","Nubes: AWS · Azure · GCP"),
-           ("100s","Profesionales formados en IA"),("30+","Proyectos de IA y analítica")],
+           ("14 + 1","Premios J&amp;J (Inspire + Encore)"),("10–15+","Colaboradores liderados en equipos de data, digital y analítica"),
+           ("3","Nubes: AWS · Azure · GCP"),("100s","Profesionales formados en IA"),("30+","Proyectos de IA y analítica")],
   "exp": [
     ("Consultor Independiente — Data, Analítica, IA &amp; Transformación Digital","Práctica independiente · Bogotá / Remoto LATAM","Nov 2024 – Presente",
      ["Diseño hojas de ruta de adopción de IA, diagnósticos y métodos de priorización de casos de uso con criterios claros de valor de negocio.",
@@ -70,8 +70,8 @@ L = {
   "exp_h": "Professional experience", "prev_h": "Earlier career", "teach_h": "Teaching, mentoring and thought leadership",
   "skills_h": "Key skills", "edu_h": "Education, languages and recognition", "present": "Present",
   "kpis": [("25+","Years in data, analytics &amp; AI"),("8","Countries / global hubs"),
-           ("14 + 1","J&amp;J awards (Inspire + Encore)"),("3","Clouds: AWS · Azure · GCP"),
-           ("100s","Professionals trained in AI"),("30+","AI &amp; analytics projects")],
+           ("14 + 1","J&amp;J awards (Inspire + Encore)"),("10–15+","Collaborators led across data, digital and analytics teams"),
+           ("3","Clouds: AWS · Azure · GCP"),("100s","Professionals trained in AI"),("30+","AI &amp; analytics projects")],
   "exp": [
     ("Independent Consultant — Data, Analytics, AI &amp; Digital Transformation","Independent practice · Bogotá / Remote LATAM","Nov 2024 – Present",
      ["Design AI adoption roadmaps, assessments and use-case prioritization methods with clear business-value criteria.",
@@ -162,7 +162,7 @@ PROFILES = {
                    ("NEICON — Data architecture, BI and AI","advisory on modern architectures and AI deployment to production."),
                    ("SEC / Asoanei — Data model and governance","unified model, 360° view and scalable roadmap with Microsoft Fabric and Purview."),
                    ("Impulso IA 360 — Connect Bogotá","diagnosis, prioritization and prototyping of AI use cases by area.")]},
-   "skills": "AI/Data Advisory · Business Transformation · Solution Architecture · Data Governance · Diagnosis &amp; Roadmap · Capability Building · Stakeholder Management · Microsoft Fabric · Power BI · Discovery Workshops · Value Creation · Operating Model · Pre-sales",
+   "skills": "AI &amp; Data Advisory · Business Transformation · Solution Architecture · Data Governance · Diagnosis &amp; Roadmap · Capability Building · Stakeholder Management · Microsoft Fabric · Power BI · Discovery Workshops · Value Creation · Operating Model · Pre-sales",
  },
  "Executive_Education": {
    "title": {"es":"Educador Ejecutivo en IA · Adopción y Alfabetización","en":"Executive AI Educator · Adoption &amp; Literacy"},
@@ -184,8 +184,8 @@ CSS = """
 @font-face{font-family:'IgraSans';src:url(IgraSans.otf) format('opentype');font-weight:400;}
 :root{--purple:#4e00ff;--deep:#041c59;--text:#1f2937;--muted:#5f6b7a;--link:#0048ff;--border:#e3e8f5;--lila:#f6f3ff;}
 *{box-sizing:border-box}
-@page{size:A4;margin:0.7cm 1cm;}
-body{font-family:'IgraSans',Aptos,Helvetica,Arial,sans-serif;color:var(--text);font-size:9.7px;line-height:1.28;margin:0;}
+@page{size:A4;margin:0.55cm 0.95cm;}
+body{font-family:'IgraSans',Aptos,Helvetica,Arial,sans-serif;color:var(--text);font-size:9.7px;line-height:1.26;margin:0;}
 h1{font-size:22.5px;color:var(--deep);margin:0;font-weight:800;font-feature-settings:"liga" 1,"ss01" 1;font-variant-ligatures:common-ligatures;}
 .role{color:var(--purple);font-weight:700;font-size:10.7px;margin:2px 0 4px;}
 .contact{font-size:8.8px;color:var(--muted);margin-bottom:6px;}
@@ -196,7 +196,7 @@ h2{font-size:10.2px;color:var(--deep);text-transform:uppercase;letter-spacing:.0
 .kpi{background:var(--lila);border:1px solid var(--border);border-radius:7px;padding:3px 8px;font-size:8.7px;color:var(--deep);}
 .kpi b{color:var(--purple);font-size:11.2px;display:block;}
 .proj{margin-bottom:3px;} .proj b{color:var(--deep);}
-.item{margin-bottom:5px;}
+.item{margin-bottom:4px;}
 .item .h{display:flex;justify-content:space-between;gap:10px;}
 .item .t{font-weight:800;color:var(--deep);font-size:9.7px;}
 .item .d{color:var(--muted);font-size:8.5px;white-space:nowrap;}

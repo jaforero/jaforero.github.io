@@ -106,7 +106,7 @@ const card = p => { const v = PVe(p); return `      <article class="proj card" d
         <h3>${v.title}</h3>
         <div class="proj-field pf-prob"><span class="pf-label">Problem</span><span class="pf-val">${v.challenge}</span></div>
         <div class="proj-field pf-role"><span class="pf-label">My role</span><span class="pf-val">${v.role}</span></div>
-        <div class="tags">${badges(p.tags.slice(0, 3))}</div>
+        <div class="tags">${badges(v.tags.slice(0, 3))}</div>
         <div class="proj-foot">${evTag(p.ev)}<span class="more">${UI.en.more}</span></div>
       </article>`; };
 out = out.replace(/(<!-- PROJECTS:START[^>]*-->\n)[\s\S]*?(\n<!-- PROJECTS:END -->)/, (m, a, b) => a + PROJECTS.map(card).join('\n') + b);

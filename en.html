@@ -997,6 +997,12 @@ h1,h2,h3,h4{line-height:1.18;margin:0}
 .proj-field.pf-prob .pf-val{-webkit-line-clamp:2}
 .proj-field.pf-role .pf-val{-webkit-line-clamp:1}
 /* Vista rápida para reclutadores */
+.rv-value{margin:2px 0 18px}
+.rv-value-h{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--deep-blue);margin:0 0 8px}
+.rv-value-list{margin:0;padding-left:18px;line-height:1.5;color:var(--text);font-size:13.5px}
+.rv-value-list li{margin-bottom:4px}
+.rv-value-list strong{color:var(--deep-blue)}
+@media(max-width:620px){.rv-value-list{font-size:13px}}
 .rv-routes{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 18px}
 .rv-route{display:flex;flex-direction:column;align-items:flex-start;gap:3px;text-align:left;cursor:pointer;background:var(--white);border:1px solid var(--border);border-radius:14px;padding:12px 16px;font-family:inherit;flex:1 1 180px;min-width:160px;transition:.15s}
 .rv-route:hover{border-color:var(--purple);transform:translateY(-1px)}
@@ -1200,7 +1206,7 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
         <button class="seg-btn active" data-lang="en">EN</button>
       </div>
       <button class="icon-btn" id="themeBtn" aria-label="Cambiar tema claro/oscuro" title="Tema claro/oscuro">🌙</button>
-      <button class="icon-btn" id="cvBtn" onclick="downloadCV()" aria-label="Download CV" title="Descargar CV (PDF)">⬇</button>
+      <button class="icon-btn" id="cvBtn" onclick="downloadCV()" aria-label="Download resume" title="Descargar CV (PDF)">⬇</button>
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
     </div>
   </div>
@@ -1212,7 +1218,7 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
 <!-- ============ HERO ============ -->
 <header class="hero" id="inicio">
   <div class="wrap hero-in">
-    <p class="eyebrow">Executive Intelligence Platform</p>
+    <p class="eyebrow">Executive AI &amp; Data Profile</p>
     <h1 aria-label="Javier Forero">JAVIER FORERO</h1>
     <p class="hero-role">AI &amp; Data Strategy Leader · GenAI Adoption · Analytics Transformation</p>
     <p class="hero-lead"><strong>Senior data scientist</strong> and AI strategy leader with <strong>25+ years</strong> connecting data, artificial intelligence and business decisions. I design strategies, analytical products, intelligent automation and adoption programs that turn technical complexity into real transformation capabilities.</p>
@@ -1223,7 +1229,7 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
       <span>🔗 <a href="https://www.linkedin.com/in/jforero/" style="color:#fff" target="_blank" rel="noopener">linkedin.com/in/jforero</a></span>
     </div>
     <div class="hero-cta">
-      <button class="btn secondary" onclick="downloadCV()">⬇ Download executive CV</button>
+      <button class="btn secondary" onclick="downloadCV()">⬇ Download executive resume</button>
       <a class="btn ghost" href="#proyectos">View projects</a>
       <a class="btn ghost" href="#contacto">Get in touch</a>
     </div>
@@ -1256,16 +1262,16 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
         <div class="lab">Inspire Awards and 1 Encore Award at Johnson &amp; Johnson</div>
       </div>
       <div class="metric">
+        <div class="num">10–15+</div>
+        <div class="lab">Collaborators led across data, digital and analytics teams</div>
+      </div>
+      <div class="metric">
         <div class="num">Global</div>
         <div class="lab">Global and LATAM corporate experience: Johnson &amp; Johnson and the WPP group (GroupM · Wavemaker)</div>
       </div>
       <div class="metric">
         <div class="num">4 functions</div>
         <div class="lab">AI, data and analytics across corporate functions: HR, Finance, Procurement and Legal</div>
-      </div>
-      <div class="metric">
-        <div class="num">1.6K</div>
-        <div class="lab">YouTube subscribers (AI &amp; analytics outreach)</div>
       </div>
       <div class="metric">
         <div class="num">NPS 60–85</div>
@@ -1283,7 +1289,7 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
         <li>Global and regional corporate experience at Johnson &amp; Johnson and the WPP communications group (GroupM / Wavemaker / MEC / Y&amp;R).</li>
         <li>A strong bridge between business, technology, adoption and executive storytelling.</li>
         <li>Track record building analytical products, automations, executive training and AI capabilities.</li>
-        <li>Best fit: AI/Data Strategy, GenAI Adoption, Analytics Transformation, Data Products, Decision Intelligence and Executive AI Education.</li>
+        <li>Best fit: AI &amp; Data Strategy, GenAI Adoption, Analytics Transformation, Data Products, Decision Intelligence and Executive AI Education.</li>
       </ul>
     </div>
   </div>
@@ -1331,7 +1337,17 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
     <div class="section-head">
       <div class="section-title">Quick view for recruiters</div>
       <h2 class="section-h">Pick the angle closest to the role to see the most relevant evidence first</h2>
-      <p class="section-sub">Not every process evaluates the same thing. This view doesn't change my experience or generate an artificial CV — it only reorders cases, capabilities and evidence to make the review faster.</p>
+      <p class="section-sub">Not every process evaluates the same thing. This view doesn't change my experience or generate an artificial resume — it only reorders cases, capabilities and evidence to make the review faster.</p>
+    </div>
+    <div class="rv-value">
+      <p class="rv-value-h">Where this profile creates the most value</p>
+      <ul class="rv-value-list">
+        <li><strong>AI &amp; Data Strategy Leadership:</strong> strategy, governance, adoption and analytics transformation.</li>
+        <li><strong>GenAI Adoption &amp; Automation:</strong> applied generative AI, RAG, agents, productivity and process redesign.</li>
+        <li><strong>Analytics Products &amp; Decision Intelligence:</strong> BI, dashboards, executive insights and decision-making.</li>
+        <li><strong>Senior AI &amp; Data Consulting:</strong> diagnostics, architecture, roadmaps, prioritization and executive advisory.</li>
+        <li><strong>Executive AI Education:</strong> AI literacy, corporate training and adoption for technical and non-technical teams.</li>
+      </ul>
     </div>
     <div class="rv-routes" id="rvRoutes" role="tablist" aria-label="Rutas de evaluación">
       <button class="rv-route" role="tab" type="button" data-rv="ai-data-leadership">
@@ -1348,7 +1364,7 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
       </button>
       <button class="rv-route" role="tab" type="button" data-rv="consulting">
         <span class="rv-r-t">Senior consulting &amp; advisory</span>
-        <span class="rv-r-h">AI/Data Advisor · Transformation Consultant</span>
+        <span class="rv-r-h">AI &amp; Data Advisor · Transformation Consultant</span>
       </button>
       <button class="rv-route" role="tab" type="button" data-rv="education">
         <span class="rv-r-t">Executive AI education</span>
@@ -1411,7 +1427,7 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
         <h3>Preflex — Demand planning & production orders</h3>
         <div class="proj-field pf-prob"><span class="pf-label">Problem</span><span class="pf-val">Reduce manual intervention without replacing FlowSoft or forcing operators to interact directly with SAP.</span></div>
         <div class="proj-field pf-role"><span class="pf-label">My role</span><span class="pf-val">Strategic consultant — phased industrial automation roadmap design.</span></div>
-        <div class="tags"><span class="badge">Automatización</span><span class="badge">SAP B1</span><span class="badge">WMS</span></div>
+        <div class="tags"><span class="badge">Automation</span><span class="badge">SAP B1</span><span class="badge">WMS</span></div>
         <div class="proj-foot"><span class="ev ev-exp">Expected impact</span><span class="more">View case →</span></div>
       </article>
       <article class="proj card" data-cat="analytics" data-id="rac-insights-360" tabindex="0" role="button" aria-label="RAC Insights 360 — Longitudinal brand intelligence">
@@ -1427,7 +1443,7 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
         <h3>RAC Evolution — TARGET filter & redesign</h3>
         <div class="proj-field pf-prob"><span class="pf-label">Problem</span><span class="pf-val">Expand commercial value of the analysis balancing depth, performance and cloud costs.</span></div>
         <div class="proj-field pf-role"><span class="pf-label">My role</span><span class="pf-val">Product-evolution design and add-on technical strategy.</span></div>
-        <div class="tags"><span class="badge">Dashboards</span><span class="badge">Segmentación</span><span class="badge">Cloud / S3</span></div>
+        <div class="tags"><span class="badge">Dashboards</span><span class="badge">Segmentation</span><span class="badge">Cloud / S3</span></div>
         <div class="proj-foot"><span class="ev ev-exp">Expected impact</span><span class="more">View case →</span></div>
       </article>
       <article class="proj card" data-cat="public" data-id="sec-asoanei" tabindex="0" role="button" aria-label="SEC / Asoanei — Data model & Power BI">
@@ -1443,7 +1459,7 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
         <h3>Yubarta / SEC — Circular-economy REP platform</h3>
         <div class="proj-field pf-prob"><span class="pf-label">Problem</span><span class="pf-val">Evaluate developer proposals and steer the MVP on data, security, quality and interoperability.</span></div>
         <div class="proj-field pf-role"><span class="pf-label">My role</span><span class="pf-val">Independent expert consultant — technical evaluation and MVP follow-up (SEC volunteering).</span></div>
-        <div class="tags"><span class="badge">Data Governance</span><span class="badge">Circular Economy</span><span class="badge">Interoperabilidad</span></div>
+        <div class="tags"><span class="badge">Data Governance</span><span class="badge">Circular Economy</span><span class="badge">Interoperability</span></div>
         <div class="proj-foot"><span class="ev ev-doc">Documented</span><span class="more">View case →</span></div>
       </article>
       <article class="proj card" data-cat="public" data-id="civisai" tabindex="0" role="button" aria-label="CivisAI — AI for urban planning">
@@ -1451,7 +1467,7 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
         <h3>CivisAI — AI for urban planning</h3>
         <div class="proj-field pf-prob"><span class="pf-label">Problem</span><span class="pf-val">Facilitate access, analysis and presentation of qualitative information for public decisions.</span></div>
         <div class="proj-field pf-role"><span class="pf-label">My role</span><span class="pf-val">Strategic design and POC in a public-innovation call.</span></div>
-        <div class="tags"><span class="badge">NLP</span><span class="badge">Clasificación automática</span><span class="badge">Visualización</span></div>
+        <div class="tags"><span class="badge">NLP</span><span class="badge">Auto-classification</span><span class="badge">Visualization</span></div>
         <div class="proj-foot"><span class="ev ev-doc">Documented</span><span class="more">View case →</span></div>
       </article>
       <article class="proj card" data-cat="corporate" data-id="jnj-cbt" tabindex="0" role="button" aria-label="Johnson & Johnson — Corporate Business Technology">
@@ -1966,7 +1982,7 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
         </ul>
       </div>
       <div class="cta-side">
-        <div class="card"><h3>For recruiters</h3><p>Pick the angle closest to the role to see the most relevant evidence first, or download my executive CV.</p><a class="btn sm" href="#reclutadores">Recruiter quick view →</a> <button class="btn sm secondary" onclick="downloadCV()">⬇ Download CV</button></div>
+        <div class="card"><h3>For recruiters</h3><p>Pick the angle closest to the role to see the most relevant evidence first, or download my executive resume.</p><a class="btn sm" href="#reclutadores">Recruiter quick view →</a> <button class="btn sm secondary" onclick="downloadCV()">⬇ Download resume</button></div>
         <div class="card"><h3>For clients</h3><p>Let's talk about how to turn your data and processes into actionable decisions.</p><a class="btn sm secondary" href="mailto:mail@javierforero.com?subject=Consultor%C3%ADa%20IA%20y%20Datos">✉ Schedule a conversation</a></div>
         <div class="card"><h3>Explore more</h3><p>My projects, content and AI application cases.</p><a class="btn sm secondary" href="#proyectos">View projects</a></div>
         <div class="card"><h3>Save my contact</h3>
@@ -2004,7 +2020,7 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
       <a href="https://javierforero.co/" target="_blank" rel="noopener">Web</a>
     </div>
   </div>
-  <div class="wrap"><div class="footer-bottom">© <span id="year"></span> Javier Forero · Executive Intelligence Platform. Metrics are classified by evidence type; unconfirmed data is not presented as achievements.</div></div>
+  <div class="wrap"><div class="footer-bottom">© <span id="year"></span> Javier Forero · Executive AI &amp; Data Profile. Metrics are classified by evidence type; unconfirmed data is not presented as achievements.</div></div>
 </footer>
 
 <button class="totop" id="toTop" aria-label="Volver arriba">↑</button>
@@ -2263,7 +2279,7 @@ const PROJ_EN={
   stack:'SAP Business One · SIADOC · Google Gemini · GCP · Service Layer / DI API · declarative rules.',
   metrics:[['Expected STP 70–80% of invoices posted without human intervention','kpi'],['Match ≥95% · extraction ≥99.5% · cycle reduction 60–80% vs baseline · ≥90% exceptions within SLA','kpi']],
   note:'Figures are MVP exit/target criteria. Not presented as real results until execution is validated.'},
- 'preflex-produccion':{type:'Industrial automation',title:'Preflex — Demand planning & production orders',summary:'Roadmap to connect forecast, SAP B1, WMS, intranet calendar, rules engine and shop-floor capture.',
+ 'preflex-produccion':{type:'Industrial automation',title:'Preflex — Demand planning & production orders',summary:'Roadmap to connect forecast, SAP B1, WMS, intranet calendar, rules engine and shop-floor capture.',tags:['Automation','SAP B1','WMS','RPA','Rules Engine'],
   context:'Demand planning and production order release keeping FlowSoft as forecast and SAP B1 as source of truth.',
   challenge:'Reduce manual intervention without replacing FlowSoft or forcing operators to interact directly with SAP.',
   role:'Strategic consultant — phased industrial automation roadmap design.',
@@ -2279,7 +2295,7 @@ const PROJ_EN={
   stack:'Longitudinal base · dashboards · Google Gemini · predictive models.',
   metrics:[['Base 2003–2025 · 19 sectors · 120+ categories','doc'],['12 automated analytical modules with AI narratives','doc']],
   note:'No documented ROI yet: communicated as an automation and analytical-scaling product, not as proven savings.'},
- 'rac-evolution':{type:'Analytical product evolution',title:'RAC Evolution — TARGET filter & redesign',summary:'New TARGET filter and selective indicator recalculation with cloud cost control.',
+ 'rac-evolution':{type:'Analytical product evolution',title:'RAC Evolution — TARGET filter & redesign',summary:'New TARGET filter and selective indicator recalculation with cloud cost control.',tags:['Dashboards','Segmentation','Cloud / S3','Market Intelligence'],
   context:'Evolution of the RAC dashboard to incorporate advanced segmentation by target.',
   challenge:'Expand commercial value of the analysis balancing depth, performance and cloud costs.',
   role:'Product-evolution design and add-on technical strategy.',
@@ -2295,7 +2311,7 @@ const PROJ_EN={
   stack:'Power BI · SharePoint · Microsoft Fabric · Purview · data governance.',
   metrics:[['Mission completed: unified model, dashboard and roadmap','doc'],['Enablement of faster, more effective decisions','doc']],
   note:'Pending to quantify reporting time reduction, adoption and operational ROI.'},
- 'yubarta-sec':{type:'Architecture · Data governance',title:'Yubarta / SEC — Circular-economy REP platform',summary:'Expert support in architecture, governance and traceability for a REP platform.',
+ 'yubarta-sec':{type:'Architecture · Data governance',title:'Yubarta / SEC — Circular-economy REP platform',summary:'Expert support in architecture, governance and traceability for a REP platform.',tags:['Data Governance','Circular Economy','Interoperability','Traceability','SMEs'],
   context:'REP platform connecting Producers, Managers and Transformers for environmental compliance and material traceability.',
   challenge:'Evaluate developer proposals and steer the MVP on data, security, quality and interoperability.',
   role:'Independent expert consultant — technical evaluation and MVP follow-up (SEC volunteering).',
@@ -2303,7 +2319,7 @@ const PROJ_EN={
   stack:'Data architecture · governance · technical evaluation criteria.',
   metrics:[['12-week technical support','doc'],['Initial MVP planned for ~15 ecosystem actors','doc']],
   note:'Pending to quantify risk reduction, documentary compliance and REP process efficiency.'},
- 'civisai':{type:'POC · Public AI · NLP',title:'CivisAI — AI for urban planning',summary:'NLP POC to classify qualitative information and support evidence-based public decisions.',
+ 'civisai':{type:'POC · Public AI · NLP',title:'CivisAI — AI for urban planning',summary:'NLP POC to classify qualitative information and support evidence-based public decisions.',tags:['NLP','Auto-classification','Visualization','Public Policy'],
   context:'Analysis and categorization of large volumes of qualitative citizen-participation and policy-monitoring data.',
   challenge:'Facilitate access, analysis and presentation of qualitative information for public decisions.',
   role:'Strategic design and POC in a public-innovation call.',
@@ -2509,7 +2525,7 @@ let LANG='en';/* en.html: idioma fijo */
 /* Descarga del PDF maestro según el idioma activo */
 function downloadCV(){
  var f=(LANG==='en')?'cv/Javier_Forero_Master_CV_EN_2026.pdf':'cv/Javier_Forero_CV_Base_Maestra_ES_2026.pdf';
- if(window.gtag)gtag('event','cv_download',{language:LANG,file_name:f});
+ if(window.gtag)gtag('event',(LANG==='en')?'download_cv_general_en':'download_cv_general_es',{file_name:f});
  var a=document.createElement('a');a.href=encodeURI(f);a.download=f;a.rel='noopener';
  document.body.appendChild(a);a.click();a.remove();
 }
@@ -2523,7 +2539,7 @@ function downloadVCard(){
  var a=document.createElement('a');
  a.href='data:text/vcard;charset=utf-8,'+encodeURIComponent(v);
  a.download='Javier_Forero.vcf';document.body.appendChild(a);a.click();a.remove();
- if(window.gtag)gtag('event','save_contact',{method:'vcard'});
+ if(window.gtag)gtag('event','save_vcard',{});
 }
 const grid=document.getElementById('projGrid');
 /* Vista de proyecto según idioma (mezcla base ES + capa EN) */
@@ -2537,7 +2553,7 @@ function cardHTML(p){
    <h3>${v.title}</h3>
    <div class="proj-field pf-prob"><span class="pf-label">${LANG==='en'?'Problem':'Problema'}</span><span class="pf-val">${v.challenge}</span></div>
    <div class="proj-field pf-role"><span class="pf-label">${LANG==='en'?'My role':'Mi rol'}</span><span class="pf-val">${v.role}</span></div>
-   <div class="tags">${badgesHTML(p.tags.slice(0,3))}</div>
+   <div class="tags">${badgesHTML(v.tags.slice(0,3))}</div>
    <div class="proj-foot">${evHTML(p.ev)}<span class="more">${UI[LANG].more}</span></div>
  </article>`;
 }
@@ -2606,7 +2622,7 @@ const modalBg=document.getElementById('modalBg');
 let modalId=null;
 function openModal(id){
  const base=PROJECTS.find(x=>x.id===id);if(!base)return;
- if(window.gtag)gtag('event','project_open',{project_id:id});
+ if(window.gtag)gtag('event','open_project_case',{project_id:id});
  modalId=id;const p=PV(base);const u=UI[LANG];
  document.getElementById('modalType').textContent=p.type;
  document.getElementById('modalTitle').innerHTML=p.title;
@@ -2620,7 +2636,7 @@ function openModal(id){
     <h4>${u.arch}</h4><p>${p.stack}</p>
     <h4>${u.met}</h4><ul>${m}</ul>
     ${p.note?`<h4>${u.ctrl}</h4><p style="color:var(--muted);font-size:13px">${p.note}</p>`:''}
-    <div style="margin-top:18px">${badgesHTML(base.tags)}</div>`;
+    <div style="margin-top:18px">${badgesHTML(p.tags)}</div>`;
  modalReturnFocus=document.activeElement;            /* recordar el origen para devolver el foco */
  modalBg.classList.add('open');document.body.style.overflow='hidden';
  document.getElementById('modalX').focus();
@@ -2861,7 +2877,7 @@ applyLang(LANG);
  window.__track = track;
  // Cambio de idioma (ES/EN)
  document.querySelectorAll('#langSeg .seg-btn').forEach(function(b){
-   b.addEventListener('click', function(){ track('language_switch', {language: b.dataset.lang}); });
+   b.addEventListener('click', function(){ track(b.dataset.lang==='en'?'change_language_en':'change_language_es', {}); });
  });
  // Cambio de tema (claro/oscuro)
  var tb=document.getElementById('themeBtn');
@@ -2889,10 +2905,10 @@ applyLang(LANG);
  document.addEventListener('click', function(e){
    var a=e.target.closest('a'); if(!a) return;
    var href=a.getAttribute('href')||'';
-   if(href.indexOf('mailto:')===0) track('contact_click', {method:'email'});
-   else if(href.indexOf('tel:')===0) track('contact_click', {method:'phone'});
-   else if(/linkedin\.com/.test(href)) track('contact_click', {method:'linkedin'});
-   else if(/bit\.ly\/m\/jforero/.test(href)) track('contact_click', {method:'portfolio'});
+   if(href.indexOf('mailto:')===0) track('click_contact_email', {});
+   else if(href.indexOf('tel:')===0) track('click_contact_phone', {});
+   else if(/linkedin\.com/.test(href)) track('click_linkedin', {});
+   else if(/bit\.ly\/m\/jforero/.test(href)) track('click_portfolio', {});
    else if(/youtube\.com|youtu\.be/.test(href)) track('outbound_click', {destination:'youtube', url:href});
    else if(/^https?:\/\//.test(href) && href.indexOf(location.host)<0) track('outbound_click', {url:href});
  });
@@ -3024,10 +3040,11 @@ applyLang(LANG);
   'ai-data-leadership':['AI Strategy','AI Governance','Data & Analytics Leadership','Target Operating Model','C-level Stakeholders','Change Adoption','Responsible AI','Digital Transformation','Roadmap'],
   'genai-automation':['Generative AI','LLMs','RAG','Prompt Engineering','Intelligent Automation','Process Automation','AI Adoption','Copilot','Google Gemini'],
   'data-products':['Business Intelligence','Power BI','Tableau','Predictive Analytics','Decision Intelligence','Data Products','Forecasting','Databricks · PySpark','Data Visualization'],
-  'consulting':['AI/Data Advisory','Business Transformation','Solution Architecture','Data Governance','Diagnosis & Roadmap','Capability Building','Microsoft Fabric','Workshops','Value Creation'],
+  'consulting':['AI & Data Advisory','Business Transformation','Solution Architecture','Data Governance','Diagnosis & Roadmap','Capability Building','Microsoft Fabric','Workshops','Value Creation'],
   'education':['AI Literacy','Executive Education','Corporate Training','Change Management','AI Adoption','Curriculum Design','Workshops','Non-technical Enablement','NPS']
  };
  var PDF={'ai-data-leadership':'AI_Data_Leadership','genai-automation':'GenAI_Automation','data-products':'Analytics_Products_BI','consulting':'Senior_Consulting','education':'Executive_Education'};
+ var EVSLUG={'ai-data-leadership':'ai_strategy','genai-automation':'genai','data-products':'data_products','consulting':'consulting','education':'education'};
  var cur='ai-data-leadership';
  function en(){return (typeof LANG!=='undefined'&&LANG==='en');}
  function t(es,e){return en()?e:es;}
@@ -3051,7 +3068,7 @@ applyLang(LANG);
      '<div class="rv-ev-title">'+t('Skills clave','Key skills')+'</div>'+
      '<div class="rv-skills">'+(SK[cur]||[]).map(function(s){return '<span class="badge">'+s+'</span>';}).join('')+'</div>'+
      '<div class="rv-cta">'+
-       '<a class="btn sm" href="cv/Javier_Forero_CV_'+PDF[cur]+'_'+(en()?'EN':'ES')+'.pdf" download>'+t('⬇ Descargar CV para esta ruta','⬇ Download CV for this view')+'</a>'+
+       '<a class="btn sm" href="cv/Javier_Forero_CV_'+PDF[cur]+'_'+(en()?'EN':'ES')+'.pdf" download onclick="window.__track&&__track(\'download_cv_'+EVSLUG[cur]+'\',{lang:\''+(en()?'en':'es')+'\'})">'+t('⬇ Descargar CV para esta ruta','⬇ Download resume for this view')+'</a>'+
        '<a class="btn sm secondary" href="#proyectos">'+t('Ver todos los casos','See all cases')+'</a>'+
        '<a class="btn sm secondary" href="#contacto">'+t('Contactar','Get in touch')+'</a>'+
      '</div>';
@@ -3060,7 +3077,7 @@ applyLang(LANG);
    if(!RV[id]) return;
    cur=id; render();
    if(updateURL){ try{ history.replaceState(null,'', location.pathname+'?view='+id+location.hash); }catch(e){} }
-   if(window.__track) window.__track('recruiter_view',{view:id});
+   if(window.__track) window.__track('select_recruiter_view',{view:id});
  }
  Array.prototype.forEach.call(routes.querySelectorAll('.rv-route'),function(b){
    b.addEventListener('click',function(){ select(b.getAttribute('data-rv'), true); });
