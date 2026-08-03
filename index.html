@@ -161,7 +161,7 @@
   "@type": "ItemList",
   "@id": "https://cv.javierforero.co/#proyectos",
   "name": "Proyectos y casos · Javier Forero",
-  "numberOfItems": 30,
+  "numberOfItems": 31,
   "itemListOrder": "https://schema.org/ItemListUnordered",
   "itemListElement": [
     {
@@ -379,6 +379,21 @@
       "position": 15,
       "item": {
         "@type": "CreativeWork",
+        "name": "Cómo la IA rompió la Ley de Moore — 68 años de cómputo",
+        "about": "Visualización de datos · Divulgación con evidencia",
+        "description": "Visualización bilingüe de 72 modelos de IA (1958–2026) con el nivel de evidencia declarado modelo a modelo, sobre datos de Epoch AI.",
+        "creator": {
+          "@id": "https://javierforero.co/#person"
+        },
+        "dateCreated": "2026",
+        "url": "https://cv.javierforero.co/#proyectos"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "item": {
+        "@type": "CreativeWork",
         "name": "VibraWave Studio — Visualización de audio reactiva",
         "about": "Producto propio · Creatividad IA",
         "description": "App web que transforma música en videos con gráficos reactivos y exportación cinematográfica.",
@@ -391,7 +406,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 16,
+      "position": 17,
       "item": {
         "@type": "CreativeWork",
         "name": "Asesor de Prompts — GPT de prompt engineering",
@@ -406,7 +421,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 17,
+      "position": 18,
       "item": {
         "@type": "CreativeWork",
         "name": "Databricks — Análisis de clientes por industria (BNA)",
@@ -421,7 +436,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 18,
+      "position": 19,
       "item": {
         "@type": "CreativeWork",
         "name": "NEICON — Arquitectura de datos, BI e IA",
@@ -436,7 +451,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 19,
+      "position": 20,
       "item": {
         "@type": "CreativeWork",
         "name": "Collective Academy — BI & Data Analytics",
@@ -451,7 +466,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 20,
+      "position": 21,
       "item": {
         "@type": "CreativeWork",
         "name": "Crehana — Business Analytics con Python y Excel",
@@ -466,7 +481,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 21,
+      "position": 22,
       "item": {
         "@type": "CreativeWork",
         "name": "Convertidor TOON — prompts técnicos para imágenes",
@@ -481,7 +496,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 22,
+      "position": 23,
       "item": {
         "@type": "CreativeWork",
         "name": "MarkDowner — ETL de documentos a Markdown",
@@ -496,7 +511,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 23,
+      "position": 24,
       "item": {
         "@type": "CreativeWork",
         "name": "AprendIA — LMS con gamificación e IA",
@@ -511,7 +526,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 24,
+      "position": 25,
       "item": {
         "@type": "CreativeWork",
         "name": "Tutor de Conceptos Complejos — claridad y simplicidad",
@@ -526,7 +541,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 25,
+      "position": 26,
       "item": {
         "@type": "CreativeWork",
         "name": "Tutor IA para Exámenes — de PDF a examen interactivo",
@@ -541,7 +556,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 26,
+      "position": 27,
       "item": {
         "@type": "CreativeWork",
         "name": "NotebookLM — base de conocimiento IA (RAG)",
@@ -556,7 +571,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 27,
+      "position": 28,
       "item": {
         "@type": "CreativeWork",
         "name": "Asistente de Noticias de IA — monitoreo y resúmenes",
@@ -571,7 +586,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 28,
+      "position": 29,
       "item": {
         "@type": "CreativeWork",
         "name": "SYNCO — contenido de marketing omnicanal",
@@ -586,7 +601,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 29,
+      "position": 30,
       "item": {
         "@type": "CreativeWork",
         "name": "Reflexiones Literarias — IA creativa diaria",
@@ -601,7 +616,7 @@
     },
     {
       "@type": "ListItem",
-      "position": 30,
+      "position": 31,
       "item": {
         "@type": "CreativeWork",
         "name": "DJ StoryMix — narrativas de audio personalizadas",
@@ -1332,7 +1347,19 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
 .showcase-mini .lnk{font-size:13px;font-weight:800;color:var(--vibrant-blue);margin-top:12px}
 .showcase-side{display:flex;flex-direction:column;gap:18px;min-width:0}
 .showcase-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
-@media(max-width:820px){.showcase-grid,.showcase-mini-row{grid-template-columns:1fr}}
+/* Tarjeta destacada a todo el ancho: miniatura a la izquierda, contenido a la derecha.
+   Evita que una tarjeta impar quede sola a media fila. */
+.showcase-wide{grid-column:1/-1;flex-direction:row;align-items:stretch}
+.showcase-wide .showcase-thumb{flex:0 0 44%;aspect-ratio:auto;border-bottom:0;border-right:1px solid var(--border)}
+.showcase-wide .showcase-body{padding:22px 24px 24px}
+.showcase-wide h3{font-size:22px}
+@media(max-width:820px){
+  .showcase-grid,.showcase-mini-row{grid-template-columns:1fr}
+  .showcase-wide{flex-direction:column}
+  .showcase-wide .showcase-thumb{flex:none;aspect-ratio:1200/630;border-right:0;border-bottom:1px solid var(--border)}
+  .showcase-wide .showcase-body{padding:18px 20px 20px}
+  .showcase-wide h3{font-size:20px}
+}
 </style>
 </head>
 <body>
@@ -1678,6 +1705,14 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
         <div class="proj-field pf-role"><span class="pf-label">Mi rol</span><span class="pf-val">Capstone del 5-Day Gen AI Intensive Course with Google (2025 Q1): desarrollo del MVP demostrativo.</span></div>
         <div class="tags"><span class="badge">Generative AI</span><span class="badge">RAG</span><span class="badge">Gemini 2.0 Flash</span></div>
         <div class="proj-foot"><span class="ev ev-doc">Documentado</span><span class="more">Ver caso →</span></div>
+      </article>
+      <article class="proj card" data-cat="creative" data-id="ia-compute" tabindex="0" role="button" aria-label="Cómo la IA rompió la Ley de Moore — 68 años de cómputo">
+        <div class="ptype">Visualización de datos · Divulgación con evidencia</div>
+        <h3>Cómo la IA rompió la Ley de Moore — 68 años de cómputo</h3>
+        <div class="proj-field pf-prob"><span class="pf-label">Problema</span><span class="pf-val">Comunicar 68 años y ~12 órdenes de magnitud de crecimiento sin caer en el hype ni ocultar la incertidumbre: los laboratorios frontera dejaron de publicar cifras de cómputo tras GPT-4.</span></div>
+        <div class="proj-field pf-role"><span class="pf-label">Mi rol</span><span class="pf-val">Concepto, análisis, diseño de la visualización y curaduría de fuentes.</span></div>
+        <div class="tags"><span class="badge">Data Visualization</span><span class="badge">Data Storytelling</span><span class="badge">Epoch AI</span></div>
+        <div class="proj-foot"><span class="ev ev-pub">Promedio público</span><span class="more">Ver caso →</span></div>
       </article>
       <article class="proj card" data-cat="creative" data-id="vibrawave" tabindex="0" role="button" aria-label="VibraWave Studio — Visualización de audio reactiva">
         <div class="ptype">Producto propio · Creatividad IA</div>
@@ -2079,6 +2114,22 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
           </div>
         </div>
       </article>
+      <article class="showcase-hero showcase-wide card reveal">
+        <a class="showcase-thumb" href="https://dashboards.javierforero.co/ia-compute/" target="_blank" rel="noopener" aria-label="Abrir la visualización: cómo la IA rompió la Ley de Moore, 1958–2026">
+          <img src="https://dashboards.javierforero.co/og-image.png" width="1200" height="630" loading="lazy" alt="Visualización del cómputo de entrenamiento en IA entre 1958 y 2026, en escala logarítmica, con 72 modelos y su nivel de evidencia">
+        </a>
+        <div class="showcase-body">
+          <div class="ptype" data-en="Data visualization · evidence-based storytelling">Visualización de datos · divulgación con evidencia</div>
+          <h3 data-en="How AI broke Moore's Law — 68 years of compute in one chart">Cómo la IA rompió la Ley de Moore — 68 años de cómputo en una gráfica</h3>
+          <p data-en="From Rosenblatt's artificial neuron (1958) to the 2026 frontier models: 72 models across three documented eras — Moore (2× every 2 years), Deep Learning (~10×/year) and Frontier LLMs (4–5×/year). What used to take two years to double now multiplies by five every twelve months.">De la neurona artificial de Rosenblatt (1958) a los modelos frontera de 2026: 72 modelos en tres eras documentadas — Moore (2× cada 2 años), Deep Learning (~10×/año) y Frontier LLMs (4–5×/año). Lo que antes tardaba dos años en duplicarse, hoy se multiplica por cinco cada doce meses.</p>
+          <div class="showcase-tags"><span class="badge"><strong>72</strong>&nbsp;<span data-en="AI models">modelos de IA</span></span><span class="badge"><strong>68</strong>&nbsp;<span data-en="years of data">años de datos</span></span><span class="badge" data-en="Evidence level per model">Nivel de evidencia por modelo</span><span class="badge">Epoch AI · CC-BY</span><span class="badge" data-en="Bilingual ES/EN">Bilingüe ES/EN</span></div>
+          <p class="showcase-demo" data-en="What it proves: intellectual honesty at scale — every figure traceable to a primary source, every estimate carrying its declared confidence level, and the uncertainty stated rather than hidden.">Qué demuestra: honestidad intelectual a escala — cada cifra rastreable a una fuente primaria, cada estimación con su nivel de confianza declarado, y la incertidumbre explicitada en lugar de escondida.</p>
+          <div class="showcase-actions">
+            <a class="btn sm" href="https://dashboards.javierforero.co/ia-compute/" target="_blank" rel="noopener" data-en="Explore the visualization →">Explorar la visualización →</a>
+            <a class="btn sm secondary" href="https://epoch.ai/data/ai-models" target="_blank" rel="noopener" data-en="Source data (Epoch AI) →">Datos fuente (Epoch AI) →</a>
+          </div>
+        </div>
+      </article>
     </div>
     <div class="showcase-mini-row">
       <div class="showcase-mini card reveal">
@@ -2471,6 +2522,17 @@ const PROJECTS=[
   metrics:[['MVP demostrativo creado con Gemini 2.0 Flash','doc'],['Comprensión documental y generación estructurada para no técnicos','exp']],
   note:'Pendiente número de usuarios, pruebas y satisfacción.'},
 
+ {id:'ia-compute',cat:'creative',type:'Visualización de datos · Divulgación con evidencia',title:'Cómo la IA rompió la Ley de Moore — 68 años de cómputo',period:'2026',client:'Producto propio',ev:'pub',
+  summary:'Visualización bilingüe de 72 modelos de IA (1958–2026) con el nivel de evidencia declarado modelo a modelo, sobre datos de Epoch AI.',
+  tags:['Data Visualization','Data Storytelling','Epoch AI','Evidence Levels','Plotly'],
+  context:'Narrativa de datos sobre la aceleración del cómputo de entrenamiento en IA: de la neurona artificial de Rosenblatt (1958) a los modelos frontera de 2026, en escala logarítmica.',
+  challenge:'Comunicar 68 años y ~12 órdenes de magnitud de crecimiento sin caer en el hype ni ocultar la incertidumbre: los laboratorios frontera dejaron de publicar cifras de cómputo tras GPT-4.',
+  role:'Concepto, análisis, diseño de la visualización y curaduría de fuentes.',
+  solution:['Serie de 72 modelos con tres eras documentadas: Moore (2× cada 2 años), Deep Learning (~10×/año) y Frontier LLMs (4–5×/año).','Etiqueta de confianza por modelo tomada del campo <em>Confidence</em> de Epoch AI — la misma que usan Our World in Data y el AI Index de Stanford.','Filtro por laboratorio con eje autoajustable, zoom a la era frontera (2023–2026) y distinción visual entre modelos cerrados y de pesos abiertos.','Umbral regulatorio de 10²⁶ FLOP (riesgo sistémico según la EU AI Act) marcado en el gráfico.','Nota metodológica explícita sobre triangulación, imputación y el error de confundir parámetros totales vs. activos en arquitecturas MoE.','Soporte científico con 11 referencias primarias (Rosenblatt, Moore, AlexNet, Transformer, Kaplan, Chinchilla, Llama 3) y capa bilingüe ES/EN.','Pieza publicada: <a href="https://dashboards.javierforero.co/ia-compute/" target="_blank" rel="noopener">ver visualización</a>.'],
+  stack:'Plotly · JavaScript · datos Epoch AI (CC-BY) · escala logarítmica · diseño bilingüe.',
+  metrics:[['72 modelos · 68 años de historia · 3 eras con punto de inflexión documentado','doc'],['Nivel de evidencia declarado por modelo (fuente: campo Confidence de Epoch AI)','pub'],['11 referencias primarias rastreables y nota metodológica pública','doc']],
+  note:'Divulgación sobre datos de terceros (Epoch AI, CC-BY); los modelos de 2026 se ubican sobre la tendencia 4–5× anual y están marcados como «Tendencia», no como cifra medida.'},
+
  {id:'vibrawave',cat:'creative',type:'Producto propio · Creatividad IA',title:'VibraWave Studio — Visualización de audio reactiva',period:'2025–2026',client:'Producto propio',ev:'doc',
   summary:'App web que transforma música en videos con gráficos reactivos y exportación cinematográfica.',
   tags:['Web App','Audio-reactive','Creative AI','Video Export'],
@@ -2755,6 +2817,14 @@ const PROJ_EN={
   stack:'Google Gemini 2.0 Flash · RAG · Kaggle notebooks.',
   metrics:[['Demonstrative MVP built with Gemini 2.0 Flash','doc'],['Document understanding and structured generation for non-technical users','exp']],
   note:'Pending number of users, tests and satisfaction.'},
+ 'ia-compute':{type:'Data visualization · Evidence-based storytelling',title:'How AI broke Moore\'s Law — 68 years of compute',summary:'Bilingual visualization of 72 AI models (1958–2026) with the evidence level declared model by model, built on Epoch AI data.',
+  context:'A data narrative on the acceleration of AI training compute: from Rosenblatt\'s artificial neuron (1958) to the 2026 frontier models, on a logarithmic scale.',
+  challenge:'Communicate 68 years and ~12 orders of magnitude of growth without hype and without hiding uncertainty: frontier labs stopped publishing compute figures after GPT-4.',
+  role:'Concept, analysis, visualization design and source curation.',
+  solution:['A series of 72 models across three documented eras: Moore (2× every 2 years), Deep Learning (~10×/year) and Frontier LLMs (4–5×/year).','A per-model confidence label taken from Epoch AI\'s <em>Confidence</em> field — the same one used by Our World in Data and Stanford\'s AI Index.','Lab filter with a self-adjusting axis, zoom into the frontier era (2023–2026) and a visual distinction between closed and open-weight models.','The 10²⁶ FLOP regulatory threshold (systemic risk under the EU AI Act) marked on the chart.','An explicit methodological note on triangulation, imputation and the common error of confusing total vs. active parameters in MoE architectures.','Scientific backing with 11 primary references (Rosenblatt, Moore, AlexNet, Transformer, Kaplan, Chinchilla, Llama 3) and a bilingual ES/EN layer.','Published piece: <a href="https://dashboards.javierforero.co/ia-compute/" target="_blank" rel="noopener">view visualization</a>.'],
+  stack:'Plotly · JavaScript · Epoch AI data (CC-BY) · logarithmic scale · bilingual design.',
+  metrics:[['72 models · 68 years of history · 3 eras with a documented inflection point','doc'],['Evidence level declared per model (source: Epoch AI Confidence field)','pub'],['11 traceable primary references and a public methodological note','doc']],
+  note:'Science communication on third-party data (Epoch AI, CC-BY); 2026 models sit on the 4–5×/year trend and are flagged as "Trend", not as measured figures.'},
  'vibrawave':{type:'Own product · Creative AI',title:'VibraWave Studio — Reactive audio visualization',summary:'Web app that turns music into videos with reactive graphics and cinematic export.',
   context:'Professional browser-based audio-visualization studio.',
   challenge:'Accelerate production of musical/reactive videos with a browser-based experience.',
