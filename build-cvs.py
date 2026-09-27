@@ -59,7 +59,7 @@ L = {
     "<b>Director, Analytics &amp; Insight Global Solutions — MEC / GroupM</b> · Londres, Reino Unido · Ago 2008 – Sep 2010",
     "<b>Research Director — MEC / Mediaedge:cia</b> · Bogotá · Abr 2000 – Jul 2008",
   ],
-  "teach": "Universidad Militar Nueva Granada (IA generativa, Legal Tech, ética), Universidad El Bosque, Collective Academy (AI Productivity Tools, NPS 70/60; BI &amp; Data Analytics MBA), Crehana (Business Analytics con Python) y Asuntos Digitales (NPS 95). Talleres ejecutivos de IA para directivos, agencias y gremios.",
+  "teach": "Universidad del Rosario — Rosario GSB (curso ejecutivo &quot;IA para el Liderazgo&quot;, 3 de 8 módulos, evaluación docente 4,6/5), Universidad de los Andes (educación continua corporativa en IA y analítica avanzada), Universidad Militar Nueva Granada (IA generativa, Legal Tech, ética), Collective Academy (AI Productivity Tools, NPS 70/60; BI &amp; Data Analytics MBA), Crehana (Business Analytics con Python) y Asuntos Digitales (NPS 85–95). Talleres ejecutivos con Connect (Impulso IA 360), SEC (analítica para microempresarios), agencias y gremios.",
   "edu": ["<b>Estadístico</b> — Universidad Nacional de Colombia.",
           "<b>Certificaciones seleccionadas (71 en total):</b> 5-Day Gen AI Intensive — Google/Kaggle (2025) · Generative AI with LLMs — DeepLearning.AI/AWS · LangChain for LLM Application Development · Building Agentic RAG with LlamaIndex · Agentic AI for Leadership — LinkedIn · ChatGPT Prompt Engineering for Developers · Microsoft Azure Relational Databases.",
           "<b>Idiomas:</b> español (nativo) · inglés (profesional).",
@@ -97,7 +97,7 @@ L = {
     "<b>Director, Analytics &amp; Insight Global Solutions — MEC / GroupM</b> · London, UK · Aug 2008 – Sep 2010",
     "<b>Research Director — MEC / Mediaedge:cia</b> · Bogotá · Apr 2000 – Jul 2008",
   ],
-  "teach": "Universidad Militar Nueva Granada (generative AI, Legal Tech, ethics), Universidad El Bosque, Collective Academy (AI Productivity Tools, NPS 70/60; BI &amp; Data Analytics MBA), Crehana (Business Analytics with Python) and Asuntos Digitales (NPS 95). Executive AI workshops for leaders, agencies and industry guilds.",
+  "teach": "Universidad del Rosario — Rosario GSB (executive program &quot;AI for Leadership&quot;, 3 of 8 modules, 4.6/5 teaching score), Universidad de los Andes (corporate continuing education in AI and advanced analytics), Universidad Militar Nueva Granada (generative AI, Legal Tech, ethics), Collective Academy (AI Productivity Tools, NPS 70/60; BI &amp; Data Analytics MBA), Crehana (Business Analytics with Python) and Asuntos Digitales (NPS 85–95). Executive AI workshops with Connect (Impulso IA 360), SEC (analytics for micro-entrepreneurs), agencies and industry guilds.",
   "edu": ["<b>Statistician</b> — Universidad Nacional de Colombia.",
           "<b>Selected certifications (71 total):</b> 5-Day Gen AI Intensive — Google/Kaggle (2025) · Generative AI with LLMs — DeepLearning.AI/AWS · LangChain for LLM Application Development · Building Agentic RAG with LlamaIndex · Agentic AI for Leadership — LinkedIn · ChatGPT Prompt Engineering for Developers · Microsoft Azure Relational Databases.",
           "<b>Languages:</b> Spanish (native) · English (professional).",
@@ -166,17 +166,73 @@ PROFILES = {
  },
  "Executive_Education": {
    "title": {"es":"Educador Ejecutivo en IA · Adopción y Alfabetización","en":"Executive AI Educator · Adoption &amp; Literacy"},
-   "summary": {"es":"Educador y facilitador en IA aplicada con 25+ años en datos e IA, especializado en llevar audiencias técnicas y no técnicas a la adopción real. Diseño y dicto programas de IA generativa, productividad, BI y data storytelling, con foco en cambio cultural y NPS verificable. Mi experiencia docente es evidencia de una capacidad crítica: traducir complejidad técnica en adopción organizacional.",
-               "en":"Educator and facilitator in applied AI with 25+ years in data and AI, specialized in taking technical and non-technical audiences to real adoption. I design and deliver programs in generative AI, productivity, BI and data storytelling, focused on cultural change and verifiable NPS. My teaching experience is evidence of a critical capability: translating technical complexity into organizational adoption."},
+   "summary": {"es":"Educador y facilitador en IA aplicada con 25+ años en datos e IA, especializado en llevar audiencias técnicas y no técnicas a la adopción real. Diseño y dicto programas de IA generativa, productividad, BI y data storytelling —desde 5 diplomados y especializaciones B2B (7 clases/módulos, NPS 85–95) hasta talleres para comités directivos y microempresarios (Connect · Impulso IA 360; SEC)—, con foco en cambio cultural y adopción medible. Mi experiencia docente es evidencia de una capacidad crítica: traducir complejidad técnica en adopción organizacional.",
+               "en":"Educator and facilitator in applied AI with 25+ years in data and AI, specialized in taking technical and non-technical audiences to real adoption. I design and deliver programs in generative AI, productivity, BI and data storytelling —from 5 B2B diplomas and specializations (7 classes/modules, NPS 85–95) to workshops for leadership committees and micro-entrepreneurs (Connect · Impulso IA 360; SEC)—, focused on cultural change and measurable adoption. My teaching experience is evidence of a critical capability: translating technical complexity into organizational adoption."},
    "cases": {"es":[("Collective Academy — AI Productivity Tools","2 cohortes (40+ participantes) en GenAI, automatización y datos. NPS 70 y 60."),
-                   ("Asuntos Digitales — Docente en 5 diplomados/especializaciones B2B","7 clases/módulos: Dirección Comercial (Métricas Comerciales, NPS 95), IA para Negocios (KPIs financieros, 4 cohortes), Marketing (chatbots, 2 cohortes), Operaciones B2B y sesiones pregrabadas."),
+                   ("Asuntos Digitales — Docente en 5 diplomados/especializaciones B2B","7 clases/módulos: Dirección Comercial (Métricas comerciales y reporting, NPS 85–95), IA para Negocios (KPIs financieros, 4 cohortes), Marketing (chatbots, 2 cohortes), Operaciones B2B y sesiones pregrabadas."),
+                   ("Talleres ejecutivos — Connect (Impulso IA 360) &amp; SEC","IA aplicada para comités directivos y microempresarios; adopción práctica con foco en resultados de negocio."),
                    ("Universidad Militar Nueva Granada","diplomados de IA generativa, Legal Tech, ética e investigación aplicada."),
                    ("Crehana — Business Analytics con Python","curso publicado de analítica aplicada con Excel y Python.")],
              "en":[("Collective Academy — AI Productivity Tools","2 cohorts (40+ participants) in GenAI, automation and data. NPS 70 and 60."),
-                   ("Asuntos Digitales — Lecturer across 5 B2B diplomas/specializations","7 classes/modules: Commercial Management (Commercial Metrics, NPS 95), AI for Business (financial KPIs, 4 cohorts), Marketing (chatbots, 2 cohorts), B2B Operations and pre-recorded sessions."),
+                   ("Asuntos Digitales — Lecturer across 5 B2B diplomas/specializations","7 classes/modules: Commercial Management (Commercial metrics &amp; reporting, NPS 85–95), AI for Business (financial KPIs, 4 cohorts), Marketing (chatbots, 2 cohorts), B2B Operations and pre-recorded sessions."),
+                   ("Executive workshops — Connect (Impulso IA 360) &amp; SEC","applied AI for leadership committees and micro-entrepreneurs; hands-on adoption focused on business outcomes."),
                    ("Universidad Militar Nueva Granada","diplomas in generative AI, Legal Tech, ethics and applied research."),
                    ("Crehana — Business Analytics with Python","published applied-analytics course with Excel and Python.")]},
-   "skills": "AI Literacy · Executive Education · Corporate Training · Change Management · AI Adoption · Curriculum Design · Workshops · Data Storytelling · Public Speaking · Non-technical Enablement · NPS · Generative AI · Prompt Engineering",
+   "skills": "AI Literacy · Executive Education · Graduate Teaching · Curriculum Design · Challenge-Based Learning · Corporate Training · Change Management · AI Adoption · Data Storytelling · Public Speaking · Non-technical Enablement · NPS · Generative AI · Prompt Engineering",
+   "kpis": {"es":[("25+","Años en datos, analítica e IA"),("4,6/5","Evaluación docente — la más alta del equipo (Rosario GSB)"),
+                  ("NPS 85–95","Clases de Asuntos Digitales (cohortes 2026)"),("6","Instituciones académicas donde enseño"),
+                  ("100s","Profesionales formados en IA"),("7","Clases/módulos B2B diseñados y dictados"),("48 h","Curso ejecutivo de IA (Rosario GSB · ABR)")],
+            "en":[("25+","Years in data, analytics &amp; AI"),("4.6/5","Teaching score — highest on the faculty (Rosario GSB)"),
+                  ("NPS 85–95","Asuntos Digitales classes (2026 cohorts)"),("6","Academic institutions where I teach"),
+                  ("100s","Professionals trained in AI"),("7","B2B classes/modules designed &amp; delivered"),("48 h","Executive AI course (Rosario GSB · CBL)")]},
+   "teach_detail": {"es":[
+       ("Universidad del Rosario — Rosario GSB · Advance (educación ejecutiva / posgrado)","Profesor invitado del curso de formación ejecutiva &quot;IA para el Liderazgo&quot; (48 h, Aprendizaje Basado en Retos): 3 de los 8 módulos, incluidos los dos de cierre y la retroalimentación de los retos finales. Evaluación docente <b>4,6/5 — la más alta del equipo de 4 profesores</b>; 8,2/10 en aprendizaje percibido del curso."),
+       ("Universidad de los Andes — Educación Continua","Profesor invitado en un programa corporativo de la Academia de Inteligencia Aplicada (&quot;IA y Analítica avanzada para resolver retos estratégicos&quot;), en tres módulos técnicos: Analítica de Datos Avanzada, Construcción de Prototipos Analíticos y Dominio Técnico Avanzado con IA. Cliente corporativo confidencial."),
+       ("Asuntos Digitales — diplomados y especializaciones B2B","Diseño y docencia de 7 clases/módulos en 5 programas: Dirección Comercial y Ventas con IA (clase &quot;Métricas comerciales, reporting y toma de decisiones con IA&quot;, <b>NPS 85–95</b> en cohortes jul–sep 2026), IA Aplicada a los Negocios (KPIs financieros, 5 cohortes), IA para Marketing (chatbots de venta, 2 cohortes) y Operaciones B2B. Además, Programa de Certificación de Claude: Live de métricas de negocio y sesión de agentes con MCP. NPS público institucional &gt;85."),
+       ("Collective Academy — educación ejecutiva y MBA","Mentor en AI Productivity Tools (2 cohortes, 40+ participantes; NPS 70 y 60) y en Business Intelligence &amp; Data Analytics para cohortes MBA (NPS 40 y 50)."),
+       ("Universidad Militar Nueva Granada — docencia universitaria","Docente y conferencista en diplomados de IA generativa, Legal Tech, análisis documental, investigación aplicada y uso responsable/ética de la IA. Nueva generación 2026-II: curso &quot;Herramientas Tecnológicas al servicio del Derecho&quot; (5 sesiones de 3 h)."),
+       ("Crehana — curso publicado","Profesor del curso &quot;Business Analytics with Python and Excel&quot;: analítica aplicada para audiencias masivas."),
+       ("Talleres ejecutivos y gremiales","IA para comités directivos y microempresarios: Connect (Programa de Impulso IA 360), SEC (analítica para microempresarios), agencias creativas (Bumerang, Performer, La Mediática) y gremios (ACIA/ASOPESAJE).")],
+     "en":[
+       ("Universidad del Rosario — Rosario GSB · Advance (executive / graduate education)","Guest professor of the executive course &quot;AI for Leadership&quot; (48 h, Challenge-Based Learning): 3 of the 8 modules, including both closing modules and the final-challenge feedback. Teaching score <b>4.6/5 — the highest of the 4-professor faculty</b>; 8.2/10 in perceived learning."),
+       ("Universidad de los Andes — Continuing Education","Guest professor in a corporate program of the Applied Intelligence Academy (&quot;AI and advanced analytics to solve strategic challenges&quot;), across three technical modules: Advanced Data Analytics, Building Analytical Prototypes and Advanced Technical Mastery with AI. Confidential corporate client."),
+       ("Asuntos Digitales — B2B diplomas and specializations","Design and teaching of 7 classes/modules across 5 programs: Commercial Management &amp; Sales with AI (class &quot;Commercial metrics, reporting &amp; decision-making with AI&quot;, <b>NPS 85–95</b> across Jul–Sep 2026 cohorts), AI Applied to Business (financial KPIs, 5 cohorts), AI for Marketing (sales chatbots, 2 cohorts) and B2B Operations. Also a Claude Certification program: business-metrics Live and an MCP agents session. Public institutional NPS &gt;85."),
+       ("Collective Academy — executive education and MBA","Mentor in AI Productivity Tools (2 cohorts, 40+ participants; NPS 70 and 60) and in Business Intelligence &amp; Data Analytics for MBA cohorts (NPS 40 and 50)."),
+       ("Universidad Militar Nueva Granada — university teaching","Lecturer and speaker in diploma programs on generative AI, Legal Tech, document analysis, applied research and responsible/ethical AI use. New 2026-II cohort: course &quot;Technology Tools Serving Law&quot; (5 sessions of 3 h)."),
+       ("Crehana — published course","Instructor of &quot;Business Analytics with Python and Excel&quot;: applied analytics for mass audiences."),
+       ("Executive &amp; industry workshops","Applied AI for leadership committees and micro-entrepreneurs: Connect (Impulso IA 360 program), SEC (analytics for micro-entrepreneurs), creative agencies (Bumerang, Performer, La Mediática) and industry guilds (ACIA/ASOPESAJE).")]},
+   "acad": {"es":[
+       ("Metodologías y diseño curricular","Aprendizaje Basado en Retos (70% práctico / 30% teórico), diseño de currículo, rúbricas y evaluación; data storytelling y framework propio &quot;5 niveles de analítica de datos&quot;; prototipos y casos aplicados con ChatGPT, Claude, Gemini, Copilot, Perplexity y NotebookLM."),
+       ("Base académica","Estadístico, Universidad Nacional de Colombia. Participación recurrente en el Simposio Internacional de Estadística de la UNAL (Estadística No Paramétrica, Control de Calidad, Investigación Social y Ciencia de Datos)."),
+       ("Contenido y liderazgo de pensamiento","Charlas como &quot;IA en Acción: De la Atención a la Conversión&quot;; canal de YouTube sobre IA y datos; materiales y recursos entregados en los portales de alumnos.")],
+     "en":[
+       ("Methodologies and curriculum design","Challenge-Based Learning (70% hands-on / 30% theory), curriculum design, rubrics and assessment; data storytelling and a proprietary &quot;5 levels of data analytics&quot; framework; prototypes and applied cases with ChatGPT, Claude, Gemini, Copilot, Perplexity and NotebookLM."),
+       ("Academic foundation","Statistician, Universidad Nacional de Colombia. Recurring participation in the UNAL International Statistics Symposium (Nonparametric Statistics, Quality Control, Social Research and Data Science)."),
+       ("Content and thought leadership","Talks such as &quot;AI in Action: From Attention to Conversion&quot;; a YouTube channel on AI and data; materials and resources delivered through student portals.")]},
+   "catalog": {"es":[
+       ("Estrategia, liderazgo y gobierno de IA","IA para el liderazgo; diagnóstico de madurez y hoja de ruta de adopción a 90 días; gobernanza, ética y uso responsable; futuro del trabajo, upskilling/reskilling e impacto de la IA en LATAM."),
+       ("IA generativa aplicada","Prompt engineering avanzado; asistentes y agentes de IA; automatización con GenAI (comprensión documental, reglas y excepciones); RAG para negocio y multimodalidad."),
+       ("Analítica, métricas y decisión","Métricas comerciales, reporting y toma de decisiones con IA; KPIs financieros; BI y dashboards; data storytelling; framework &quot;5 niveles de analítica de datos&quot;."),
+       ("Productividad y operaciones B2B","ChatGPT, Claude, Gemini, Copilot y NotebookLM aplicados al trabajo; organización y gestión inteligente de información; &quot;análisis y síntesis de datos sin ser analista&quot;.")],
+     "en":[
+       ("AI strategy, leadership and governance","AI for leadership; maturity assessment and 90-day adoption roadmap; governance, ethics and responsible use; future of work, upskilling/reskilling and AI's impact in LATAM."),
+       ("Applied generative AI","Advanced prompt engineering; AI assistants and agents; automation with GenAI (document understanding, rules and exceptions); business RAG and multimodality."),
+       ("Analytics, metrics and decision-making","Commercial metrics, reporting and decision-making with AI; financial KPIs; BI and dashboards; data storytelling; the &quot;5 levels of data analytics&quot; framework."),
+       ("Productivity and B2B operations","ChatGPT, Claude, Gemini, Copilot and NotebookLM applied to work; smart information organization and management; &quot;data analysis and synthesis without being an analyst&quot;.")]},
+   "certs": {"es":[
+       ("IA, GenAI, LLMs &amp; ML","5-Day Gen AI Intensive (Google/Kaggle, 2025) · Generative AI with LLMs (DeepLearning.AI/AWS) · Building Agentic RAG with LlamaIndex · LangChain for LLM App Development · Multimodal Llama 3.2 · ChatGPT Prompt Engineering · GenAI for Business Leaders · Deep Learning · Reinforcement Learning · NLP con Python."),
+       ("Ciencia de datos, analítica &amp; cloud","Data Science in Stratified Healthcare — Edinburgh · Data Science for All (DS4A) 375 h — Correlation One / MinTIC · Python for Everybody — Michigan · Data Science Specialization — Johns Hopkins · Microsoft Azure Relational Databases."),
+       ("Producto, agile &amp; liderazgo","Agentic AI for Leadership — LinkedIn · Product Management Foundations &amp; Metrics · Agile &amp; Design Thinking · Digital Leadership Program — Google (INALDE Business School).")],
+     "en":[
+       ("AI, GenAI, LLMs &amp; ML","5-Day Gen AI Intensive (Google/Kaggle, 2025) · Generative AI with LLMs (DeepLearning.AI/AWS) · Building Agentic RAG with LlamaIndex · LangChain for LLM App Development · Multimodal Llama 3.2 · ChatGPT Prompt Engineering · GenAI for Business Leaders · Deep Learning · Reinforcement Learning · NLP with Python."),
+       ("Data science, analytics &amp; cloud","Data Science in Stratified Healthcare — Edinburgh · Data Science for All (DS4A) 375 h — Correlation One / MinTIC · Python for Everybody — Michigan · Data Science Specialization — Johns Hopkins · Microsoft Azure Relational Databases."),
+       ("Product, agile &amp; leadership","Agentic AI for Leadership — LinkedIn · Product Management Foundations &amp; Metrics · Agile &amp; Design Thinking · Digital Leadership Program — Google (INALDE Business School).")]},
+   "edu": {"es":["<b>Estadístico</b> — Universidad Nacional de Colombia.",
+                 "<b>Idiomas:</b> español (nativo) · inglés (profesional / C1).",
+                 "<b>Reconocimientos:</b> 14 Johnson &amp; Johnson Inspire Awards y 1 Encore Award."],
+           "en":["<b>Statistician</b> — Universidad Nacional de Colombia.",
+                 "<b>Languages:</b> Spanish (native) · English (professional / C1).",
+                 "<b>Recognition:</b> 14 Johnson &amp; Johnson Inspire Awards and 1 Encore Award."]},
  },
 }
 
@@ -210,7 +266,8 @@ ul{margin:1px 0 0;padding-left:14px;} li{margin-bottom:1px;}
 
 def render(profile_key, lang):
     p = PROFILES[profile_key]; d = L[lang]
-    kpis = "".join(f'<div class="kpi"><b>{n}</b>{t}</div>' for n,t in d["kpis"])
+    kpi_data = p["kpis"][lang] if "kpis" in p else d["kpis"]
+    kpis = "".join(f'<div class="kpi"><b>{n}</b>{t}</div>' for n,t in kpi_data)
     cases = "".join(f'<div class="proj"><b>{t}.</b> {desc}</div>' for t,desc in p["cases"][lang])
     exp = ""
     for t,org,dt,bul in d["exp"]:
@@ -218,20 +275,40 @@ def render(profile_key, lang):
         exp += f'<div class="item"><div class="h"><span class="t">{t}</span><span class="d">{dt}</span></div><div class="org">{org}</div><ul>{lis}</ul></div>'
     prev = "".join(f"<li>{x}</li>" for x in d["prev"])
     edu = "".join(f"<li>{x}</li>" for x in d["edu"])
-    return f"""<!DOCTYPE html><html lang="{lang}"><head><meta charset="utf-8"><style>{CSS}</style></head><body>
+    head = f"""<!DOCTYPE html><html lang="{lang}"><head><meta charset="utf-8"><style>{CSS}</style></head><body>
 <h1>JAVIER FORERO</h1>
 <div class="role">{p['title'][lang]}</div>
 <div class="contact">{CONTACT}</div>
 <h2>{d['title_html']}</h2><div class="summary">{p['summary'][lang]}</div>
-<h2>{d['kpis_h']}</h2><div class="snap">{kpis}</div>
+<h2>{d['kpis_h']}</h2><div class="snap">{kpis}</div>"""
+    foot = '<div class="foot">Javier Forero <span class="sep">·</span> <a href="https://javierforero.co">javierforero.co</a></div>\n</body></html>'
+    # Perfil con capa académica profunda (p.ej. Educación Ejecutiva): docencia primero, 2 páginas.
+    if "teach_detail" in p:
+        H = {"es":("Trayectoria docente y académica","Metodologías, diseño curricular y base académica","Programas y temas que diseño e imparto","Certificaciones y formación (selección · 71 credenciales)"),
+             "en":("Teaching &amp; academic track record","Methodologies, curriculum design &amp; academic foundation","Programs &amp; topics I design and teach","Certifications &amp; training (selected · 71 credentials)")}[lang]
+        tdet = "".join(f'<div class="proj"><b>{t}.</b> {desc}</div>' for t,desc in p["teach_detail"][lang])
+        acad = "".join(f'<div class="proj"><b>{t}.</b> {desc}</div>' for t,desc in p["acad"][lang])
+        catalog = "".join(f'<div class="proj"><b>{t}:</b> {desc}</div>' for t,desc in p["catalog"][lang])
+        certs = "".join(f'<div class="proj"><b>{t}:</b> {desc}</div>' for t,desc in p["certs"][lang])
+        edu2 = "".join(f"<li>{x}</li>" for x in (p["edu"][lang] if "edu" in p else d["edu"]))
+        return head + f"""
+<h2>{H[0]}</h2>{tdet}
+<h2>{H[1]}</h2>{acad}
+<h2>{H[2]}</h2>{catalog}
+<h2>{d['exp_h']}</h2>{exp}
+<h2>{d['prev_h']}</h2><ul class="prev">{prev}</ul>
+<h2>{H[3]}</h2>{certs}
+<h2>{d['skills_h']}</h2><div class="stack">{p['skills']}</div>
+<h2>{d['edu_h']}</h2><ul>{edu2}</ul>
+""" + foot
+    return head + f"""
 <h2>{d['cases_h']}</h2>{cases}
 <h2>{d['exp_h']}</h2>{exp}
 <h2>{d['prev_h']}</h2><ul class="prev">{prev}</ul>
 <h2>{d['teach_h']}</h2><div class="summary">{d['teach']}</div>
 <h2>{d['skills_h']}</h2><div class="stack">{p['skills']}</div>
 <h2>{d['edu_h']}</h2><ul>{edu}</ul>
-<div class="foot">Javier Forero <span class="sep">·</span> <a href="https://javierforero.co">javierforero.co</a></div>
-</body></html>"""
+""" + foot
 
 if __name__ == "__main__":
     n = 0
