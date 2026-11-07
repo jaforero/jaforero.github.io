@@ -44,9 +44,9 @@ const UI       = eval('(' + grab(/const UI=(\{[\s\S]*?\n\});/, 'UI') + ')');
 const badges = t => t.map(x => `<span class="badge">${x}</span>`).join('');
 const evTag  = k => `<span class="ev ${EV[k][1]}">${EV[k][0]}</span>`;
 const card = p =>
-`      <article class="proj card" data-cat="${p.cat}" data-id="${p.id}" tabindex="0" role="button" aria-label="${p.title}">
+`      <article class="proj card" data-cat="${p.cat}" data-id="${p.id}">
         <div class="ptype">${p.type}</div>
-        <h3>${p.title}</h3>
+        <h3><button type="button" class="proj-open">${p.title}</button></h3>
         <div class="proj-field pf-prob"><span class="pf-label">Problema</span><span class="pf-val">${p.challenge}</span></div>
         <div class="proj-field pf-role"><span class="pf-label">Mi rol</span><span class="pf-val">${p.role}</span></div>
         <div class="tags">${badges(p.tags.slice(0, 3))}</div>

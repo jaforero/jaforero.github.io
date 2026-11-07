@@ -14,7 +14,7 @@ mismo set de keywords que alimenta la sección "Reclutadores" del sitio.
 Uso:  python3 build-cvs.py
 Requiere: weasyprint, IgraSans.woff2 en esta carpeta.
 """
-import os, weasyprint
+import os, re, weasyprint
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(BASE, "cv")
@@ -279,7 +279,10 @@ def render(profile_key, lang):
         exp += f'<div class="item"><div class="h"><span class="t">{t}</span><span class="d">{dt}</span></div><div class="org">{org}</div><ul>{lis}</ul></div>'
     prev = "".join(f"<li>{x}</li>" for x in d["prev"])
     edu = "".join(f"<li>{x}</li>" for x in d["edu"])
-    head = f"""<!DOCTYPE html><html lang="{lang}"><head><meta charset="utf-8"><style>{CSS}</style></head><body>
+    meta_t = re.sub(r"<[^>]+>", "", p['title'][lang])
+    meta_d = ("CV de Javier Forero — " if lang == "es" else "Resume of Javier Forero — ") + meta_t
+    meta_k = ", ".join(x.strip() for x in re.sub(r"<[^>]+>", "", p['skills']).split("·")[:15])
+    head = f"""<!DOCTYPE html><html lang="{lang}"><head><meta charset="utf-8"><title>Javier Forero — {meta_t}</title><meta name="author" content="Javier Forero"><meta name="description" content="{meta_d}"><meta name="keywords" content="{meta_k}"><style>{CSS}</style></head><body>
 <h1>JAVIER FORERO</h1>
 <div class="role">{p['title'][lang]}</div>
 <div class="contact">{CONTACT}</div>
