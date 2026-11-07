@@ -467,9 +467,9 @@
       "position": 21,
       "item": {
         "@type": "CreativeWork",
-        "name": "Official LATAM exchange rates — self-updating pipeline and live dashboard",
-        "about": "Own product · Data pipeline + Dashboard",
-        "description": "Open repository that queries five central banks daily and publishes versioned JSO‌N; on top of it, my own dashboard, a Claude Design version and a ChatGPT version.",
+        "name": "LATAM Observatory — population, inflation and exchange rates from official data",
+        "about": "Own data product · Official open data",
+        "description": "Integrated case: three open data assets —daily exchange rates from 7 central banks, official population for 20 countries and inflation for 18 countries (2007–2025)— for cross-market decisions in Latin America.",
         "creator": {
           "@id": "https://javierforero.co/#person"
         },
@@ -1449,6 +1449,85 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
   .showcase-wide h3{font-size:20px}
 }
 </style>
+<style id="obs-css">
+/* ===== Caso integral · Observatorio LATAM ===== */
+.obs-case{padding:0;overflow:hidden;margin-bottom:22px;border-radius:var(--radius-lg);font-variant-ligatures:no-common-ligatures;font-feature-settings:"liga" 0}
+.obs-head{display:grid;grid-template-columns:minmax(0,52%) minmax(0,1fr);align-items:stretch;border-bottom:1px solid var(--border)}
+.obs-thumb{display:flex;align-items:center;background:linear-gradient(135deg,#041c59 0%,#14086b 60%,#26098a 100%);overflow:hidden}
+.obs-thumb img{width:100%;height:auto;display:block;transition:transform .4s}
+.obs-thumb:hover img{transform:scale(1.03)}
+.obs-intro{padding:24px 26px;align-self:center}
+.obs-intro h3{font-size:22px;line-height:1.25;color:var(--deep-blue);margin:6px 0 10px}
+.obs-intro p{font-size:14.5px;line-height:1.6;color:var(--text);margin:0}
+.obs-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.obs-kpi{background:var(--soft-lilac);border:1px solid var(--border);border-radius:14px;padding:10px 12px;display:flex;flex-direction:column;gap:3px;min-width:0}
+.obs-kpi b{font-size:22px;line-height:1.1;color:var(--purple);font-weight:800}
+.obs-kpi span{font-size:12px;line-height:1.35;color:var(--muted)}
+.obs-kpis.sm .obs-kpi b{font-size:19px}
+[data-theme="dark"] .obs-kpi b{color:#a98bff}
+.obs-tabs{display:flex;gap:6px;padding:14px 22px 0;overflow-x:auto;scrollbar-width:none}
+.obs-tabs::-webkit-scrollbar{display:none}
+.obs-tab{flex:0 0 auto;font:inherit;font-size:14px;font-weight:700;color:var(--muted);background:transparent;border:1px solid var(--border);border-radius:999px;padding:8px 15px;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.obs-tab:hover{color:var(--deep-blue);border-color:var(--purple-light)}
+.obs-tab[aria-selected="true"]{background:var(--purple);border-color:var(--purple);color:#fff}
+.obs-tab:focus-visible,.obs-go:focus-visible{outline:3px solid var(--purple-light);outline-offset:2px}
+.obs-panel{padding:18px 22px 6px}
+.obs-panel[hidden]{display:none}
+.obs-qs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.obs-q{border:1px solid var(--border);border-radius:16px;padding:16px 16px 14px;background:var(--white);display:flex;flex-direction:column;position:relative;overflow:hidden}
+.obs-q::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--purple)}
+.obs-q:nth-child(2)::before{background:#f2c94c}.obs-q:nth-child(3)::before{background:#38bdf8}
+.obs-q-n{font-size:12px;font-weight:800;letter-spacing:.1em;color:var(--muted)}
+.obs-q h4{font-size:16px;line-height:1.3;color:var(--deep-blue);margin:4px 0 6px}
+.obs-q p{font-size:13.5px;line-height:1.5;color:var(--text);margin:0 0 10px}
+.obs-q .obs-src{font-size:12.5px;font-weight:700;color:var(--purple);margin-bottom:6px}
+[data-theme="dark"] .obs-q .obs-src{color:#a98bff}
+.obs-go{margin-top:auto;align-self:flex-start;font:inherit;font-size:13px;font-weight:700;color:var(--vibrant-blue);background:none;border:0;padding:4px 0;cursor:pointer}
+.obs-go:hover{text-decoration:underline}
+.obs-principles-h{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:16px 0 6px}
+.obs-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:start}
+.obs-viz{margin:0;border:1px solid var(--border);border-radius:16px;padding:14px 16px;background:var(--soft-lilac);min-width:0}
+.obs-viz figcaption,.obs-live-h{font-size:12.5px;font-weight:800;color:var(--deep-blue);margin:0 0 10px;display:flex;align-items:center;gap:8px}
+.obs-img{display:block;padding:0;overflow:hidden;background:#041c59}
+.obs-img img{width:100%;height:auto;display:block}
+.obs-bars{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;align-items:end;height:170px}
+.obs-bar{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;min-width:0}
+.obs-bar i{display:block;width:100%;border-radius:8px 8px 3px 3px;background:var(--purple)}
+.obs-bar.proj i{background:repeating-linear-gradient(135deg,rgba(124,77,255,.55) 0 6px,rgba(124,77,255,.35) 6px 12px)}
+.obs-bar b{font-size:12px;color:var(--deep-blue);margin-bottom:4px;font-weight:800}
+.obs-bar span{font-size:11.5px;color:var(--muted);margin-top:5px}
+.obs-viz-note{font-size:11.5px;line-height:1.45;color:var(--muted);margin:10px 0 0}
+.obs-info p{font-size:14px;line-height:1.6;color:var(--text);margin:12px 0}
+.obs-info .obs-fine,.obs-fine{font-size:12.5px;color:var(--muted)}
+.obs-dot{width:9px;height:9px;border-radius:50%;background:#16a34a;box-shadow:0 0 0 0 rgba(22,163,74,.55);animation:obsPulse 2s infinite}
+@keyframes obsPulse{0%{box-shadow:0 0 0 0 rgba(22,163,74,.55)}70%{box-shadow:0 0 0 8px rgba(22,163,74,0)}100%{box-shadow:0 0 0 0 rgba(22,163,74,0)}}
+@media (prefers-reduced-motion:reduce){.obs-dot{animation:none}.obs-thumb img{transition:none}}
+.obs-fx{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+.obs-fx-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1px 8px;align-items:baseline;background:var(--white);border:1px solid var(--border);border-radius:12px;padding:7px 10px;min-width:0}
+.obs-fx-row .p{font-weight:800;font-size:13px;color:var(--deep-blue);white-space:nowrap}
+.obs-fx-row .v{font-weight:800;font-size:14.5px;color:var(--purple);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+[data-theme="dark"] .obs-fx-row .v{color:#a98bff}
+.obs-fx-row .s{font-size:11.5px;color:var(--muted);grid-column:1/-1}
+.obs-demo{margin:14px 22px 22px}
+@media(max-width:900px){
+  .obs-head{grid-template-columns:1fr}
+  .obs-thumb{aspect-ratio:1200/630}
+  .obs-split{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .obs-intro{padding:18px 16px}
+  .obs-intro h3{font-size:19px}
+  .obs-kpis,.obs-qs{grid-template-columns:1fr}
+  .obs-tabs{padding:12px 16px 0;flex-wrap:wrap}
+  .obs-fx{grid-template-columns:1fr}
+  .obs-panel{padding:14px 16px 4px}
+  .obs-demo{margin:12px 16px 16px}
+  .obs-bars{height:140px;gap:5px}
+  .obs-bar b{font-size:10.5px}
+}
+@media print{.obs-tabs,.obs-go{display:none}.obs-panel[hidden]{display:block}}
+</style>
+
 
 <link rel="alternate" hreflang="en" href="https://cv.javierforero.co/en.html">
 <link rel="alternate" hreflang="es" href="https://cv.javierforero.co/">
@@ -1847,12 +1926,12 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
         <div class="tags"><span class="badge">Custom GPT</span><span class="badge">Prompt Engineering</span><span class="badge">Automation</span></div>
         <div class="proj-foot"><span class="ev ev-doc">Documented</span><span class="more">View case →</span></div>
       </article>
-      <article class="proj card" data-cat="analytics" data-id="fx-latam" tabindex="0" role="button" aria-label="Official LATAM exchange rates — self-updating pipeline and live dashboard">
-        <div class="ptype">Own product · Data pipeline + Dashboard</div>
-        <h3>Official LATAM exchange rates — self-updating pipeline and live dashboard</h3>
-        <div class="proj-field pf-prob"><span class="pf-label">Problem</span><span class="pf-val">Have official, traceable rates updated daily with no manual intervention, ready to feed dashboards and AI assistants.</span></div>
-        <div class="proj-field pf-role"><span class="pf-label">My role</span><span class="pf-val">Designed and built the pipeline, the data contract and the dashboards; author of the video and the article.</span></div>
-        <div class="tags"><span class="badge">Data Pipeline</span><span class="badge">GitHub Actions</span><span class="badge">Claude Design</span></div>
+      <article class="proj card" data-cat="analytics" data-id="observatorio-latam" tabindex="0" role="button" aria-label="LATAM Observatory — population, inflation and exchange rates from official data">
+        <div class="ptype">Own data product · Official open data</div>
+        <h3>LATAM Observatory — population, inflation and exchange rates from official data</h3>
+        <div class="proj-field pf-prob"><span class="pf-label">Problem</span><span class="pf-val">Answer, with official and traceable data, the three questions behind every cross-market decision: how big is the market, how stable are prices, and what is revenue worth in each currency?</span></div>
+        <div class="proj-field pf-role"><span class="pf-label">My role</span><span class="pf-val">Designed and built the pipelines, data contracts, dashboards and storytelling pieces; governance and maintenance of the sources.</span></div>
+        <div class="tags"><span class="badge">Open Data</span><span class="badge">Market Intelligence</span><span class="badge">Data Pipeline</span></div>
         <div class="proj-foot"><span class="ev ev-doc">Documented</span><span class="more">View case →</span></div>
       </article>
       <article class="proj card" data-cat="analytics" data-id="databricks-bna" tabindex="0" role="button" aria-label="Databricks — Customer analysis by industry (BNA)">
@@ -2194,26 +2273,140 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
       <h2 class="section-h">Proof, not claims — interactive experiences I built</h2>
       <p class="section-sub">I demonstrate my visualization and UX approach with real, open pieces you can open and explore — clarity and usability first.</p>
     </div>
-    <div class="showcase-grid">
-      <article class="showcase-hero showcase-wide card reveal">
-        <a class="showcase-thumb" href="https://dashboards.javierforero.co/tasas-cambio/" target="_blank" rel="noopener" aria-label="Abrir el dashboard de tasas de cambio oficiales de bancos centrales de América Latina">
-          <img src="https://dashboards.javierforero.co/tasas-cambio/assets/og-image.png" width="1200" height="630" loading="lazy" style="object-fit:contain" alt="Tasas de cambio oficiales de bancos centrales: USD, MXN, COP, ARS, BRL y CLP">
+    <!-- ============ CASO INTEGRAL · OBSERVATORIO LATAM ============ -->
+    <article class="obs-case card reveal" id="observatorio-latam" aria-labelledby="obsTitle">
+      <div class="obs-head">
+        <a class="obs-thumb" href="https://dashboards.javierforero.co/" target="_blank" rel="noopener" aria-label="Open the LATAM Observatory dashboards">
+          <img src="https://cv.javierforero.co/observatorio-latam-hero-en.jpg" width="1200" height="630" loading="lazy" alt="Observatorio LATAM de datos abiertos: población de 20 países, inflación de 18 países y tasas oficiales de 7 bancos centrales">
         </a>
-        <div class="showcase-body">
-          <div class="ptype">Live dashboard · self-updating pipeline · Claude Design</div>
-          <h3>Official LATAM exchange rates — from central banks to the dashboard, every day</h3>
-          <p>An open repository queries five central banks every day — Banxico (FIX), Banco de la República (TRM), BCRA (A 3500), Banco Central do Brasil (PTAX) and Banco Central de Chile — and publishes versioned JSO‌N with GitHub Actions, health checks and alerts. On top of that pipeline: my own dashboard, a version designed with Claude Design from a single sentence, and another built with ChatGPT.</p>
-          <div class="showcase-tags"><span class="badge">5 central banks</span><span class="badge">Official + calculated crosses</span><span class="badge">GitHub Actions</span><span class="badge">Daily self-update</span><span class="badge">Claude Design</span><span class="badge">ChatGPT</span></div>
-          <p class="showcase-demo">What it proves: when every series travels with its metadata (unit, date basis, source, method), an AI can design a correct dashboard in one conversation — what isn't written in the data, AI can't guess.</p>
-          <div class="showcase-actions">
-            <a class="btn sm" href="https://dashboards.javierforero.co/tasas-cambio/" target="_blank" rel="noopener">Open the dashboard →</a>
-            <a class="btn sm secondary" href="https://youtu.be/zOTZKeb0lCs" target="_blank" rel="noopener">Watch the video →</a>
-            <a class="btn sm secondary" href="https://javierforero.co/2026/10/10/claude-dashboards-analitica-conversacional/" target="_blank" rel="noopener">Read the article →</a>
-            <a class="btn sm secondary" href="https://javier-dashboards.jforero.chatgpt.site/dashboards/tasas-cambio" target="_blank" rel="noopener">ChatGPT version →</a>
-            <a class="btn sm secondary" href="https://github.com/jaforero/fx-bancos-centrales" target="_blank" rel="noopener">Official data (GitHub)</a>
+        <div class="obs-intro">
+          <div class="ptype">Integrated case · Official open data · Latin America</div>
+          <h3 id="obsTitle">LATAM Open Data Observatory — three market questions, answered with official data</h3>
+          <p>Anyone operating —or planning to grow— across several countries in the region asks the same three questions in every decision: how big is the market, how stable are prices, and what is my revenue worth in my currency? I built and maintain three open data assets that answer them with figures traceable to the institution that publishes them.</p>
+        </div>
+      </div>
+
+      <div class="obs-tabs" role="tablist" aria-label="Explore the case">
+        <button class="obs-tab" role="tab" type="button" id="obs-t-int" aria-controls="obs-p-int" aria-selected="true" data-obs="int">Integrated view</button>
+        <button class="obs-tab" role="tab" type="button" id="obs-t-pop" aria-controls="obs-p-pop" aria-selected="false" tabindex="-1" data-obs="pop">Population</button>
+        <button class="obs-tab" role="tab" type="button" id="obs-t-inf" aria-controls="obs-p-inf" aria-selected="false" tabindex="-1" data-obs="inf">Inflation</button>
+        <button class="obs-tab" role="tab" type="button" id="obs-t-fx" aria-controls="obs-p-fx" aria-selected="false" tabindex="-1" data-obs="fx">Exchange rates · live</button>
+      </div>
+
+      <!-- Visión integral -->
+      <div class="obs-panel" role="tabpanel" id="obs-p-int" aria-labelledby="obs-t-int">
+        <div class="obs-qs">
+          <div class="obs-q">
+            <span class="obs-q-n">01</span>
+            <h4>How big is the market?</h4>
+            <p class="obs-src">Official population · 20 countries</p>
+            <p>Size and prioritize markets, estimate demand and plan coverage and capacity.</p>
+            <button class="obs-go" type="button" data-go="pop">See population →</button>
+          </div>
+          <div class="obs-q">
+            <span class="obs-q-n">02</span>
+            <h4>How stable are prices?</h4>
+            <p class="obs-src">Official inflation · 18 countries, 2007–2025</p>
+            <p>Set and review prices, index contracts and budget in real terms.</p>
+            <button class="obs-go" type="button" data-go="inf">See inflation →</button>
+          </div>
+          <div class="obs-q">
+            <span class="obs-q-n">03</span>
+            <h4>What is my revenue worth in my currency?</h4>
+            <p class="obs-src">Official rates · 7 central banks, every day</p>
+            <p>Measure FX exposure, compare sales across countries and plan repatriation.</p>
+            <button class="obs-go" type="button" data-go="fx">See exchange rates →</button>
           </div>
         </div>
-      </article>
+        <p class="obs-principles-h">Common principles across the three assets</p>
+        <div class="showcase-tags obs-principles">
+          <span class="badge">Official sources only</span>
+          <span class="badge">Every figure traceable to its file</span>
+          <span class="badge">Unverifiable data stays pending, never filled in</span>
+          <span class="badge">Automated pipelines with alerts</span>
+          <span class="badge">Open data on GitHub and Kaggle</span>
+          <span class="badge">Bilingual ES/EN</span>
+        </div>
+      </div>
+
+      <!-- Población -->
+      <div class="obs-panel" role="tabpanel" id="obs-p-pop" aria-labelledby="obs-t-pop">
+        <div class="obs-split">
+          <figure class="obs-viz">
+            <figcaption>Latin America · sum of the 20 official national figures (millions)</figcaption>
+            <div class="obs-bars" id="obsPopBars" aria-hidden="true"></div>
+            <p class="obs-viz-note" id="obsPopNote">Striped bars: years where most countries are official projections. Data read live from github.com/jaforero/latam-population-official.</p>
+          </figure>
+          <div class="obs-info">
+            <div class="obs-kpis sm">
+              <div class="obs-kpi"><b id="obsPop2025">660 M</b><span>people in 2025 · 20 of 20 countries</span></div>
+              <div class="obs-kpi"><b id="obsPopRate">+0.54 %</b><span>average annual growth 2025–2030</span></div>
+              <div class="obs-kpi"><b>52.5 %</b><span>of the total: Brazil and Mexico</span></div>
+            </div>
+            <p>Annual series and projections from each national statistics institution: 34 national series, with a declared UN fallback in 6. Map, pyramids, aging, index 100, growth and peak year, with downloadable CSV.</p>
+            <p class="obs-fine">The regional total is not an official figure: it adds up each country's official figure.</p>
+            <div class="showcase-actions">
+              <a class="btn sm" href="https://dashboards.javierforero.co/poblacion-latam/" target="_blank" rel="noopener">Open the dashboard →</a>
+              <a class="btn sm secondary" href="https://github.com/jaforero/latam-population-official" target="_blank" rel="noopener">Official data (GitHub)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inflación -->
+      <div class="obs-panel" role="tabpanel" id="obs-p-inf" aria-labelledby="obs-t-inf">
+        <div class="obs-split">
+          <a class="obs-viz obs-img" href="https://javierforero.co/2026/06/15/inflacion-america-latina-2025/" target="_blank" rel="noopener" aria-label="Read the story of inflation in Latin America 2025">
+            <img src="inflacion-latam-hero.jpg" width="1672" height="941" loading="lazy" alt="Inflación en América Latina — mapa de datos por país, 19 años de historia">
+          </a>
+          <div class="obs-info">
+            <div class="obs-kpis sm">
+              <div class="obs-kpi"><b>14 of 18</b><span>countries closed 2025 below 5&nbsp;%</span></div>
+              <div class="obs-kpi"><b>−86.3 pp</b><span>Argentina, from 117.8&nbsp;% to 31.5&nbsp;%: the largest disinflation</span></div>
+              <div class="obs-kpi"><b>2007–2025</b><span>annual CPI, December to December</span></div>
+            </div>
+            <p>Official sources only —statistics institutes and central banks—, no press aggregators or third-party estimates. A complete flow: Kaggle dataset and notebook → Tableau dashboard → story on the blog → LinkedIn carousel.</p>
+            <div class="showcase-actions">
+              <a class="btn sm" href="https://javierforero.co/2026/06/15/inflacion-america-latina-2025/" target="_blank" rel="noopener">Read the story →</a>
+              <a class="btn sm secondary" href="https://public.tableau.com/shared/6ZTJZ8BF4?:display_count=n&amp;:origin=viz_share_link" target="_blank" rel="noopener">Tableau dashboard</a>
+              <a class="btn sm secondary" href="https://www.kaggle.com/datasets/jaforero/inflation-ipc-in-latam" target="_blank" rel="noopener">Dataset (Kaggle)</a>
+              <a class="btn sm secondary" href="https://www.kaggle.com/code/jaforero/inflaci-n-en-am-rica-latina-2025" target="_blank" rel="noopener">Notebook</a>
+              <a class="btn sm secondary" href="https://www.linkedin.com/posts/jforero_inflaci%C3%B3n-en-am%C3%A9rica-latina-2025-18-pa%C3%ADses-ugcPost-7472659732416131073-Lp1_/" target="_blank" rel="noopener">LinkedIn carousel</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tasas de cambio -->
+      <div class="obs-panel" role="tabpanel" id="obs-p-fx" aria-labelledby="obs-t-fx">
+        <div class="obs-split">
+          <div class="obs-viz">
+            <p class="obs-live-h"><span class="obs-dot" aria-hidden="true"></span><span>Latest official rate per central bank</span></p>
+            <div class="obs-fx" id="obsFx" aria-live="polite"><p class="obs-fine">Loading the latest official rates…</p></div>
+            <p class="obs-viz-note" id="obsFxNote">Read live from github.com/jaforero/fx-bancos-centrales. Official reference rates, not transaction rates.</p>
+          </div>
+          <div class="obs-info">
+            <div class="obs-kpis sm">
+              <div class="obs-kpi"><b>7</b><span>central banks: Banxico, BanRep, BCRA, BCB, BCCh, BCU and BCRP</span></div>
+              <div class="obs-kpi"><b>31</b><span>series: 10 official + 21 calculated crosses</span></div>
+              <div class="obs-kpi"><b>3</b><span>dashboards on the same pipeline: own, Claude Design and ChatGPT</span></div>
+            </div>
+            <p>A Python pipeline on GitHub Actions queries each central bank every day, checks its APIs and raises alerts; a failing source never erases good data. Every series travels with its record (unit, date basis, source, method), and crosses such as MXN-COP are only calculated with the same market day.</p>
+            <div class="showcase-actions">
+              <a class="btn sm" href="https://dashboards.javierforero.co/tasas-cambio/" target="_blank" rel="noopener">Open the dashboard →</a>
+              <a class="btn sm secondary" href="https://github.com/jaforero/fx-bancos-centrales" target="_blank" rel="noopener">Official data (GitHub)</a>
+              <a class="btn sm secondary" href="https://youtu.be/zOTZKeb0lCs" target="_blank" rel="noopener">Watch the video</a>
+              <a class="btn sm secondary" href="https://javierforero.co/2026/10/10/claude-dashboards-analitica-conversacional/" target="_blank" rel="noopener">Read the article</a>
+              <a class="btn sm secondary" href="https://javier-dashboards.jforero.chatgpt.site/dashboards/tasas-cambio" target="_blank" rel="noopener">ChatGPT version</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="showcase-demo obs-demo">What it proves: an end-to-end data product —data engineering, official statistics, visualization and storytelling— turned into reusable market intelligence for cross-country decisions.</p>
+    </article>
+
+    <div class="showcase-grid">
       <article class="showcase-hero card reveal">
         <a class="showcase-thumb" href="https://dashboards.javierforero.co/" target="_blank" rel="noopener" aria-label="Abrir el benchmark de dashboards de decisión construidos con dos IAs">
           <img src="https://dashboards.javierforero.co/og-image.png" width="1200" height="630" loading="lazy" alt="Benchmark de dashboards de decisión: dos portafolios construidos con Claude y con ChatGPT bajo la misma dirección analítica">
@@ -2229,25 +2422,6 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
             <a class="btn sm secondary" href="https://dashboards.javierforero.co/claude/" target="_blank" rel="noopener">Claude portfolio →</a>
             <a class="btn sm secondary" href="https://javier-dashboards.jforero.chatgpt.site/" target="_blank" rel="noopener">ChatGPT portfolio →</a>
             <a class="btn sm secondary" href="https://github.com/jaforero/dashboards" target="_blank" rel="noopener">View code (GitHub)</a>
-          </div>
-        </div>
-      </article>
-      <article class="showcase-hero card reveal">
-        <a class="showcase-thumb" href="https://javierforero.co/2026/06/15/inflacion-america-latina-2025/" target="_blank" rel="noopener" aria-label="Leer el artículo: Inflación en América Latina 2025 — 19 años de historia">
-          <img src="inflacion-latam-hero.jpg" width="1707" height="896" loading="lazy" alt="Inflación en América Latina — mapa 3D de datos por país, 19 años de historia">
-        </a>
-        <div class="showcase-body">
-          <div class="ptype">End-to-end case · open data to story</div>
-          <h3>Latin America Inflation 2025 — 19 years, one full pipeline</h3>
-          <p>One topic, the entire data pipeline: open dataset on Kaggle → analysis notebook → Tableau dashboard (my most-viewed) → a custom JS dashboard inside the full narrative on my blog → a findings carousel on LinkedIn.</p>
-          <div class="showcase-tags"><span class="badge"><strong>26K+</strong>&nbsp;<span>Tableau views</span></span><span class="badge"><strong>799</strong>&nbsp;<span>dataset downloads</span></span><span class="badge">19 years of data</span><span class="badge">18 countries</span><span class="badge">Open data</span></div>
-          <p class="showcase-demo">What it proves: the complete loop — sourcing open data, analyzing it, visualizing it and telling the story across channels.</p>
-          <div class="showcase-actions">
-            <a class="btn sm" href="https://javierforero.co/2026/06/15/inflacion-america-latina-2025/" target="_blank" rel="noopener">Read the story →</a>
-            <a class="btn sm secondary" href="https://public.tableau.com/shared/6ZTJZ8BF4?:display_count=n&amp;:origin=viz_share_link" target="_blank" rel="noopener">Tableau dashboard →</a>
-            <a class="btn sm secondary" href="https://www.linkedin.com/posts/jforero_inflaci%C3%B3n-en-am%C3%A9rica-latina-2025-18-pa%C3%ADses-ugcPost-7472659732416131073-Lp1_/" target="_blank" rel="noopener">LinkedIn carousel →</a>
-            <a class="btn sm secondary" href="https://www.kaggle.com/datasets/jaforero/inflation-ipc-in-latam" target="_blank" rel="noopener">Dataset →</a>
-            <a class="btn sm secondary" href="https://www.kaggle.com/code/jaforero/inflaci-n-en-am-rica-latina-2025" target="_blank" rel="noopener">Notebook →</a>
           </div>
         </div>
       </article>
@@ -2283,7 +2457,7 @@ html,body{overflow-x:clip}                      /* red de seguridad: cero scroll
           </div>
         </div>
       </article>
-      <article class="showcase-hero showcase-wide card reveal">
+      <article class="showcase-hero card reveal">
         <a class="showcase-thumb" href="https://dashboards.javierforero.co/ia-compute/" target="_blank" rel="noopener" aria-label="Abrir la visualización: cómo la IA rompió la Ley de Moore, 1958–2026">
           <img src="https://cv.javierforero.co/ia-compute-hero.jpg" width="1200" height="900" loading="lazy" style="object-fit:contain;background:linear-gradient(#041c59,#12065a)" alt="Visualización del cómputo de entrenamiento en IA entre 1958 y 2026, en escala logarítmica, con 72 modelos y su nivel de evidencia">
         </a>
@@ -2757,16 +2931,16 @@ const PROJECTS=[
   metrics:[['GPT propio diseñado para generación de prompts','doc'],['Mejora de calidad y reutilización de instrucciones','exp']],
   note:'Pendiente usuarios, prompts generados y recurrencia.'},
 
- {id:'fx-latam',cat:'analytics',type:'Producto propio · Pipeline de datos + Dashboard',title:'Tasas de cambio oficiales LATAM — pipeline autogestionado y dashboard en vivo',period:'2026',client:'Producto propio',ev:'doc',
-  summary:'Repositorio abierto que consulta a diario cinco bancos centrales y publica JSO‌N versionados; sobre él, un dashboard propio, una versión con Claude Design y otra con ChatGPT.',
-  tags:['Data Pipeline','GitHub Actions','Claude Design','Data Visualization','Open Data'],
-  context:'Las tasas de cambio de América Latina viven en APIs distintas, con calendarios, unidades y reglas propias. Ningún banco central publica las cruzadas entre monedas de la región (p. ej. MXN-COP).',
-  challenge:'Tener tasas oficiales confiables, trazables y actualizadas cada día sin intervención manual, listas para alimentar dashboards y asistentes de IA.',
-  role:'Diseño y desarrollo del pipeline, del contrato de datos y de los dashboards; autor del video y del artículo.',
-  solution:['Pipeline en Python (fxpipe) con GitHub Actions: Banxico (FIX), Banco de la República (TRM, verificada contra la SFC), BCRA (A 3500), Banco Central do Brasil (PTAX) y Banco Central de Chile (dólar observado).','Contrato JSO‌N versionado: cada serie viaja con su ficha (unidad, base de fecha, decimales, institución, código, método); cruzadas calculadas solo con el mismo día de mercado.','Operación autogestionada: actualización diaria, chequeo semanal de las APIs (issue api-drift) y alertas fx-alerta; una fuente caída nunca borra datos buenos.','Dashboard propio bilingüe (último valor, base 100, variaciones, conversor y metodología), una versión creada con Claude Design desde una sola frase y otra con ChatGPT, sobre la misma tubería.'],
-  stack:'Python · GitHub Actions · JSO‌N versionado · APIs de bancos centrales (SIE, SDMX, OData) · Claude Design · ChatGPT · JavaScript.',
-  metrics:[['5 bancos centrales y 18 series (oficiales y cruzadas calculadas)','doc'],['Actualización diaria automática con chequeo semanal de APIs','doc'],['3 dashboards sobre la misma tubería: propio, Claude Design y ChatGPT','doc']],
-  note:'Tasas de referencia oficiales con fines informativos; las cruzadas son cálculos propios, no tasas oficiales. Recursos: dashboard (dashboards.javierforero.co/tasas-cambio), repositorio (github.com/jaforero/fx-bancos-centrales), video (youtu.be/zOTZKeb0lCs) y artículo en javierforero.co.'},
+ {id:'observatorio-latam',cat:'analytics',type:'Producto de datos propio · Datos abiertos oficiales',title:'Observatorio LATAM — población, inflación y tasas de cambio con datos oficiales',period:'2026',client:'Producto propio',ev:'doc',
+  summary:'Caso integral: tres activos de datos abiertos —tasas de cambio diarias de 7 bancos centrales, población oficial de 20 países e inflación de 18 países (2007–2025)— para decisiones entre mercados de América Latina.',
+  tags:['Open Data','Market Intelligence','Data Pipeline','GitHub Actions','Data Visualization','Kaggle'],
+  context:'Las empresas que operan en varios países de América Latina deciden con datos dispersos: cada país publica en su propia API, formato, calendario y unidad, y los agregadores mezclan cifras oficiales con estimaciones de terceros.',
+  challenge:'Responder con datos oficiales y trazables las tres preguntas que se repiten en cada decisión entre mercados: ¿qué tan grande es el mercado?, ¿qué tan estables son los precios? y ¿cuánto vale el ingreso en cada moneda?',
+  role:'Diseño y desarrollo de los pipelines, los contratos de datos, los dashboards y las piezas de storytelling; gobierno y mantenimiento de las fuentes.',
+  solution:['Tasas de cambio: pipeline en Python con GitHub Actions que consulta cada día a 7 bancos centrales (Banxico, BanRep, BCRA, BCB, BCCh, BCU y BCRP); 31 series —10 oficiales y 21 cruzadas calculadas con el mismo día de mercado—, chequeo de APIs, alertas y versiones en Kaggle.','Población: 20 de 20 países con series anuales y proyecciones de cada institución nacional (34 series nacionales; respaldo de la ONU declarado en 6); mapa, pirámides, envejecimiento, índice 100, crecimiento y año pico, con respaldo en jsDelivr y versiones en Kaggle.','Inflación: IPC anual de 18 países (2007–2025) solo con institutos de estadística y bancos centrales; dataset y notebook en Kaggle, dashboard en Tableau, historia en el blog y carrusel en LinkedIn.','Gobierno común: cada cifra trazable a su archivo oficial; lo no verificable queda pendiente, nunca rellenado; contratos de datos con unidad, fecha y fuente; dashboards bilingües y una versión con Claude Design y otra con ChatGPT sobre la misma tubería cambiaria.'],
+  stack:'Python · GitHub Actions · JSON y CSV versionados · APIs de bancos centrales e institutos de estadística · jsDelivr · Kaggle · Tableau · JavaScript · Claude Design · ChatGPT.',
+  metrics:[['7 bancos centrales y 31 series cambiarias actualizadas cada día','doc'],['20 de 20 países con población oficial: 660 millones en 2025','doc'],['18 países y 19 años de inflación oficial (2007–2025)','doc'],['Datos abiertos en GitHub y Kaggle, con dashboards en vivo','doc']],
+  note:'Tasas oficiales de referencia con fines informativos; las cruzadas son cálculos propios. La suma regional de población no es una cifra oficial: suma la cifra oficial de cada país. Recursos: dashboards.javierforero.co/tasas-cambio, dashboards.javierforero.co/poblacion-latam, la historia de inflación en javierforero.co y los repositorios fx-bancos-centrales y latam-population-official en github.com/jaforero.'},
 
  {id:'databricks-bna',cat:'analytics',type:'Analítica avanzada · PySpark',title:'Databricks — Análisis de clientes por industria (BNA)',period:'2025',client:'Proyecto analítico',ev:'exp',
   summary:'Análisis de ventas, volumen, precio y drop size por industria con Pareto y series temporales.',
@@ -3100,14 +3274,14 @@ const PROJ_EN={
   stack:'Custom GPTs · prompt engineering · intent detection.',
   metrics:[['Own GPT designed for prompt generation','doc'],['Improved quality and reuse of instructions','exp']],
   note:'Pending users, generated prompts and recurrence.'},
- 'fx-latam':{type:'Own product · Data pipeline + Dashboard',title:'Official LATAM exchange rates — self-updating pipeline and live dashboard',summary:'Open repository that queries five central banks daily and publishes versioned JSO‌N; on top of it, my own dashboard, a Claude Design version and a ChatGPT version.',
-  context:'Latin American exchange rates live in different APIs, with their own calendars, units and rules. No central bank publishes the cross rates between regional currencies (e.g. MXN-COP).',
-  challenge:'Have official, traceable rates updated daily with no manual intervention, ready to feed dashboards and AI assistants.',
-  role:'Designed and built the pipeline, the data contract and the dashboards; author of the video and the article.',
-  solution:['Python pipeline (fxpipe) on GitHub Actions: Banxico (FIX), Banco de la República (TRM, cross-checked against the SFC), BCRA (A 3500), Banco Central do Brasil (PTAX) and Banco Central de Chile (dólar observado).','Versioned JSO‌N contract: every series travels with its metadata (unit, date basis, decimals, institution, code, method); crosses are only computed from the same market day.','Self-managed operations: daily update, weekly API health check (api-drift issue) and fx-alerta alerts; a failing source never deletes good data.','My own bilingual dashboard (latest value, base 100, variations, converter and methodology), a version created with Claude Design from a single sentence and another with ChatGPT, on the same pipeline.'],
-  stack:'Python · GitHub Actions · Versioned JSO‌N · Central-bank APIs (SIE, SDMX, OData) · Claude Design · ChatGPT · JavaScript.',
-  metrics:[['5 central banks and 18 series (official and calculated crosses)','doc'],['Automatic daily update with weekly API health check','doc'],['3 dashboards on the same pipeline: own, Claude Design and ChatGPT','doc']],
-  note:'Official reference rates for information only; cross rates are my own calculations, not official rates. Resources: dashboard (dashboards.javierforero.co/tasas-cambio), repository (github.com/jaforero/fx-bancos-centrales), video (youtu.be/zOTZKeb0lCs) and article on javierforero.co.'},
+ 'observatorio-latam':{type:'Own data product · Official open data',title:'LATAM Observatory — population, inflation and exchange rates from official data',summary:'Integrated case: three open data assets —daily exchange rates from 7 central banks, official population for 20 countries and inflation for 18 countries (2007–2025)— for cross-market decisions in Latin America.',
+  context:'Companies operating across several Latin American countries decide with scattered data: each country publishes through its own API, format, calendar and unit, and aggregators mix official figures with third-party estimates.',
+  challenge:'Answer, with official and traceable data, the three questions behind every cross-market decision: how big is the market, how stable are prices, and what is revenue worth in each currency?',
+  role:'Designed and built the pipelines, data contracts, dashboards and storytelling pieces; governance and maintenance of the sources.',
+  solution:['Exchange rates: Python pipeline on GitHub Actions that queries 7 central banks every day (Banxico, BanRep, BCRA, BCB, BCCh, BCU and BCRP); 31 series —10 official and 21 crosses calculated with the same market day—, API checks, alerts and versions on Kaggle.','Population: 20 of 20 countries with annual series and projections from each national institution (34 national series; declared UN fallback in 6); map, pyramids, aging, index 100, growth and peak year, with a jsDelivr backup and versions on Kaggle.','Inflation: annual CPI for 18 countries (2007–2025) from statistics institutes and central banks only; Kaggle dataset and notebook, Tableau dashboard, a story on the blog and a LinkedIn carousel.','Shared governance: every figure traceable to its official file; what cannot be verified stays pending, never filled in; data contracts with unit, date and source; bilingual dashboards, plus a Claude Design and a ChatGPT version on the same FX pipeline.'],
+  stack:'Python · GitHub Actions · Versioned JSON and CSV · Central-bank and statistics-institute APIs · jsDelivr · Kaggle · Tableau · JavaScript · Claude Design · ChatGPT.',
+  metrics:[['7 central banks and 31 FX series updated every day','doc'],['20 of 20 countries with official population: 660 million in 2025','doc'],['18 countries and 19 years of official inflation (2007–2025)','doc'],['Open data on GitHub and Kaggle, with live dashboards','doc']],
+  note:'Official reference rates for information only; cross rates are my own calculations. The regional population total is not an official figure: it adds up each country\'s official figure. Resources: dashboards.javierforero.co/tasas-cambio, dashboards.javierforero.co/poblacion-latam, the inflation story on javierforero.co and the fx-bancos-centrales and latam-population-official repositories at github.com/jaforero.'},
  'databricks-bna':{type:'Advanced analytics · PySpark',title:'Databricks — Customer analysis by industry (BNA)',summary:'Analysis of sales, volume, price and drop size by industry with Pareto and time series.',
   context:'Analysis by industries focused on non-alcoholic beverages (BNA): customer enrichment and join validation.',
   challenge:'Improve macro and granular diagnosis separating total vs Pareto customers.',
@@ -3542,7 +3716,7 @@ function applyLang(lang){
    el.setAttribute('data-tip',lang==='en'?el.getAttribute('data-en-tip'):el._estip);
  });
  /* Re-render contenido dinámico */
- applyProj();renderCerts(curCert);if(window.__rvRender)window.__rvRender();
+ applyProj();renderCerts(curCert);if(window.__rvRender)window.__rvRender();if(window.__obsRender)window.__obsRender();
  if(modalId)openModal(modalId);
  setYear();
  document.querySelectorAll('#langSeg .seg-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
@@ -3817,17 +3991,19 @@ applyLang(LANG);
          'Adoption of a corporate GenAI tool at scale: 1,000+ employees trained across 40+ sessions tailored to each team (4.92/5).',
          'Intelligent process automation (P2P), RAG assistants and AI productivity.',
          'Enablement of non-technical users and executive communication of value.'],
-    cases:['adopcion-ia-multinacional','preflex-facturas','fx-latam','genai-emprendedores','jnj-cbt','collective-ai']},
+    cases:['adopcion-ia-multinacional','preflex-facturas','observatorio-latam','genai-emprendedores','jnj-cbt','collective-ai']},
   'data-products':{
     fit:['Productos analíticos longitudinales e inteligencia de decisión a escala.',
          'BI ejecutivo, analítica predictiva y prescriptiva sobre datos corporativos.',
+         'Inteligencia de mercados LATAM con datos abiertos oficiales: población, inflación y tasas de cambio listas para decidir entre países.',
          'Profundidad cuantitativa y actuarial: reservas, riesgo e incertidumbre convertidos en activos abiertos y reproducibles.',
          'Arquitecturas cloud y visualización que sostienen la decisión.'],
     fitEn:['Longitudinal analytics products and decision intelligence at scale.',
          'Executive BI, predictive and prescriptive analytics on corporate data.',
+         'LATAM market intelligence on official open data: population, inflation and exchange rates ready for cross-country decisions.',
          'Quantitative and actuarial depth: reserving, risk and uncertainty turned into open, reproducible assets.',
          'Cloud architectures and visualization that sustain decisions.'],
-    cases:['rac-insights-360','fx-latam','boptimos-movilidad','actuaria-handbook','jnj-procurement','databricks-bna','sec-asoanei']},
+    cases:['rac-insights-360','observatorio-latam','boptimos-movilidad','actuaria-handbook','jnj-procurement','databricks-bna','sec-asoanei']},
   'consulting':{
     fit:['Consultoría de extremo a extremo: diagnóstico, roadmap y transferencia de capacidades.',
          'Experiencia multisectorial: industria, sector público, economía circular y pyme.',
@@ -3904,6 +4080,103 @@ applyLang(LANG);
  if(deep){ var sec=document.getElementById('reclutadores'); if(sec&&sec.scrollIntoView){ setTimeout(function(){ sec.scrollIntoView({behavior:'smooth',block:'start'}); },150); } }
 })();
 </script>
+<script id="obs-js">
+/* ===== Caso integral · Observatorio LATAM: pestañas + datos en vivo (con respaldo) ===== */
+(function(){
+ var root=document.getElementById('observatorio-latam'); if(!root) return;
+ function L(){ try{ return (typeof LANG!=='undefined'&&LANG==='en')?'en':'es'; }catch(e){ return 'es'; } }
+ var tabs=[].slice.call(root.querySelectorAll('.obs-tab')), panels=[].slice.call(root.querySelectorAll('.obs-panel'));
+ function show(k,focus){
+   tabs.forEach(function(t){ var on=t.getAttribute('data-obs')===k; t.setAttribute('aria-selected',on?'true':'false'); t.tabIndex=on?0:-1; if(on&&focus)t.focus(); });
+   panels.forEach(function(p){ p.hidden=(p.id!=='obs-p-'+k); });
+   if(k==='fx') loadFx();
+   if(k==='pop') loadPop();
+   try{ if(typeof track==='function') track('observatorio_tab',{tab:k}); }catch(e){}
+ }
+ tabs.forEach(function(t,i){
+   t.addEventListener('click',function(){ show(t.getAttribute('data-obs')); });
+   t.addEventListener('keydown',function(e){
+     var j=null; if(e.key==='ArrowRight')j=(i+1)%tabs.length; else if(e.key==='ArrowLeft')j=(i-1+tabs.length)%tabs.length; else if(e.key==='Home')j=0; else if(e.key==='End')j=tabs.length-1;
+     if(j!==null){ e.preventDefault(); show(tabs[j].getAttribute('data-obs'),true); }
+   });
+ });
+ [].slice.call(root.querySelectorAll('.obs-go')).forEach(function(b){ b.addEventListener('click',function(){ show(b.getAttribute('data-go'),true); }); });
+ show('int');
+
+ function get(paths,type){
+   var i=0;
+   return new Promise(function(res,rej){
+     (function next(){ if(i>=paths.length) return rej(new Error('sin fuente'));
+       var u=paths[i++];
+       fetch(u,{cache:'no-store'}).then(function(r){ if(!r.ok) throw new Error(r.status); return type==='json'?r.json():r.text(); }).then(res).catch(next);
+     })();
+   });
+ }
+ var loc=function(){ return L()==='en'?'en-US':'es-CO'; };
+ function fmtDate(d){ try{ var p=d.split('-'); return new Date(Date.UTC(+p[0],+p[1]-1,+p[2])).toLocaleDateString(loc(),{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}); }catch(e){ return d; } }
+ function fmtDay(d){ try{ var p=d.split('-'); return new Date(Date.UTC(+p[0],+p[1]-1,+p[2])).toLocaleDateString(loc(),{day:'numeric',month:'short',timeZone:'UTC'}).replace(/ de /g,' ').replace('.',''); }catch(e){ return d; } }
+
+ /* --- Población: total regional (suma de cifras nacionales oficiales) --- */
+ var POP_FALLBACK=[[2010,575997826,0],[2015,606581873,3],[2020,637818335,7],[2025,659961516,19],[2030,678152317,20],[2035,692423069,20],[2040,702855854,20]];
+ var POP_RATE_2025=0.00536184, popData=null, popLive=false, popTried=false;
+ function renderPop(){
+   var box=document.getElementById('obsPopBars'); if(!box) return;
+   var d=popData||POP_FALLBACK, max=Math.max.apply(null,d.map(function(r){return r[1];}));
+   box.innerHTML=d.map(function(r){
+     var h=Math.max(8,Math.round(100*r[1]/max)), proj=(r[2]/20)>=0.5;
+     return '<div class="obs-bar'+(proj?' proj':'')+'"><b>'+Math.round(r[1]/1e6)+'</b><i style="height:'+h+'%"></i><span>'+r[0]+'</span></div>';
+   }).join('');
+   var y25=d.filter(function(r){return r[0]===2025;})[0];
+   if(y25){ var el=document.getElementById('obsPop2025'); if(el) el.textContent=Math.round(y25[1]/1e6)+' M'; }
+   var re=document.getElementById('obsPopRate'); if(re){ var v=(POP_RATE_2025*100).toFixed(2); re.textContent='+'+(L()==='en'?v:v.replace('.',','))+' %'; }
+ }
+ function loadPop(){
+   renderPop(); if(popTried) return; popTried=true;
+   var f='latam-population-official/main/data/processed/region.csv';
+   get(['https://raw.githubusercontent.com/jaforero/'+f,'https://cdn.jsdelivr.net/gh/jaforero/'+f.replace('/main/','@main/')],'text').then(function(t){
+     var rows=t.trim().split(/\r?\n/), h=rows.shift().split(',');
+     var iy=h.indexOf('year'), ip=h.indexOf('population'), ij=h.indexOf('n_projection'), ir=h.indexOf('annual_rate_to_next');
+     var d=rows.map(function(l){ var c=l.split(','); return [+c[iy],+c[ip],+c[ij],c[ir]]; }).filter(function(r){ return r[0]&&r[1]; });
+     if(d.length>=4){ popData=d.map(function(r){return [r[0],r[1],r[2]];}); var r25=d.filter(function(r){return r[0]===2025;})[0]; if(r25&&r25[3]) POP_RATE_2025=+r25[3]; popLive=true; renderPop(); }
+   }).catch(function(){ /* respaldo embebido: cifras al 2 nov 2026 */ });
+ }
+
+ /* --- Tasas de cambio: último dato oficial por banco central --- */
+ var FX_ORDER=['usd_mxn_fix','usd_cop_trm','usd_ars_a3500','usd_brl_ptax','usd_clp_obs','usd_uyu_interbank','usd_pen_interbank'];
+ var FX_NAME={es:{MX:'México',CO:'Colombia',AR:'Argentina',BR:'Brasil',CL:'Chile',UY:'Uruguay',PE:'Perú'},en:{MX:'Mexico',CO:'Colombia',AR:'Argentina',BR:'Brazil',CL:'Chile',UY:'Uruguay',PE:'Peru'}};
+ var FX_BANK={MX:'Banxico',CO:'BanRep',AR:'BCRA',BR:'BCB',CL:'BCCh',UY:'BCU',PE:'BCRP'};
+ var fxData=null, fxTried=false, fxFail=false;
+ function renderFx(){
+   var box=document.getElementById('obsFx'); if(!box) return; var lg=L();
+   if(fxFail){ box.innerHTML='<p class="obs-fine">'+(lg==='en'?'The live data could not be read right now. Open the dashboard to see the latest official rates.':'No se pudo leer el dato en vivo en este momento. Abre el dashboard para ver las últimas tasas oficiales.')+'</p>'; return; }
+   if(!fxData) return;
+   var S=fxData.series||{};
+   var rows=FX_ORDER.filter(function(k){ return S[k]&&S[k].value!=null; }).map(function(k){
+     var s=S[k], src=s.source||{}, dec=Math.abs(+s.value)>=100?2:Math.min(Math.max(+s.decimals||2,2),4);
+     var val=Number(s.value).toLocaleString(lg==='en'?'en-US':'es-CO',{minimumFractionDigits:2,maximumFractionDigits:dec});
+     var cty=(FX_NAME[lg]||FX_NAME.es)[src.country]||src.country||'';
+     return '<div class="obs-fx-row" title="'+(src.institution||'')+'"><span class="p">'+s.pair+'</span><span class="v">'+val+'</span><span class="s">'+cty+' · '+(FX_BANK[src.country]||src.institution||'')+' · '+fmtDay(s.date)+'</span></div>';
+   });
+   box.innerHTML=rows.length?rows.join(''):'<p class="obs-fine">—</p>';
+   var note=document.getElementById('obsFxNote');
+   if(note&&fxData.as_of){ note.textContent=(lg==='en'?'Read live from github.com/jaforero/fx-bancos-centrales (run of '+fmtDate(fxData.as_of)+'). Official reference rates, not transaction rates.':'Leído en vivo de github.com/jaforero/fx-bancos-centrales (corrida del '+fmtDate(fxData.as_of)+'). Tasas oficiales de referencia, no de transacción.'); }
+ }
+ function loadFx(){
+   if(fxTried){ renderFx(); return; } fxTried=true;
+   var f='fx-bancos-centrales/main/data/latest.json';
+   get(['https://raw.githubusercontent.com/jaforero/'+f,'https://cdn.jsdelivr.net/gh/jaforero/'+f.replace('/main/','@main/')],'json')
+    .then(function(j){ fxData=j; renderFx(); })
+    .catch(function(){ fxFail=true; renderFx(); });
+ }
+ /* Precarga discreta cuando el caso entra en pantalla */
+ if('IntersectionObserver' in window){
+   var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ loadPop(); loadFx(); io.disconnect(); } }); },{rootMargin:'200px'});
+   io.observe(root);
+ }
+ window.__obsRender=function(){ renderPop(); renderFx(); };
+})();
+</script>
+
 
 
 </body></html>
