@@ -74,6 +74,15 @@ $('link[rel="canonical"]').attr('href', 'https://cv.javierforero.co/en.html');
 $('meta[property="og:url"]').attr('content', 'https://cv.javierforero.co/en.html');
 $('meta[property="og:locale"]').attr('content', 'en_US');
 $('meta[property="og:locale:alternate"]').attr('content', 'es_CO');
+/* Tarjeta social en inglés (título, descripción e imagen propia 1200x630) */
+$('meta[property="og:title"]').attr('content', 'Javier Forero · AI, Data & Analytics Consultant');
+$('meta[property="og:description"]').attr('content', '25+ years connecting data, artificial intelligence and business decisions. Projects, impact cases and a downloadable executive CV.');
+$('meta[property="og:image"]').attr('content', 'https://cv.javierforero.co/og-image-en.jpg');
+$('meta[property="og:image:alt"]').attr('content', 'Javier Forero — AI, Data & Digital Transformation Consultant');
+$('meta[name="twitter:title"]').attr('content', 'Javier Forero · AI, Data & Analytics Consultant');
+$('meta[name="twitter:description"]').attr('content', '25+ years connecting data, AI and business decisions. Projects, cases and executive CV.');
+$('meta[name="twitter:image"]').attr('content', 'https://cv.javierforero.co/og-image-en.jpg');
+$('meta[name="twitter:image:alt"]').attr('content', 'Javier Forero — AI & Data Consultant');
 
 /* hreflang cruzado */
 $('link[rel="alternate"][hreflang]').remove();
@@ -101,9 +110,9 @@ out = out.replace(
 const badges = t => t.map(x => `<span class="badge">${x}</span>`).join('');
 const evTag  = k => `<span class="ev ${EV[k][1]}">${EV_EN[k]}</span>`;
 const PVe    = p => Object.assign({}, p, PROJ_EN[p.id] || {});
-const card = p => { const v = PVe(p); return `      <article class="proj card" data-cat="${p.cat}" data-id="${p.id}" tabindex="0" role="button" aria-label="${v.title}">
+const card = p => { const v = PVe(p); return `      <article class="proj card" data-cat="${p.cat}" data-id="${p.id}">
         <div class="ptype">${v.type}</div>
-        <h3>${v.title}</h3>
+        <h3><button type="button" class="proj-open">${v.title}</button></h3>
         <div class="proj-field pf-prob"><span class="pf-label">Problem</span><span class="pf-val">${v.challenge}</span></div>
         <div class="proj-field pf-role"><span class="pf-label">My role</span><span class="pf-val">${v.role}</span></div>
         <div class="tags">${badges(v.tags.slice(0, 3))}</div>
